@@ -4,12 +4,12 @@
 
 **Version:** 1.0  
 **Research cut-off:** 3 September 2026  
-**Founder assumed:** age 29, and lives in Pune; has a hybrid full-time job; earns ₹1,00,000 per month in hand; has ₹5,00,000 in savings; and can use up to ₹50,000/month  
+**Founder assumed:** Age 29. Lives in Pune. Has a hybrid full-time job. Earns ₹1,00,000 per month in hand. Has ₹5,00,000 in savings. Can use up to ₹50,000/month.  
 **Business model:** charge an implementation fee and a monthly managed-service retainer. The client owns and controls its advertising accounts, CRM, WhatsApp Business Account/number, DLT Principal Entity registration, headers/templates, telephony resources and platform usage. The vendor gets only limited role-based access for the agreed work.  
 
 > **Read this first:** This guide tells you how to do the work. It does not guarantee results. Do not quit your job, borrow money, send messages to people in bulk, or spend all ₹5 lakh. Your first goal is two unrelated paying pilots. It is not a logo, company registration, chatbot, or SaaS product. The legal and tax sections are checklists for running the business. They do not replace advice from a Maharashtra lawyer, CA, or privacy professional. They also do not replace the client's own compliance review.
 
-> **Launch-blocking legal gate:** You may run interviews, synthetic demos, and backend diagnostics if you follow employment and privacy rules. But you must not message or call real buyers, qualify them, or schedule site visits until you choose an operating model in [Section 30.2](#compliance) and have evidence for every applicable gate in Section 30.22. If a Maharashtra lawyer does not clearly approve how you will run Model A, use Model B. Complete agent registration, competency certification, and project association before contacting buyers.
+> **Launch-blocking legal gate:** You may run interviews, synthetic demos, and backend diagnostics if you follow employment and privacy rules. You must choose an operating model in [Section 30.2](#compliance). You must also have evidence for every gate that applies in Section 30.22. Until then, do not message or call real buyers, qualify them, or schedule site visits. If a Maharashtra lawyer does not clearly approve how you will run Model A, use Model B. Complete agent registration, competency certification, and project association before contacting buyers.
 
 This easy-language edition keeps technical and legal terms because you will see them in tools, contracts, and laws. Each term is explained in simple words where it appears or in [the glossary](#glossary).
 
@@ -83,7 +83,7 @@ Copy this table into your weekly notes. Update it every Sunday.
 | Outcome gate | At least one agreed leading metric improves, and consent or complaint results do not get worse | If not, check adoption, data, and process before you add AI |
 | Retention gate | The client renews or gives a specific reason that makes economic sense for not renewing | If the client does not renew, record the root cause; do not hide it with new sales |
 | Productisation gate | 5–10 customers need the same workflow, fields, and integration | Only then build reusable modules or micro-SaaS |
-| Resignation gate | Post-tax owner cash is ≥₹1.5 lakh/month for 9–12 months; no client is >30% of revenue; and you have 12 months of personal runway, or money to live on | Keep the job until then |
+| Resignation gate | Owner cash after tax is ≥₹1.5 lakh/month for 9–12 months. No client is >30% of revenue. You have 12 months of personal runway, or money to live on | Keep the job until then |
 
 ### 0.6 Emergency links inside this book
 
@@ -105,7 +105,7 @@ Copy this table into your weekly notes. Update it every Sunday.
 
 ### 0.7 How to use this as an operating system, not a textbook
 
-Do not read 52,000 words once and expect to remember them. Use these four layers:
+Do not read at least 52,000 words once and expect to remember them. Use these four layers:
 
 | Your situation | What to read/use now | What you should produce |
 |---|---|---|
@@ -469,7 +469,7 @@ Do not claim success only because response time improved when attended visits di
 
 ### 4.2 Recommended beachhead ICP
 
-Start with **Pune brokerage/channel-partner teams that have 5–30 sales users, at least 300 digital enquiries/month, one decision-maker, an existing CRM or organised spreadsheet, and site visits they can measure**.
+Start with **Pune brokerage/channel-partner teams that have 5–30 sales users and at least 300 digital enquiries/month. They should have one decision-maker, an existing CRM or organised spreadsheet, and site visits they can measure**.
 
 This is a good starting group because it has:
 
@@ -759,7 +759,7 @@ A proper pilot includes:
 - clear responsibility for approving messages/templates;
 - export and handover of data.
 
-A pilot does **not** include integrations without a limit. It does not include cleaning every old record, building a custom mobile app, buying media, writing property ads, providing a call-centre team, guaranteeing leads, closing sales, or giving support after the pilot period.
+A pilot does **not** include integrations without a limit. It also does not include cleaning every old record or building a custom mobile app. It does not cover buying media, writing property ads or providing a call-centre team. It does not guarantee leads, include closing sales or provide support after the pilot period.
 
 ### 7.4 Bottom-up quote builder
 
@@ -1262,7 +1262,7 @@ Problem → rule or safeguard → work a person must do → proof → what happe
 
 Here is an example:
 
-> The safeguard is not only “a WhatsApp was sent.” The system saves the source event time, assignment time, delivery status, and first attempt by a person as separate facts. If assignment fails, the record goes into the exception queue and the manager gets an alert. The system does not quietly choose a rep without a rule.
+> The safeguard is not only “a WhatsApp was sent.” The system saves four facts separately: source event time, assignment time, delivery status and first attempt by a person. If assignment fails, the record goes into the exception queue and the manager gets an alert. The system does not quietly choose a rep without a rule.
 
 ### 12.4 Audit inputs
 
@@ -1827,7 +1827,7 @@ A separate `SELECT/check → send → mark complete` sequence is not safe. Two w
 | Invalid/opted-out recipient | No | Set the right suppression or invalid state |
 | Downstream outage | Yes, within the set window | Queue the work safely; notify people when it crosses the SLA limit |
 
-Save these queue/DLQ fields: `tenant_id`, work/event ID, workflow/version, state, attempt count, first/last attempt, `next_attempt_at`, maximum attempts/age, terminal reason, last safe error code, correlation ID, lease/claim owner and expiry. Add a circuit breaker for a dependency that keeps failing. Also set a controlled recovery rate and a provider-cost limit. Before replaying a DLQ, check the current permission and state again. Get a dry-run count and approval from a named person. After replay, match the records.
+Save the client and work fields in the queue or DLQ: `tenant_id`, work/event ID, workflow/version and state. Save the attempt count, first and last attempt, `next_attempt_at`, and maximum attempts and age. Also save the terminal reason, last safe error code, correlation ID, and lease or claim owner and expiry. Add a circuit breaker for a dependency that keeps failing. Also set a controlled recovery rate and a provider-cost limit. Before replaying a DLQ, check the current permission and state again. Get a dry-run count and approval from a named person. After replay, match the records.
 
 ### 17.7 Environments
 
@@ -1985,7 +1985,7 @@ Never change `unknown` to `granted`. The client or legal owner must decide which
 
 ### 18.6A Outbound-send and delivery-status fields
 
-Create `OutboundSendIntent` before you call a provider. At minimum, include `tenant_id`, the unchangeable `send_intent_id`, lead/contact, channel, named business/project, purpose, eligibility-decision ID/time, template/rendering/version/language, recipient token/reference, scheduled time, state, attempt/cost cap, correlation ID and payload hash. Store sensitive rendered content only when needed. Protect it when you store it.
+Create `OutboundSendIntent` before you call a provider. At minimum, include `tenant_id` and the unchangeable `send_intent_id`. Add the lead/contact, channel, named business/project and purpose. Add the eligibility-decision ID/time, template/rendering/version/language and recipient token/reference. Also add the scheduled time, state, attempt/cost cap, correlation ID and payload hash. Store sensitive rendered content only when needed. Protect it when you store it.
 
 Provider callbacks create `MessageStatusEvent` rows that cannot change. Each row must include the tenant, send intent, provider message/status-event ID, status, provider timestamp, received timestamp, raw-evidence reference and signature/auth result. Use a written state machine, priority order and provider time to calculate the visible status. A late duplicate `sent` event must never replace a `delivered` or `read` event that already has evidence. Keep failures, reasons and corrections. Do not delete the history.
 
@@ -2028,7 +2028,7 @@ Do not replace the original source when an old lead sends a new form. Do not pro
 ### 18.9 Duplicate-resolution hierarchy
 
 1. An exact replay of the source event ID → treat it as the same event and create no new lead side effect.
-2. The exact normalised phone or email plus the same form or project within a short time → treat it as a likely duplicate enquiry; keep the event and update or review it as policy says.
+2. The exact normalised phone or email appears with the same form or project within a short time → treat it as a likely duplicate enquiry. Keep the event. Update or review it as policy says.
 3. The same phone with a different project, time or source → treat it as a possible match to the same person, but possibly a new enquiry or interest.
 4. Only a similar name → never merge it automatically.
 5. A family or office shares the phone → require a person to decide; do not assume an identity.
@@ -2142,7 +2142,7 @@ Never send a message until the event is safely saved and controls prevent duplic
 | Invalid input | Quarantine it with a reason that a machine can read; alert only when the severity or volume reaches the set limit |
 | Metric | Count accepted, rejected, duplicate and quarantined events; measure receipt delay and the source comparison gap |
 
-Acceptance cases: a valid signed event; an invalid signature; missing phone and email; an unexpected field; a Unicode name; a very long field; a provider retry; two copies at the same time; a late event; an out-of-order update; a temporary CRM outage.
+Acceptance cases include a valid signed event and an invalid signature. Test missing phone and email, an unexpected field, a Unicode name and a very long field. Also test a provider retry, two copies at the same time, a late event, an out-of-order update and a temporary CRM outage.
 
 For a Meta webhook path, follow the current official contract exactly. Do not guess that a general bearer token is enough. Handle the GET subscription challenge. Keep the raw request body. Check the `X-Hub-Signature-256` HMAC-SHA256 before parsing the data or making side effects. Map the WABA, phone, form or account ID to an authenticated tenant configuration. Process every entry, change and message in a payload that contains several items. Enforce limits for content type, bytes, schema and depth. Claim each provider event in one atomic step before you acknowledge that it was safely received. These are examples for this provider. Before you build, check the fields, algorithms and versions again in the current Meta documentation.
 
@@ -2806,7 +2806,7 @@ The calendar time passing does not prove attendance. You do not need a location 
 
 ### 22.11 No-show logic
 
-Mark no-show only after the planned start time and a grace period the client approved. Also check with the host or roster. Common false no-shows come from a wrong entrance, a late host, a rescheduled visit that did not sync, a family member attending, duplicate bookings, or time zone and date errors.
+Mark no-show only after the planned start time and a grace period the client approved. Also check with the host or roster. A wrong entrance or late host can create a false no-show. So can a rescheduled visit that did not sync, a family member attending, duplicate bookings, or time zone and date errors.
 
 No-show workflow:
 
@@ -3077,11 +3077,11 @@ A real human review loop needs all of these:
 
 ### 23.12 AI incident triggers
 
-Pause the affected AI path at once if it reveals data to the wrong person or sends a message after a stop request. Also pause it for an invented project fact with important effects, an unsafe tool action, repeated failure in a language, a successful prompt-injection attack, data retrieved from another client, a model or version change nobody can explain, or failure to send a required case to a person. Fall back to fixed-rule intake and tasks. Do not turn off all of the client's lead capture when that is not needed.
+Pause the affected AI path at once if it reveals data to the wrong person or sends a message after a stop request. Also pause it if it invents an important project fact or makes an unsafe tool action. Pause it for repeated failure in a language or a successful prompt-injection attack. Do the same for data from another client, a model or version change nobody can explain, or failure to send a required case to a person. Fall back to fixed-rule intake and tasks. Do not turn off all of the client's lead capture when that is not needed.
 
 ### 23.13 When to remove AI
 
-Remove the AI or give it a smaller role when rules can do the task. Do the same when corrections take more time than AI saves, the client cannot keep approved knowledge current, cost or delay makes the service lose money, a language group remains unsafe, a provider term conflicts with the contract, or nobody staffs the human queue. This business does not have to include “AI.”
+Remove the AI or give it a smaller role when rules can do the task. Do the same when fixing its work takes more time than it saves. Remove it if the client cannot keep approved knowledge current or if cost or delay makes the service lose money. Also remove it when a language group stays unsafe, a provider term conflicts with the contract, or nobody staffs the human queue. This business does not have to include “AI.”
 
 [Back to index](#table-of-contents)
 
@@ -3193,85 +3193,85 @@ For Make, document the current credit or operation unit for each module and acti
 
 | Area | Questions |
 |---|---|
-| Ownership | Is the client the verified business/account/phone owner and admin? |
-| Consent | Can source, timestamp, purpose and notice/template evidence be stored? |
-| Templates | Creation, approval, category/status and language visibility? |
-| Session/context | Can the system enforce current conversation-window/template rules? |
-| Webhooks | Sent/delivered/read/failed/inbound/opt-out events and stable IDs? |
-| Quality | Quality/limit warnings and account status accessible? |
-| Human inbox | Assignment, collision prevention, context and escalation? |
-| Data | Storage location, retention, export/deletion, subprocessors? |
-| API | Documented version, rate limits, idempotency/retry guidance? |
-| Billing | Transparent Meta/provider/seat charges; client direct payment? |
-| Exit | Number/template/history migration limits understood? |
+| Ownership | Is the client the verified owner and admin of the business, account and phone number? |
+| Consent | Can you save proof of the source, time, purpose, notice and template? |
+| Templates | Can you see their creation, approval, category, status and language? |
+| Session/context | Can the system apply the current rules for conversation windows and templates? |
+| Webhooks | Does it send events for sent, delivered, read, failed, incoming and opt-out actions? Does each event have a stable ID? |
+| Quality | Can you see quality warnings, limit warnings and account status? |
+| Human inbox | Can it assign work, stop two people replying at once, show context and escalate? |
+| Data | Where is data stored? How long is it kept? Can it be exported and deleted? Which subprocessors receive it? |
+| API | Is the version documented? Are rate limits and safe retry/idempotency rules clear? |
+| Billing | Are Meta, provider and seat charges clear? Can the client pay them directly? |
+| Exit | Do you understand the limits on moving the number, templates and history? |
 
-Official policy requires opt-in before business contact, approved templates for business-initiated conversations, and clear/direct human escalation when automating within the customer-service window; verify the live policy before implementation: [WhatsApp Business Messaging Policy](https://whatsappbusiness.com/policy/).
+Official policy requires the person's opt-in before the business contacts them. A business-started conversation needs an approved template. Automation inside the customer-service window must also offer a clear, direct path to a person. Check the live policy before you build: [WhatsApp Business Messaging Policy](https://whatsappbusiness.com/policy/).
 
-For the first pilots, prefer the client's existing official BSP and shared inbox when it passes the checklist. Compare direct Meta only when the client can own the app/assets and somebody can operate onboarding, review, webhooks, support and policy changes. Do not centralise many clients under the founder's WABA/number or create a reusable multi-client tech-provider application merely to save a small seat fee.
+For the first pilots, use the client's current official BSP and shared inbox if they pass this checklist. Consider a direct Meta setup only if the client can own the app and other assets. A named person must also manage onboarding, review, webhooks, support and policy changes. Do not put many clients under the founder's WABA or phone number. Do not build one reusable multi-client tech-provider app only to save a small seat fee.
 
 ### 24.8 Telephony checklist
 
-- approved business identity/number and applicable registrations;
-- client-approved calling purpose, consent/preference/suppression handling;
-- permitted hours/cadence and agent identity script;
-- click-to-call versus predictive/automated mode clearly distinguished;
-- call event timestamps and dispositions from provider, not fabricated CRM clicks;
-- recording disclosure/consent and retention reviewed if recording enabled;
-- role access and download restriction for recordings/transcripts;
-- DTMF/OTP/payment/identity data not captured unnecessarily;
-- outage/manual fallback and caller-number continuity;
-- reconciliation of attempted, connected and completed calls;
-- cost caps and anomalous-call alert.
+- Use an approved business name and phone number. Complete every registration that applies.
+- Get the client's approval for the call purpose. Define how consent, preferences and suppression will work.
+- Set the allowed calling hours and frequency. Give callers an approved identity script.
+- Clearly separate click-to-call from predictive or automatic calling.
+- Take call times and outcomes from the phone provider. Do not create fake outcomes from CRM clicks.
+- If calls are recorded, review the disclosure, consent and retention rules first.
+- Limit who can open or download recordings and transcripts by role.
+- Do not collect DTMF, OTP, payment or identity data unless it is truly needed.
+- Set a manual fallback for outages. Plan how the caller number will stay consistent.
+- Compare attempted, connected and completed calls across systems.
+- Set cost limits. Alert on unusual calling activity.
 
 ### 24.9 Calendar/booking tool checklist
 
-- authoritative or explicitly request-only status;
-- real capacity and concurrent booking controls;
-- host roster/leave/blackouts/buffers;
-- atomic booking or collision mitigation;
-- stable tenant-scoped visit ID created before reservation and deterministic provider event ID where supported;
-- opaque `visit_id`/CRM ID in provider private extended properties; never treat those properties as a secret vault;
-- stored provider event version/ETag and explicit conflict/update policy;
-- reschedule/cancel webhooks;
-- CRM ownership plus incremental-sync token/watermark reconciliation and full-resync path;
-- push/watch channel expiry/renewal and missed-notification recovery;
-- explicit `Asia/Kolkata` zone and local date/time display across CRM/message/calendar;
-- minimum attendee-visible title/description and restricted visibility; no unnecessary lead details;
-- customer correction/cancel path;
-- site-team adoption and physical map verification.
+- Decide whether the calendar is the official source of truth or only receives booking requests.
+- Store the real capacity. Control bookings that arrive at the same time.
+- Keep the host list, leave, blocked times and time buffers current.
+- Make a booking in one safe atomic step, or use a clear control that stops two people taking the same slot.
+- Create a stable visit ID for that client before reserving the slot. Where supported, also use a fixed provider event ID.
+- Put only an opaque `visit_id` or CRM ID in the provider's private extended properties. Never use those fields as a vault for secrets.
+- Save the provider event version or ETag. Write a clear rule for conflicts and updates.
+- Receive webhooks for reschedules and cancellations.
+- Keep the CRM as owner of the business record. Use an incremental-sync token or watermark to compare changes, and keep a full-resync path.
+- Track when push or watch channels expire. Renew them and recover notifications that were missed.
+- Use the explicit `Asia/Kolkata` time zone. Show local dates and times the same way in the CRM, messages and calendar.
+- Show attendees only the minimum title and description. Restrict visibility and do not include lead details that are not needed.
+- Give the customer a way to correct or cancel the booking.
+- Make sure the site team really uses the tool. Check the physical map and directions.
 
-Google Calendar may return a conflict for an existing deterministic custom event ID; fetch and compare the mapped event before deciding to update or treat the request as a safe replay. Store only opaque IDs in `extendedProperties.private`. Calendar visibility settings and “private” properties reduce exposure but do not replace correct account/ACL/tenant controls.
+Google Calendar may report a conflict when the same fixed custom event ID already exists. Fetch that mapped event and compare it first. Then decide whether to update it or treat the new request as a safe replay. Store only opaque IDs in `extendedProperties.private`. Visibility settings and “private” properties lower exposure. They do not replace correct account, ACL and client-isolation controls.
 
 ### 24.10 Starter stack and budget
 
-The leanest safe pilot can use the client's CRM, official business messaging/telephony accounts, its calendar, a client-owned automation workspace and simple reporting. Your own pre-revenue spend should primarily cover domain/email, secure password management, basic bookkeeping/contracts and test tooling—not production vendor consumption.
+The smallest safe pilot can use the client's CRM, official business messaging and phone accounts, calendar, client-owned automation workspace and simple reports. Before revenue, spend your own money mainly on a domain and email, safe password management, basic bookkeeping and contracts, and test tools. Do not pay the client's live vendor usage.
 
 | Stage | Founder-funded spend rule |
 |---|---|
-| Interviews | Near zero beyond travel/communications |
-| Demo | Synthetic data; free/trial/local isolated tools where terms permit |
-| Paid diagnostic | Simple analysis; no permanent client data copy |
-| Pilot | Client directly pays production CRM/BSP/telephony/message/hosting usage |
-| Retainer | Vendor allowance/cap written; pass-through separated from professional fee |
+| Interviews | Spend almost nothing except needed travel and communication |
+| Demo | Use made-up data and free, trial or isolated local tools when their terms allow it |
+| Paid diagnostic | Use simple analysis. Do not keep a permanent copy of client data |
+| Pilot | The client directly pays for live CRM, BSP, phone, message and hosting use |
+| Retainer | Write down the vendor allowance or limit. Keep pass-through costs separate from your fee |
 
 ### 24.11 Vendor proof-of-concept scorecard
 
 | Test | Pass evidence |
 |---|---|
-| End-to-end happy path | Stable IDs visible through source, CRM, message/task and visit |
-| Duplicate replay | One side effect only |
-| Dependency outage | Controlled retry/queue/alert |
-| Rate limit/backlog | Throttled recovery without storm |
-| Opt-out | Queued actions cancelled and suppression propagated |
-| Least privilege | Test user cannot access unrelated/admin data |
-| Export | Usable records/config retrieved without vendor assistance |
-| Deletion | Test subject removed/retained according to approved policy |
-| Version/change | Upgrade notice or pinning/retest path understood |
-| Support | Real support path and expected response documented |
+| End-to-end happy path | You can see stable IDs from the source through the CRM, message or task, and visit |
+| Duplicate replay | Repeating the same event creates only one real-world effect |
+| Dependency outage | The system retries, queues and alerts in a controlled way |
+| Rate limit/backlog | It slows down and recovers without causing a retry storm |
+| Opt-out | It cancels queued actions and sends the suppression state to every needed system |
+| Least privilege | A test user cannot open unrelated data or admin features |
+| Export | You can get usable records and configuration without help from the vendor |
+| Deletion | The test person's data is removed or kept exactly as the approved policy says |
+| Version/change | You understand upgrade notices, version pinning and the retest path |
+| Support | You have recorded a real support route and its expected response |
 
 ### 24.12 Tool register
 
-Maintain one row per production dependency:
+Keep one entry for every live system or service on which the workflow depends:
 
 ```text
 Vendor/product/version or plan
@@ -3298,17 +3298,17 @@ Last access review / last restore test / next review
 
 ### 25.1 Definition of done
 
-A workflow is done only when requirement, configuration/code, review, tests, monitoring, runbook, access, approvals, rollback and owner training are complete. “Worked once in a demo” is not done.
+A workflow is “done” only when all of these are complete: requirements, setup or code, review, tests, monitoring, runbook, access, approvals, rollback and owner training. Working once in a demo does not mean it is done.
 
 ### 25.2 Environment strategy
 
 | Environment | Data | External side effects | Access |
 |---|---|---|---|
-| Development | Synthetic only | Test endpoints/numbers | Builders |
-| Test/UAT | Synthetic or approved masked minimum | Allow-listed test recipients/calendar | Builders + client testers |
-| Production | Necessary live data | Real client-owned endpoints | Least-privilege production roles |
+| Development | Made-up data only | Test endpoints and phone numbers | Builders |
+| Test/UAT | Made-up data, or the smallest approved and masked data set | Only approved test recipients and calendar | Builders and client testers |
+| Production | Only the live data that is needed | Real endpoints owned by the client | Live roles with the least access needed |
 
-Where a vendor lacks environments, simulate isolation with separate test accounts/pipelines, feature flags, allow-lists and strict recipient guards. Never test bulk logic against the full live audience.
+Some vendors do not provide separate environments. In that case, create separation with different test accounts or pipelines, feature flags, allow-lists and strict recipient checks. Never test bulk actions on the full live audience.
 
 ### 25.3 Requirements traceability
 
@@ -3316,57 +3316,57 @@ Where a vendor lacks environments, simulate isolation with separate test account
 |---|---|---|---|---|---|---|
 | REQ-001 | Example: Project A leads route only to active A team | Sales ops/date | WF-06/ruleset v1 | T-021–T-027 | Link/reference | v1.0 |
 
-Every acceptance criterion maps to at least one test; every production workflow maps to an approved requirement.
+Link every acceptance criterion, which is a condition for approval, to at least one test. Link every live workflow to an approved requirement.
 
 ### 25.4 Test-data design
 
-Use fabricated names, reserved/test contacts and clearly marked projects. Include:
+Use made-up names, reserved test contacts and projects clearly marked as tests. Include:
 
-- minimum, maximum and empty optional fields;
-- valid/invalid Indian and international phone formats;
-- duplicate phones with different people/context;
-- Unicode, Hindi/Marathi/mixed-script and emoji;
-- exact boundary timestamps, holidays and after-hours;
-- stale/unknown project and deactivated rep;
-- opted-out/complaint/invalid contacts;
-- simultaneous and out-of-order events;
-- long text, HTML/script-like text and prompt injection;
-- provider timeout, rate limit, auth failure and malformed response;
-- cancellation/reschedule/attendance lifecycle.
+- the smallest and largest allowed values, plus optional fields left empty;
+- valid and invalid Indian and international phone-number formats;
+- the same phone number linked to different people or situations;
+- Unicode, Hindi, Marathi, mixed scripts and emoji;
+- times exactly at a rule boundary, holidays and after-hours events;
+- an old or unknown project and a sales rep who has been turned off;
+- contacts who opted out, complained or are invalid;
+- events that happen at the same time or arrive in the wrong order;
+- long text, HTML-like or script-like text, and prompt injection;
+- provider timeouts, rate limits, login or authorisation failure, and broken responses;
+- the full cancellation, reschedule and attendance lifecycle.
 
-Never use a real employee/customer phone as a casual test target without explicit permission and allow-listing.
+Never casually use a real employee or customer phone as a test target. Do so only with clear permission and an allow-list.
 
 ### 25.5 Test layers
 
 | Layer | What it proves |
 |---|---|
-| Schema/unit | Individual validation, mapping, formulas and rule branches |
-| Contract | Provider/API request-response assumptions and versions |
-| Integration | Two systems exchange correct state and IDs |
-| End-to-end | Source event reaches CRM, task/message, booking and reporting |
-| Negative/security | Invalid auth, access, injection, wrong-recipient and secret controls |
-| Failure/recovery | Retry, queue, reconciliation, replay and rollback |
-| Load/capacity | Burst, concurrency, backlog, rate limits and cost cap |
-| User acceptance | Client confirms process, words, states and responsibilities |
-| Operational drill | On-call person detects, triages, communicates and restores |
+| Schema/unit | Each validation, mapping, formula and branch of a rule works |
+| Contract | Your assumptions about the provider or API request, response and version are correct |
+| Integration | Two systems share the correct state and IDs |
+| End-to-end | A source event reaches the CRM, task or message, booking and report |
+| Negative/security | Controls stop bad authorisation, access, injection, wrong recipients and exposed secrets |
+| Failure/recovery | Retry, queue, comparison, replay and rollback work safely |
+| Load/capacity | The system handles bursts, actions at the same time, backlog, rate limits and the cost limit |
+| User acceptance | The client confirms the process, wording, states and duties |
+| Operational drill | The on-call person can detect the problem, judge it, communicate and restore service |
 
 ### 25.6 Master functional test matrix
 
 | Area | Mandatory cases |
 |---|---|
-| Intake | Every approved source; invalid signature/token; multi-entry payload; malformed/oversized; late; duplicate/concurrent replay; schema change |
-| Identity | New person; prior person/new enquiry; shared number; uncertain merge; reversal |
-| Mapping | Known project; inactive; ambiguous; missing; renamed campaign |
-| Eligibility | Valid inbound; template-required; unknown consent; opt-out; complaint; expired context |
-| Assignment | Each rule; no eligible rep; capacity full; leave; reassign; existing owner |
-| Messaging | Approved content/language; persisted send intent; ambiguous timeout; duplicate/out-of-order provider statuses; delivery/failure; response; human request; stop signal |
-| Qualification | All options; unknown; correction; contradiction; sensitive question refusal |
-| Booking | Concurrent last-slot collision; durable pending ID; ambiguous create timeout; expiry; capacity/calendar/CRM partial failure; timezone; push expiry/sync; reschedule/cancel |
-| Attendance | Host mark; correction; grace period; duplicate; missing outcome |
-| Reporting | Frozen denominator; exclusions; cohort; reschedule dedupe; source reconciliation |
-| Access | Each role allowed/denied; disabled user; secret rotation; audit event; Tenant A credential/object/event/cache/replay attempts against Tenant B CRM, messages, calendar, logs and exports |
-| Retention/rights | Search/export/correct/delete/suppress with approved exceptions |
-| AI if used | Evaluation set, injection, unsupported fact, low confidence, escalation, outage |
+| Intake | Test every approved source. Test a bad signature or token. Test a payload with several entries and one that is broken or oversized. Test a late event, duplicate or simultaneous replay, and a schema change |
+| Identity | Test a new person; a known person with a new enquiry; a shared number; an uncertain merge; and reversing a merge |
+| Mapping | Test a known, inactive, unclear or missing project, plus a renamed campaign |
+| Eligibility | Test a valid incoming lead; a case needing a template; unknown consent; opt-out; complaint; and expired conversation context |
+| Assignment | Test every rule; no eligible rep; full capacity; leave; reassignment; and a lead with an existing owner |
+| Messaging | Test approved content and language, plus a saved send intent. Test an unclear timeout and duplicate or out-of-order provider status. Test delivery, failure, a reply, a request for a person and a stop message |
+| Qualification | Test every choice, an unknown answer, a correction, a conflict and refusal of a sensitive question |
+| Booking | Test two people taking the last slot at once. Test a durable pending ID, an unclear timeout while creating and expiry. Test partial failure in capacity, calendar or CRM. Test the time zone, push expiry and sync, reschedule and cancellation |
+| Attendance | Test the host's mark, a correction, grace period, duplicate and missing outcome |
+| Reporting | Test the fixed denominator, exclusions, cohort, removal of duplicate reschedules and source comparison |
+| Access | Test what each role may and may not do; a disabled user; secret rotation; and an audit event. Also test attempts to use Tenant A's credential, object, event, cache or replay against Tenant B's CRM, messages, calendar, logs and exports |
+| Retention/rights | Test search, export, correction, deletion and suppression, including approved exceptions |
+| AI if used | Test the evaluation set, injection, unsupported facts, low confidence, escalation and outage |
 
 ### 25.7 UAT script format
 
@@ -3385,71 +3385,71 @@ Tester/date:
 Defect and retest reference:
 ```
 
-Screenshots can supplement but not replace record IDs, timestamps and exported/log evidence.
+Screenshots can add to the evidence. They cannot replace record IDs, times, exports or log evidence.
 
 ### 25.8 Severity and defect policy
 
 | Severity | Example | Go-live rule |
 |---|---|---|
-| Critical | Wrong recipient, opt-out ignored, cross-client data, duplicate booking/message at scale | Zero open; pause affected path |
-| High | Lead lost, widespread wrong routing, false confirmation, no fallback | Zero open unless workflow disabled and sponsor accepts documented workaround |
-| Medium | Report mismatch with operational truth intact, isolated UX failure | Named owner/date/workaround; risk accepted |
-| Low | Cosmetic text/layout without misleading effect | May backlog |
+| Critical | Wrong recipient, ignored opt-out, data crossing between clients, or many duplicate bookings or messages | None may stay open. Pause the affected path |
+| High | Lost lead, widespread wrong routing, false confirmation or no fallback | None may stay open, unless that workflow is off and the sponsor accepts a written workaround |
+| Medium | A report does not match, but the real operating record is correct; or one user-interface problem | Name the owner, date and workaround. Record who accepted the risk |
+| Low | A visual text or layout issue that does not mislead anyone | It may go into the backlog |
 
-Do not lower severity to meet a launch date.
+Never call a problem less serious just to meet the launch date.
 
 ### 25.9 Go-live readiness checklist
 
-- signed scope, DPA/contracts and payment state valid;
-- business/privacy/content/security/UAT approvals recorded;
-- client-owned production accounts and least-privilege service users ready;
-- MFA, secrets, IP/network rules and audit logging configured;
-- source, project, roster, hours, templates and mapping versions frozen;
-- test set passed; critical/high defects closed;
-- monitoring dashboards and alerts reach named people;
-- manual fallback and customer-contact decision tree tested;
-- backlog/queue capacity and vendor limits checked;
-- rollback/disable steps rehearsed;
-- source/CRM snapshot or safe export available where applicable;
-- support hours, escalation numbers and change freeze communicated;
-- staff trained; attendance and competency check recorded;
-- small launch cohort/allow-list and success/abort thresholds set;
-- reconciliation scheduled after first events;
-- no unrelated campaign/tool migration during the observation window where possible.
+- The signed scope, DPA, contracts and payment status are valid.
+- You recorded the business, privacy, content, security and UAT approvals.
+- The client owns the live accounts. Service users are ready and have only the access they need.
+- MFA, secret storage, IP and network rules, and audit logs are set up.
+- Freeze the approved versions of sources, projects, roster, work hours, templates and mappings.
+- The test set passed. Every critical and high defect is closed.
+- Monitoring dashboards and alerts reach named people.
+- You tested the manual fallback and the decision tree for contacting customers.
+- You checked queue capacity, backlog and vendor limits.
+- The team practised the rollback and disable steps.
+- Where needed, you have a safe source or CRM snapshot or export.
+- Everyone knows the support hours, escalation numbers and change freeze.
+- Staff completed training. You recorded attendance and a check that they understood it.
+- Set a small first group or allow-list. Set the success and stop thresholds.
+- Schedule a comparison of records after the first events.
+- Where possible, do not move another campaign or tool during the observation period.
 
 ### 25.10 Progressive release
 
 | Stage | Scope | Observation |
 |---|---|---|
-| Internal | Test sources/recipients only | All events manually verified |
-| Canary | One source/project/rep subset or small percentage | Continuous first-day watch |
-| Limited | Agreed portion of real traffic | Daily reconciliation and sample QA |
-| Full pilot | All in-scope traffic only | Daily exceptions, weekly outcome review |
-| Expanded | New project/source/language | Repeat relevant UAT and approvals |
+| Internal | Only test sources and recipients | Check every event by hand |
+| Canary | One source, project or small rep group, or a small percentage | Watch it continuously on the first day |
+| Limited | The agreed part of real traffic | Compare records daily and check a sample |
+| Full pilot | All traffic inside the agreed scope, and nothing more | Review exceptions daily and results weekly |
+| Expanded | A new project, source or language | Repeat the UAT and approvals that apply |
 
-Promotion is explicit. Time passing does not automatically increase traffic.
+Move to the next stage only through a clear decision. Do not increase traffic only because time has passed.
 
 ### 25.11 Abort and rollback triggers
 
-Abort affected side effects immediately for wrong-recipient risk, messages after suppression, false visit confirmations, cross-client data, uncontrolled duplicates, lost lead events without fallback, unbounded retry/cost, unauthorised fact/template, or monitoring blindness. Preserve intake when safe, divert to manual tasks/queue, communicate the scope and follow [Chapter 28](#incident-response).
+Immediately stop the affected action if the wrong person may receive a message. Also stop if a suppressed person may receive one, or a visit confirmation may be false. Stop for data crossing between clients, uncontrolled duplicates, or lost lead events with no fallback. Other stop reasons are retries or costs with no limit, an unauthorised fact or template, or no working monitoring. Keep receiving leads only when that is safe. Send work to a manual task or queue. Tell the client exactly what is affected. Then follow [Chapter 28](#incident-response).
 
 ### 25.12 Hypercare
 
-For the first five business days or sufficient volume:
+For the first five business days, or until you have enough activity to judge it:
 
-- reconcile source-to-CRM at least daily;
-- inspect every exception and a risk-based conversation sample;
-- compare automated and human timestamps;
-- confirm opt-out propagation;
-- verify site roster/bookings each day;
-- log user confusion and shadow workarounds;
-- freeze nonessential changes;
-- send one concise daily client status: volume, exceptions, impact, owners, next steps;
-- hold a go/adjust/rollback decision at the end.
+- compare source records with CRM records at least once each day;
+- check every exception and a sample of conversations chosen by risk;
+- compare system times with human-action times;
+- confirm that an opt-out reaches every required system;
+- check the site roster and bookings each day;
+- record where users are confused or create hidden manual workarounds;
+- allow no change that is not needed;
+- send one short daily client update with volume, exceptions, effect, owners and next steps;
+- at the end, make a clear go, adjust or rollback decision.
 
 ### 25.13 Handover pack
 
-Provide current-state/future-state maps, data dictionary, workflow/version export, access register, approved content, environment/vendor register, test results, known limitations, monitoring links, daily/incident runbooks, backup/restore evidence, change log, training material, support terms, data-return/deletion procedure and named owners. Confirm the client can operate a manual fallback without you.
+Give the client the current and future process maps, data dictionary, workflow and version export, access register and approved content. Also give the client the environment and vendor register, test results, known limits and monitoring links. Add the daily and incident runbooks, proof of backup and restore, change log and training material. Include the support terms, steps for returning or deleting data, and named owners. Confirm that the client can run the manual fallback without you.
 
 [Back to index](#table-of-contents)
 
@@ -3461,32 +3461,32 @@ Provide current-state/future-state maps, data dictionary, workflow/version expor
 
 ### 26.1 Measurement promise
 
-Your reporting must make the funnel observable; it must not manufacture causality. Preserve raw counts, fixed definitions, cohorts, exclusions, uncertainty and business changes. The client decides using evidence—not a decorative dashboard.
+Your reports must show what happens in the funnel. They must not pretend that one thing caused another without proof. Keep the raw counts, fixed meanings, groups, excluded records, uncertainty and business changes. The client needs evidence for decisions, not a pretty dashboard.
 
 ### 26.2 KPI dictionary template
 
-Every KPI needs this metadata:
+For every KPI, or key performance measure, record this information:
 
 | Field | Example question |
 |---|---|
-| KPI name/version | Is this `Contact rate v2`? |
-| Business question | What decision changes when it moves? |
-| Numerator | Exact unique entity/event and qualifying state |
-| Denominator | Exact eligible population |
-| Unit of analysis | Event, person, enquiry, visit journey, booking or project? |
-| Time basis | Lead-created cohort, event date or current snapshot? |
-| Inclusion/exclusion | Tests, spam, duplicates, cancellations, missing data? |
-| Source of truth | Which tables/system and extraction time? |
-| Deduplication | Which identifier/window? |
-| Time zone | Normally Asia/Kolkata for business display |
-| Segment | Project/source/campaign/team/score band/language where justified |
-| Owner | Who can change definition? |
-| Data-quality test | What invalidates publication? |
-| Effective dates | When did version start/end? |
+| KPI name/version | Is its name `Contact rate v2`? |
+| Business question | Which decision should change when this number moves? |
+| Numerator | What exact unique item or event, in which state, goes on top? |
+| Denominator | What exact eligible group goes on the bottom? |
+| Unit of analysis | Are you counting an event, person, enquiry, visit journey, booking or project? |
+| Time basis | Is this a group made when the lead arrived, an event date or a current snapshot? |
+| Inclusion/exclusion | How will you handle tests, spam, duplicates, cancellations and missing data? |
+| Source of truth | Which table or system is official, and when was the data taken? |
+| Deduplication | Which ID and time window remove duplicates? |
+| Time zone | Normally use Asia/Kolkata when showing business time |
+| Segment | When useful, split by project, source, campaign, team, score band or language |
+| Owner | Who is allowed to change the meaning? |
+| Data-quality test | Which failed check means you must not publish it? |
+| Effective dates | When did this version start and end? |
 
 ### 26.3 Core funnel
 
-Use unique valid enquiry cohorts unless the signed definition states otherwise.
+Use groups of unique, valid enquiries unless the signed definition says something else.
 
 ```text
 Raw source events
@@ -3511,80 +3511,80 @@ unique valid enquiries
 
 | KPI | Formula | Important caveat |
 |---|---|---|
-| Source capture rate | Received supported-source unique events / source-reported eligible unique events | Requires reliable source export |
-| Validity rate | Unique valid enquiries / raw source events | Rule changes can fake improvement |
-| Assignment rate | Enquiries assigned within agreed threshold / actionable valid enquiries | Show fallback separately |
-| Acknowledgement latency | `system_acknowledged_at − received_at` | Not human response |
-| First-attempt latency | `first_attempt_at − chosen clock start` | Report P50 and P90/P95, not average only |
-| SLA compliance | Leads with valid attempt inside threshold / eligible leads | Show coverage-hours exclusions |
-| Contact rate | Leads with meaningful two-way contact / unique valid leads | Delivery/read/ringing do not count |
-| Qualification rate | Qualified leads / contacted leads | Also show qualified / valid leads |
-| Schedule rate | Unique visit journeys booked / qualified leads | Define multi-project handling |
-| Confirmation rate | Confirmed visits / booked visits reaching checkpoint | Checkpoint must be frozen |
-| Attendance/show rate | Attended visit journeys / due eligible visit journeys | State treatment of cancellation/reschedule |
-| Outcome completeness | Due visit journeys with authorised final outcome / due journeys | Missing is not no-show |
-| Visit-to-booking | Client-verified bookings / attended visits | Long lag and attribution issues |
-| Lead ageing | Open leads older than stage threshold / open leads | Snapshot metric; segment by stage |
-| Next-action hygiene | Open leads with valid future owner/action / open leads | Can be gamed with meaningless tasks |
-| Opt-out rate | Relevant opt-outs / delivered or contacted recipients—state denominator | Interpret with complaints/blocks |
-| Workflow exception rate | Failed/quarantined workflow attempts / workflow attempts | Separate expected business exceptions |
-| Cost per attended visit | Attributed source spend / verified attended visits | Cohort/lag must align |
-| Cost per booking | Attributed source spend / verified client booking | Attribution and cancellation caveats |
+| Source capture rate | Unique events received from a supported source / eligible unique events reported by that source | You need a reliable export from the source |
+| Validity rate | Unique valid enquiries / all source events | A rule change can create a false improvement |
+| Assignment rate | Enquiries assigned within the agreed time / valid enquiries that can be acted on | Show fallback assignments separately |
+| Acknowledgement latency | `system_acknowledged_at − received_at` | This is not a response from a person |
+| First-attempt latency | `first_attempt_at − chosen clock start` | Show P50 and P90 or P95, not only the average |
+| SLA compliance | Leads with a valid attempt inside the limit / eligible leads | Show which hours were outside coverage |
+| Contact rate | Leads with a meaningful two-way contact / unique valid leads | Ringing, delivery and read marks do not count |
+| Qualification rate | Qualified leads / contacted leads | Also show qualified leads / valid leads |
+| Schedule rate | Unique visit journeys booked / qualified leads | State how one person asking about several projects is handled |
+| Confirmation rate | Confirmed visits / booked visits that reached the check time | Keep the check time fixed |
+| Attendance/show rate | Attended visit journeys / eligible visit journeys that became due | State how cancellations and reschedules are handled |
+| Outcome completeness | Due visit journeys with an approved final result / all due journeys | A missing result is not a no-show |
+| Visit-to-booking | Bookings verified by the client / attended visits | There may be a long delay and unclear source credit |
+| Lead ageing | Open leads older than the limit for their stage / open leads | This is a current snapshot; split it by stage |
+| Next-action hygiene | Open leads with a valid future owner and action / open leads | People can game it by creating useless tasks |
+| Opt-out rate | Relevant opt-outs / delivered or contacted recipients—state which bottom number you use | Read it together with complaints and blocks |
+| Workflow exception rate | Failed or held workflow attempts / all workflow attempts | Keep expected business exceptions separate |
+| Cost per attended visit | Source spending given credit / verified attended visits | The group and time delay must match |
+| Cost per booking | Source spending given credit / client-verified bookings | Explain source-credit and cancellation limits |
 
 ### 26.5 Percentiles, not averages
 
-One extremely slow lead can be hidden by an average, and a median can hide the slowest tail. For response and processing latency report:
+An average can hide one very slow lead. A median can hide the slowest group. For response and processing time, report:
 
-- P50: typical case;
-- P90 or P95: slow tail management must fix;
-- maximum only with incident context;
-- count/percentage inside signed SLA;
-- business-hours and wall-clock variants if both matter.
+- P50, which shows the typical case;
+- P90 or P95, which shows the slow group that managers must fix;
+- the maximum only when you also explain the incident;
+- the number and percentage inside the signed SLA;
+- both business-hours time and full clock time when both matter.
 
-Document exactly how overnight leads are treated. Do not delete slow leads to improve the percentile.
+Write down exactly how you treat leads that arrive overnight. Never remove slow leads just to make the percentile look better.
 
 ### 26.6 Cohort design
 
-Lead-created cohorts answer what ultimately happened to the same group. Event-date charts answer workload during a date. They are not interchangeable.
+A lead-created cohort follows the same group of leads to see what finally happened. An event-date chart shows work that happened on a date. These two views answer different questions.
 
 | Question | Correct time frame |
 |---|---|
-| “What share of August leads attended?” | August lead-created cohort with a stated maturation window |
-| “How many visits happened this week?” | Visit-event date |
-| “Did response improve after launch?” | Comparable lead-created pre/post cohorts and same coverage definition |
-| “Which source generated bookings?” | Lead-source cohort with long enough booking lag |
-| “What is today's workload?” | Current-state snapshot, not conversion cohort |
+| “What share of August leads attended?” | The group of leads created in August, with a stated time allowed for results to develop |
+| “How many visits happened this week?” | The date on which each visit happened |
+| “Did response improve after launch?” | Comparable groups created before and after launch, using the same coverage meaning |
+| “Which source generated bookings?” | A group based on lead source, followed long enough for bookings to happen |
+| “What is today's workload?” | A snapshot of the current state, not a conversion group |
 
-Freeze cohorts or restate them clearly as outcomes mature. Never quietly compare a fully matured old cohort with an incomplete recent one.
+Freeze each group, or clearly restate its numbers as later results arrive. Never quietly compare an old group with complete results against a recent group that has not had enough time.
 
 ### 26.7 Attribution model
 
-Preserve source facts before choosing credit:
+Keep the source facts before you decide which source gets credit:
 
-- original source;
-- enquiry-specific source/campaign/ad/form;
-- latest re-engagement source;
-- self-reported referral where collected;
-- offline/manual influence;
-- model and version used in the report.
+- the first source;
+- the source, campaign, ad and form for this enquiry;
+- the latest source that brought the person back;
+- a referral the person reported, if you collect it;
+- offline or manual influence;
+- the source-credit model and version used in the report.
 
-Start with enquiry-source cohort reporting, plus original and latest source views. If the client changes attribution, show both during transition. Do not claim that the service “generated” a sale when it only changed response operations.
+Start with reports that group enquiries by source. Also show the first and latest source. If the client changes the way credit is given, show both old and new methods during the change. Do not say the service “generated” a sale if it only improved response work.
 
 ### 26.8 Baseline design
 
-Use at least six to eight weeks where volume/seasonality permits and record:
+When volume and seasonal changes allow it, use at least six to eight weeks. Record:
 
-- exact date range and maturation period;
-- project, price/inventory, campaigns, sources and spend;
-- staffing, shifts and major personnel changes;
-- CRM/process definitions and missingness;
+- the exact dates and how long you waited for results to develop;
+- the project, price, inventory, campaigns, sources and spending;
+- staff, shifts and major staff changes;
+- the CRM and process meanings, plus missing data;
 - holidays, launch events and outages;
-- lead validity/duplicate rules;
-- funnel counts and P50/P90 latencies;
-- visit verification method;
-- other agencies/tools/process changes.
+- the rules for valid and duplicate leads;
+- funnel counts and P50 and P90 response times;
+- how a visit is verified;
+- changes to other agencies, tools or processes.
 
-If history is unreliable, call it a measurement/setup pilot rather than claiming uplift.
+If the old records are not reliable, call the work a measurement or setup pilot. Do not claim an improvement.
 
 ### 26.9 Pre/post comparison table
 
@@ -3601,11 +3601,11 @@ If history is unreliable, call it a measurement/setup pilot rather than claiming
 | Opt-outs/complaints |  |  |  |  |  |
 | Workflow/data exceptions |  |  |  |  |  |
 
-Use `percentage points` for rate differences and `% relative change` separately. A rise from 10% to 12% is +2 percentage points and +20% relative.
+Show `percentage points` and `% relative change` as different numbers. For example, a rise from 10% to 12% is +2 percentage points, but +20% relative change.
 
 ### 26.10 Experiments
 
-Prefer one operational change at a time. Pre-register:
+Where possible, change only one part of the operation at a time. Before starting, write down:
 
 ```text
 Hypothesis:
@@ -3621,11 +3621,11 @@ Known simultaneous changes:
 Owner and decision date:
 ```
 
-Do not randomly withhold legally necessary or expected service, suppress opt-outs, or expose a group to known inferior treatment. Small client samples may support only directional learning; say so.
+Do not randomly deny a group a service that is required by law or normally expected. Never ignore opt-outs or knowingly give one group worse treatment. A small client sample may show only a possible direction, not proof. Say that clearly.
 
 ### 26.11 ROI and break-even formulas
 
-Use the client's **net contribution per completed booking**, not property value, top-line sale value or gross brokerage invoice.
+Use the client's **net contribution per completed booking**. Do not use the property value, total sale value or full brokerage invoice.
 
 ```text
 Programme cost
@@ -3648,11 +3648,11 @@ Net ROI
 = (estimated incremental contribution − programme cost) ÷ programme cost
 ```
 
-These are decision estimates, not accounting recognition or proof of causation.
+These figures help with a decision. They are not formal accounting entries and do not prove what caused the result.
 
 ### 26.12 Worked sensitivity—not a benchmark
 
-Suppose total monthly programme cost is ₹40,000.
+For this example, assume the total monthly programme cost is ₹40,000.
 
 | Net contribution per completed booking | Visit→booking 3% | Visit→booking 5% | Visit→booking 8% |
 |---:|---:|---:|---:|
@@ -3660,40 +3660,40 @@ Suppose total monthly programme cost is ₹40,000.
 | ₹1,50,000 | 8.9 | 5.3 | 3.3 |
 | ₹3,00,000 | 4.4 | 2.7 | 1.7 |
 
-Formula example: at ₹1,50,000 contribution and 5% visit-to-booking, expected contribution per attended visit is ₹7,500; ₹40,000 / ₹7,500 = 5.33 additional attended visits. If the required improvement exceeds the client's plausible volume, do not sell the programme.
+Example: net contribution per booking is ₹1,50,000 and 5% of attended visits become bookings. The expected contribution from one attended visit is then ₹7,500. So ₹40,000 / ₹7,500 = 5.33 extra attended visits to break even. If the client does not have enough volume for that improvement to be realistic, do not sell the programme.
 
 ### 26.13 Client-data-quality score
 
-Score each `0 absent`, `1 partial`, `2 reliable`:
+Give each item a score: `0 absent`, `1 partial`, or `2 reliable`.
 
 | Dimension | Test |
 |---|---|
-| Source completeness | Counts reconcile to source |
-| Stable identifiers | Source/enquiry/contact/visit IDs persist |
-| Timestamp integrity | Created/assigned/attempted/visit times exist and use known time zone |
-| Status definitions | Objective dictionary and allowed transitions |
-| Disposition completeness | Required outcome and next action populated |
-| Visit verification | Authorised evidence, not calendar assumption |
-| Campaign mapping | IDs preserved and versioned |
-| Duplicate logic | Event and identity rules distinguishable |
-| Consent/suppression | Evidence and propagation visible |
-| Change history | Rule/status/manual corrections auditable |
+| Source completeness | The counts match the source |
+| Stable identifiers | Source, enquiry, contact and visit IDs stay the same |
+| Timestamp integrity | Created, assigned, attempted and visit times exist and use a known time zone |
+| Status definitions | There is an objective dictionary and a list of allowed moves between states |
+| Disposition completeness | The required result and next action are filled in |
+| Visit verification | There is approved evidence, not only an assumption from a calendar event |
+| Campaign mapping | IDs are kept and their versions are known |
+| Duplicate logic | You can tell event-duplicate rules from person-identity rules |
+| Consent/suppression | You can see the evidence and whether the state reached every system |
+| Change history | You can audit changes to rules, states and manual corrections |
 
-Below 14/20, prioritise instrumentation and process; treat ROI uplift claims as low confidence.
+If the score is below 14/20, first improve measurement and the process. Treat any claimed ROI improvement as low confidence.
 
 ### 26.14 Dashboard pages
 
 | Page | Minimum widgets |
 |---|---|
-| Executive | Cohort funnel, response tail, attended visits, economic sensitivity, guardrails, caveats |
-| Operations | New/unassigned/breached/no-next-action/visit exceptions by owner and age |
-| Marketing | Validity, contact, qualification, attended visit and cost by source/campaign/project |
-| Sales/site | Qualified→booked→confirmed→attended; no-show/reschedule; outcome completeness |
-| Reliability | Source reconciliation, workflow failures/backlog, vendor status, incidents |
-| Compliance/quality | Opt-outs, complaints, wrong-recipient/critical errors, template/content versions |
-| Adoption | Rep activity/disposition completeness, manager actions; contextualise workload |
+| Executive | Funnel by group, slow-response tail, attended visits, money sensitivity, safety measures and limits |
+| Operations | New, unassigned, late, no-next-action and visit exceptions, split by owner and age |
+| Marketing | Validity, contact, qualification, attended visits and cost by source, campaign and project |
+| Sales/site | Qualified → booked → confirmed → attended; no-show and reschedule; missing results |
+| Reliability | Source comparison, workflow failures and backlog, vendor status and incidents |
+| Compliance/quality | Opt-outs, complaints, wrong-recipient and other critical errors, and template or content versions |
+| Adoption | Rep activity, complete results and manager actions, shown with the workload context |
 
-Dashboards displaying personal performance require role-based access, minimum necessary detail and fair interpretation. Never create public shaming leaderboards.
+A dashboard that shows each person's performance needs role-based access, only the detail that is needed and a fair explanation. Never make a public leaderboard that shames people.
 
 ### 26.15 Weekly report format
 
@@ -3713,16 +3713,16 @@ Risks/decisions required from sponsor
 
 ### 26.16 Data manipulation guardrails
 
-- Never change history without an audit correction.
-- Never exclude “bad leads” after seeing the result unless the frozen rule requires it.
-- Never count message delivery/read as human contact.
-- Never count proposed or rescheduled slots multiple times as successful bookings.
-- Never count calendar expiry as no-show without authorised evidence.
-- Never compare projects/sources without noting audience, price, spend and inventory differences.
-- Never hide missing fields inside a favourable denominator.
-- Never report a percentage without numerator, denominator and period.
-- Never imply statistical certainty from a handful of events.
-- Never convert vendor case-study uplift into a client forecast.
+- Never change past data without recording an audit correction.
+- Never remove “bad leads” after seeing the result unless the fixed rule already requires their removal.
+- Never count a delivered or read message as contact with a person.
+- Never count proposed or rescheduled slots several times as successful bookings.
+- Never call an expired calendar event a no-show without approved evidence.
+- Never compare projects or sources without explaining differences in audience, price, spending and inventory.
+- Never choose a favourable bottom number that hides records with missing fields.
+- Never show a percentage without its top number, bottom number and time period.
+- Never suggest statistical certainty from only a few events.
+- Never turn an improvement in a vendor case study into a forecast for your client.
 
 [Back to index](#table-of-contents)
 
@@ -3734,65 +3734,65 @@ Risks/decisions required from sponsor
 
 ### 27.1 Operating objective
 
-Managed service means you own visibility and a defined response to exceptions—not that you personally answer every customer lead. The client owns sales coverage; the contract defines your monitoring and support window.
+A managed service means you make problems visible and follow an agreed response when they happen. It does not mean you personally answer every lead. The client remains responsible for having salespeople available. Your contract states when you monitor and support the system.
 
 ### 27.2 Service calendar for a salaried founder
 
 | Time | Founder action | Boundary |
 |---|---|---|
-| Weekday morning, 20–30 min | Check critical alerts, queue, source reconciliation, today's visits | Do not use employer device/time |
-| Weekday evening, 45–60 min | Resolve noncritical items, client update, planned configuration | Honour client support window honestly |
-| Wednesday evening | Pipeline/sales follow-up for your business | Avoid production releases after fatigue |
-| Saturday, 3–5 h | Client workshop, build/UAT/training, onsite visit | Pre-book; cap concurrent implementations |
-| Sunday, 60–90 min | Weekly report, finances, plan, backup/change review | Preserve rest/burnout guardrail |
+| Weekday morning, 20–30 min | Check critical alerts, queues, whether source and CRM records match, and today's visits | Never use your employer's device or work time |
+| Weekday evening, 45–60 min | Fix noncritical items, update the client and make planned changes | Be honest about the support hours you can provide |
+| Wednesday evening | Follow up on your own sales pipeline | Do not release live changes when you are tired |
+| Saturday, 3–5 h | Run a client workshop, build, UAT, training or site visit | Book it early and limit how many setups run at once |
+| Sunday, 60–90 min | Prepare the weekly report, check money, plan, and review backups and changes | Keep enough rest time to prevent burnout |
 
-If a client requires live weekday daytime response, include a staffed contractor/employee/client admin in the RACI or reject the SLA. Automation alerts without a responder are theatre.
+If the client needs a person to respond during weekday working hours, put a staffed contractor, employee or client admin in the RACI. Otherwise, refuse that SLA. An alert is useless when nobody is available to act on it.
 
 ### 27.3 Daily runbook
 
-1. Review critical/high alerts and vendor status.
-2. Confirm last successful event from each active source.
-3. Reconcile yesterday/source lag window.
-4. Inspect unassigned, quarantined, breached and no-next-action queues.
-5. Inspect today's/tomorrow's booked visits and booking exceptions.
-6. Verify opt-out/complaint queue has no propagation gap.
-7. Check message/API failure/backlog/cost anomalies.
-8. Sample conversations/records based on risk, new changes and languages.
-9. Assign each exception an owner, severity and due time.
-10. Record outcome; do not close because an alert stopped.
-11. Send client status only at agreed cadence or incident threshold.
+1. Review every critical or high alert and check vendor status pages.
+2. Find the latest successful event from each active source.
+3. Compare yesterday's source and CRM records after allowing for the normal delay.
+4. Check queues for unassigned, held, late and no-next-action items.
+5. Check today's and tomorrow's booked visits and every booking exception.
+6. Make sure opt-outs and complaints reached every system that must stop contact.
+7. Look for message or API failures, backlog and unusual cost.
+8. Check a sample of conversations and records. Choose the sample by risk, recent changes and language.
+9. Give every exception an owner, severity and due time.
+10. Record the final result. Do not close the item only because the alert stopped.
+11. Send a client update only at the agreed time or when the incident threshold is met.
 
 ### 27.4 Daily exception board
 
 | Queue | Required fields | Closure evidence |
 |---|---|---|
-| Intake/reconciliation | Source, event/correlation ID, age, reason | CRM ID or documented invalid/reject |
-| Mapping/data | Project/form/field, version, owner | Approved map/correction and replay |
-| Assignment/SLA | Lead/owner/timers/roster | Assigned action or client-approved disposition |
-| Message/eligibility | Contact, purpose, template/context, provider status | Delivered/failed/suppressed with reason |
-| Booking | Visit/calendar/CRM IDs and state | Reconciled customer/site state |
-| Opt-out/complaint | Channel/purpose/time/systems | Suppression propagated and complaint owner |
-| Security/access | User/system/action/severity | Containment, access correction and incident record |
+| Intake/reconciliation | Source, event or correlation ID, age and reason | CRM ID, or a written reason why it was invalid or rejected |
+| Mapping/data | Project, form, field, version and owner | Approved mapping or correction, followed by safe replay |
+| Assignment/SLA | Lead, owner, timers and roster | Assigned action or a result approved by the client |
+| Message/eligibility | Contact, purpose, template or context, and provider status | Delivered, failed or suppressed, with the reason |
+| Booking | Visit, calendar and CRM IDs, plus state | Customer and site records now agree |
+| Opt-out/complaint | Channel, purpose, time and affected systems | Suppression reached every system and the complaint has an owner |
+| Security/access | User, system, action and severity | Risk contained, access corrected and incident record completed |
 
 ### 27.5 Weekly operating review
 
 | Agenda | Evidence | Output |
 |---|---|---|
-| Data reliability | Reconciliation and completeness | Fix owner/date |
-| Funnel movement | Cohort counts/rates and response tail | One bottleneck priority |
-| Visit operations | Booked/confirmed/due/outcomes | Site/host corrective action |
-| Exceptions/incidents | Severity, age, recurrence | Root-cause action |
-| Staff adoption | Dispositions, next actions, queue ageing | Training/process decision |
-| Communication quality | Sample score, complaints/blocks/opt-outs | Content/cadence decision |
-| Changes/experiments | Release log and guardrails | Continue/revert/expand |
-| Upcoming risks | Launch, holiday, roster, vendor change | Readiness owner |
-| Commercial scope | Volume/projects/support/change hours | Change order/reprice if needed |
+| Data reliability | Record comparison and completeness | Name the fix owner and date |
+| Funnel movement | Counts and rates for each group, plus the slow-response tail | Choose one main blockage |
+| Visit operations | Booked, confirmed, due and final results | Choose a corrective action for the site or host |
+| Exceptions/incidents | Severity, age and repeated problems | Choose an action on the root cause |
+| Staff adoption | Results entered, next actions and queue age | Make a training or process decision |
+| Communication quality | Sample score, complaints, blocks and opt-outs | Decide content or frequency changes |
+| Changes/experiments | Release log and safety measures | Continue, reverse or expand |
+| Upcoming risks | Launch, holiday, roster or vendor change | Name the readiness owner |
+| Commercial scope | Volume, projects, support and change hours | Issue a change order or new price if needed |
 
-End with a written decision log. Meetings without owners and dates are not operations.
+End the meeting with a written decision log. If an action has no owner and date, the meeting did not create an operating decision.
 
 ### 27.6 Monthly executive review
 
-Cover outcome, data limits, economic sensitivity, major incidents, adoption, scope consumption, vendor cost, security/access review status, roadmap and a clear recommendation: continue, change, expand, reduce or exit.
+Cover the result and the limits in the data. Explain how different money assumptions change the answer. Cover major incidents, staff use, used scope and vendor cost. Add the security status, access-review status and roadmap. End with one clear recommendation: continue, change, expand, reduce or exit.
 
 ### 27.7 Ticket fields
 
@@ -3810,54 +3810,54 @@ Client decisions/communications
 Closed by/date; follow-up action
 ```
 
-Do not rely on personal WhatsApp chat as the ticket system.
+Do not use a personal WhatsApp chat as your ticket system.
 
 ### 27.8 Change-request process
 
 | Stage | Requirement |
 |---|---|
-| Request | Business reason, desired date, affected users/projects |
-| Triage | Bug, support, configuration, new scope or emergency |
-| Impact | Data, privacy, policy, reliability, cost, testing, training |
-| Estimate | Hours/fee/vendor cost/timeline and dependencies |
-| Approval | Client scope/budget owner plus technical/privacy/content owners as needed |
-| Build/test | Nonproduction and traceable test evidence |
-| Release | Scheduled window, communication, rollback, monitoring |
-| Closure | Outcome, documentation, billing and retrospective if needed |
+| Request | State the business reason, wanted date and affected users or projects |
+| Triage | Decide whether it is a bug, support item, setup change, new scope or emergency |
+| Impact | Check data, privacy, policy, reliability, cost, testing and training |
+| Estimate | State the hours, fee, vendor cost, timing and dependencies |
+| Approval | Get the client's scope or budget owner. Add technical, privacy and content owners when needed |
+| Build/test | Work outside production and keep test evidence that can be traced |
+| Release | Set the time window, messages, rollback and monitoring |
+| Closure | Record the result, update documents and billing, and review the work if needed |
 
-Bundle small changes into a planned weekly release. Constant production edits destroy causal measurement and reliability.
+Put small changes into one planned weekly release. Constant live edits make the system less reliable and make it hard to know which change caused a result.
 
 ### 27.9 Service level schedule
 
-Separate client sales SLA from your platform/support SLA.
+Keep the client's sales SLA separate from your system and support SLA.
 
 | Concept | Example definition |
 |---|---|
-| Service hours | Days/times/time zone when you actively monitor/respond |
-| Severity | Objective impact definitions, not caller seniority |
-| Acknowledgement | Time to confirm receipt and owner—not resolution |
-| Update frequency | How often material status is shared |
-| Restoration target | Target, not guarantee, subject to vendor/client dependencies |
-| Exclusions | Client/vendor outage, force majeure, unapproved change, unavailable access |
-| Maintenance | Planned windows and notice |
-| Client dependency | Named response/approval/input times |
-| Remedy | Contractual service credit/correction cap if negotiated |
+| Service hours | The days, times and time zone when you actively monitor and respond |
+| Severity | The real effect of a problem, not how senior the caller is |
+| Acknowledgement | Time to confirm receipt and name an owner. It is not the time to solve it |
+| Update frequency | How often you will share an important status update |
+| Restoration target | A target, not a guarantee. It depends on the client and vendors too |
+| Exclusions | Client or vendor outage, force majeure, an unapproved change, or missing access |
+| Maintenance | Planned work windows and how much notice you give |
+| Client dependency | The named times for the client to respond, approve or provide input |
+| Remedy | A service credit or correction limit in the contract, if it was negotiated |
 
-Do not promise 24/7 or a five-minute incident response while working another full-time job.
+Do not promise 24/7 support or a five-minute incident response while you also have a full-time job.
 
 ### 27.10 Capacity management
 
-Track per client:
+For each client, track:
 
-- monthly valid lead/workflow execution volume;
-- projects/sources/users/languages;
-- messages/calls/provider credits;
-- queue/backlog and peak burst;
-- delivery, support, QA, meeting and change hours;
-- incidents/rework;
-- gross contribution and scope variance.
+- the monthly number of valid leads and workflow runs;
+- projects, sources, users and languages;
+- messages, calls and provider credits;
+- queue size, backlog and the largest burst;
+- hours used for delivery, support, QA, meetings and changes;
+- incidents and work that had to be done again;
+- gross contribution and how far work moved outside scope.
 
-At 80% sustained planned capacity, stop adding custom work, standardise/reprice or add trained coverage. At 100%, new sales are not success if reliability fails.
+When planned capacity stays at 80%, stop adding custom work. Standardise, raise the price or add trained help. At 100%, another sale is not a success if service quality then fails.
 
 ### 27.11 Configuration and asset inventory
 
@@ -3876,46 +3876,46 @@ At 80% sustained planned capacity, stop adding custom work, standardise/reprice 
 
 ### 27.12 Backup and restoration
 
-Configuration export is not enough. Identify CRM data, workflow database/config, code, secrets references, credential-encryption key where self-hosted, content/templates, mapping tables and operational documentation. Back up the database/config and encryption key separately with appropriately separated access. Define recovery point/time objectives, encrypt/restrict backups, and test the ordered restoration in isolation; reauthorise non-exportable OAuth/provider credentials rather than assuming a database copy restores them. Avoid duplicating client personal data beyond necessary retention.
+An export of the setup alone is not enough. List the CRM data, workflow database and setup, code, references to secrets, and the credential-encryption key when you host the system yourself. Also list content, templates, mapping tables and operating documents. Back up the database and setup separately from the encryption key. Keep access to them properly separated. Set the maximum data loss and restore-time targets. Encrypt backups and limit access. Test the restore steps, in the correct order, in an isolated place. Some OAuth or provider credentials cannot be exported, so authorise them again. Do not assume a database copy restores them. Do not make extra copies of client personal data or keep them longer than needed.
 
 ### 27.13 Access lifecycle
 
 | Event | Actions |
 |---|---|
-| Join/engagement start | Approved role, named account, MFA, training, confidentiality |
-| Role/scope change | Review entitlements and project/client boundaries |
-| Periodic review | Owner confirms each account/service credential remains needed |
-| Suspected compromise | Disable/rotate, inspect logs, incident process |
-| Exit/termination | Disable promptly, reassign ownership, retrieve device/data, attest deletion |
+| Join/engagement start | Give the approved role and a named account. Turn on MFA. Complete training and confidentiality steps |
+| Role/scope change | Check access rights and the limits between projects and clients again |
+| Periodic review | The owner confirms that every account and service credential is still needed |
+| Suspected compromise | Turn off or rotate access, check logs and start the incident process |
+| Exit/termination | Turn access off quickly, move ownership, get the device and data back, and confirm deletion |
 
-No shared administrator logins. Keep client tenants, browser profiles and exports separated.
+Never share an administrator login. Keep each client's account area, browser profile and exports separate.
 
 ### 27.14 Client communication rules
 
-- one named operational channel and one emergency route;
-- no secrets or full lead exports in chat/email;
-- decisions summarised in the ticket/change log;
-- incidents state known facts, impact, actions and next update—no speculation;
-- monthly report highlights limitations and client dependencies;
-- requests outside scope receive impact/fee/date before work;
-- “urgent” does not bypass security/privacy/content approval.
+- Use one named channel for normal work and one route for emergencies.
+- Never put secrets or a full lead export in chat or email.
+- Copy each decision into the ticket or change log.
+- During an incident, state known facts, effect, actions and the next update. Do not guess.
+- Show limits and client dependencies in the monthly report.
+- For work outside scope, state the effect, fee and date before starting.
+- Calling something “urgent” does not remove security, privacy or content approval.
 
 ### 27.15 Renewal health score
 
-Score monthly, using evidence:
+Score this every month using evidence:
 
 | Dimension | Green | Amber | Red |
 |---|---|---|---|
-| Sponsor | Attends/decides | Delegates without decisions | Absent/no owner |
-| Adoption | ≥90% agreed completion | 75–89% | <75% after support |
-| Reliability | Stable/no unresolved high | Recurring medium issues | Critical/high unresolved |
-| Outcome | Controllable metric improves | Mixed/too early | No plausible value |
-| Economics | Break-even plausible | Uncertain data | Implausible/refuses data |
-| Scope/margin | Within cap/≥55% target | Near cap/50–54% | Scope refusal/<50% |
-| Payment | Prepaid/current | One reminder | Chronic late/nonpayment |
-| Conduct | Respects permission/truth | Needs coaching | Demands spam/misleading acts |
+| Sponsor | Attends and makes decisions | Gives work away but no one decides | Absent or no owner |
+| Adoption | Completes ≥90% of the agreed work | Completes 75–89% | Completes <75% even after support |
+| Reliability | Stable, with no open high problem | Medium problems keep returning | A critical or high problem stays open |
+| Outcome | A measure you can control improves | Mixed result or too early to know | No believable value |
+| Economics | Breaking even looks possible | Data is unclear | Not realistic, or client refuses data |
+| Scope/margin | Inside the limit and at the ≥55% target | Near the limit or at 50–54% | Client refuses scope control or margin is <50% |
+| Payment | Paid early or currently due | Needed one reminder | Often late or does not pay |
+| Conduct | Respects permission and truth | Needs guidance | Demands spam or misleading acts |
 
-Red ethics/compliance is an exit condition, not an upsell opportunity.
+A red ethics or compliance score means you should leave. It is not a chance to sell more work.
 
 [Back to index](#table-of-contents)
 
@@ -3929,47 +3929,47 @@ Red ethics/compliance is an exit condition, not an upsell opportunity.
 
 | Layer | Signal | Example alert |
 |---|---|---|
-| Source | Last event, count/reconciliation, auth/schema | No events during expected peak; source count gap |
-| Workflow | Success/failure, latency, retry/backlog | High failure rate or old queue item |
-| CRM | Create/update/routing and API limits | Unassigned valid lead or permission error |
-| Messaging/telephony | Delivery/failure/quality/cost | Failure spike, quality warning, anomalous volume |
-| Booking | Capacity/collisions/CRM-calendar mismatch | Confirmed record absent from calendar |
-| Data quality | Required fields, invalid transitions, duplicates | Attended before scheduled start |
-| Security/privacy | Login/access/export/secret/recipient | New admin, mass export, wrong-recipient risk |
-| Business | SLA tail, opt-out/complaint, unresolved visits | Sudden complaint/no-show spike |
-| Vendor | Status/change/deprecation | API version sunset or outage |
+| Source | Latest event, counts that match, login or authorisation, and data shape | No events during a normally busy time, or source and CRM counts differ |
+| Workflow | Success, failure, delay, retries and backlog | Failure rate is high or one queue item is too old |
+| CRM | Create, update, routing and API limits | A valid lead has no owner, or a permission error occurs |
+| Messaging/telephony | Delivery, failure, quality and cost | Failures suddenly rise, quality warning appears or volume is unusual |
+| Booking | Capacity, collisions and CRM-calendar match | The CRM says confirmed but the calendar has no event |
+| Data quality | Required fields, impossible state changes and duplicates | A visit is marked attended before its planned start |
+| Security/privacy | Login, access, exports, secrets and recipients | A new admin appears, a large export occurs or data may reach the wrong person |
+| Business | Slow SLA tail, opt-outs, complaints and visits with no result | Complaints or no-shows suddenly rise |
+| Vendor | Status, changes and features being ended | API version will close or the vendor is down |
 
-Use thresholds plus absence-of-signal checks. A pipeline that stopped sending errors may itself be dead.
+Check both limits and missing signals. A pipeline that no longer reports errors may itself have stopped working.
 
-Run a scheduled allow-listed synthetic journey through a dedicated test ingress/account mapping → event ledger → test CRM record → assignment → sandbox/non-customer send intent → test visit/calendar path. Mark and exclude every synthetic object from commercial metrics, suppress real outreach, alert on missing/late checkpoints and clean it under the test-retention rule. A quiet genuine source makes “time since last event” ambiguous; synthetic proof distinguishes silence from a broken pipeline.
+Run a planned, approved test journey through the whole path. Use this path: a separate test entry and account mapping → event ledger → test CRM record → assignment → sandbox or non-customer send intent → test visit and calendar path. Clearly mark every made-up test object. Remove it from business measures and block any real outreach. Alert if a check point is late or missing. Delete the test data under the test-retention rule. A real source may simply be quiet, so “time since last event” is unclear. A regular test proves whether the pipeline is quiet or broken.
 
 ### 28.2 Alert design
 
-Every actionable alert states client/environment, severity, detected time, affected workflow/project, count/age, correlation/sample IDs, likely runbook, owner and acknowledgement path. Never put a full message, phone number, credential or unnecessary personal data in notification text.
+Every alert that needs action must name the client, environment and severity. It must show the detection time and affected workflow and project. It must also give the number and age of items, correlation or sample IDs, likely runbook, owner and way to acknowledge it. Never put a full message, phone number, login secret or unneeded personal data in an alert.
 
 ### 28.3 Severity matrix
 
 | Severity | Definition/examples | Initial action |
 |---|---|---|
-| SEV-1 critical | Active cross-client/wrong-recipient disclosure, mass unauthorised sends, serious compromise, systemic false confirmations or lead destruction | Immediately disable affected side effect, page named owners, preserve evidence, start incident channel |
-| SEV-2 high | Major source/CRM outage, many valid leads unprocessed, opt-out propagation failure, booking sync failure with customer impact | Contain/fallback promptly; inform client per contract |
-| SEV-3 medium | Limited failure with workaround, inaccurate noncritical report, isolated mapping issue | Ticket, owner and target; monitor scope |
-| SEV-4 low | Cosmetic/documentation/nonurgent improvement | Backlog/planned release |
+| SEV-1 critical | Data is actively crossing clients or reaching a wrong person; many unauthorised messages; serious account break-in; false confirmations across the system; or leads being destroyed | Turn off the affected real-world action at once. Alert the named owners, keep evidence and open the incident channel |
+| SEV-2 high | A major source or CRM is down; many valid leads are not processed; opt-outs do not reach all systems; or booking sync fails and affects customers | Contain it and start the fallback quickly. Tell the client as the contract requires |
+| SEV-3 medium | A limited failure has a workaround; a noncritical report is wrong; or one mapping is wrong | Open a ticket, name the owner and target date, and watch how far it spreads |
+| SEV-4 low | A visual, document or nonurgent improvement | Put it in the backlog for a planned release |
 
-Contracted timings may differ. Do not publish an SLA you cannot staff.
+Your contract may set different times. Never offer an SLA unless someone can be available to meet it.
 
 ### 28.4 Incident roles
 
 | Role | Responsibility |
 |---|---|
-| Incident commander | Priorities, decisions, status cadence; does not debug everything |
-| Technical lead | Diagnosis, containment, recovery and evidence |
-| Client operational owner | Manual fallback, staff/site coordination |
-| Communications owner | Approved client/stakeholder notices |
-| Privacy/security/legal owner | Breach/notice/regulator assessment and preservation instructions |
-| Scribe | Timeline, hypotheses, actions, IDs and decisions |
+| Incident commander | Sets priorities, makes decisions and sets update times. This person does not fix every technical issue |
+| Technical lead | Finds the cause, contains the problem, restores service and keeps evidence |
+| Client operational owner | Runs the manual fallback and coordinates staff and sites |
+| Communications owner | Sends approved notices to the client and other affected people |
+| Privacy/security/legal owner | Judges a breach, notices and regulator duties, and tells the team what evidence to keep |
+| Scribe | Records the timeline, possible causes, actions, IDs and decisions |
 
-One person may hold several roles in a small engagement, but name them before launch.
+In a small job, one person may do several of these roles. Name each role before launch.
 
 ### 28.5 Incident lifecycle
 
@@ -3981,39 +3981,39 @@ detect → validate → declare/severity → contain → assess scope
 
 ### 28.6 First 15-minute checklist for a serious incident
 
-1. Confirm it is production and note first known/detected time.
-2. Open incident record and appoint commander/scribe.
-3. Identify the unsafe side effect and disable narrowly—messaging, booking or connector.
-4. Preserve logs/config/version and do not destroy evidence.
-5. Protect continued inbound capture if safe; route to manual queue.
-6. Check whether personal data, wrong recipients, opt-outs or security credentials are involved.
-7. Identify affected clients/projects/channels/records and whether impact is ongoing.
-8. Notify required internal/client roles through the agreed route.
-9. Set the next update time.
-10. Avoid speculative root-cause statements or mass corrective messages.
+1. Confirm that the problem is in production. Record when it first happened, if known, and when it was found.
+2. Open an incident record. Name the commander and scribe.
+3. Find the unsafe real-world action. Turn off only the affected message, booking or connector path.
+4. Keep logs, setup and version information. Do not destroy evidence.
+5. If it is safe, continue receiving incoming leads and send them to a manual queue.
+6. Check whether the issue includes personal data, wrong recipients, opt-outs or account secrets.
+7. Find every affected client, project, channel and record. Check whether harm is still happening.
+8. Tell the required internal and client roles through the agreed route.
+9. Set the time for the next update.
+10. Do not guess the root cause or send a large group a correction without review.
 
 ### 28.7 Containment playbooks
 
 | Incident | Immediate containment | Recovery prerequisite |
 |---|---|---|
-| Duplicate outbound messages | Disable send step; retain intake; stop queued repeats | Idempotency fix, affected-record reconciliation, test replay |
-| Wrong project/person message | Stop affected template/mapping; preserve evidence | Correct mapping/identity control; client/privacy review; test set |
-| Opt-out ignored | Stop relevant campaigns/queues; force suppression at safest layer | Reconcile all systems and verify affected people |
-| Lead source not arriving | Activate authorised fallback/export/manual intake | Cause fixed; missing interval reconciled and imported safely |
-| CRM outage | Queue minimum event references within approved limits; notify client | Controlled replay with dedupe after service returns |
-| Calendar mismatch | Stop confirmations; flag affected visits; coordinator verifies | CRM/calendar reconciled and customers contacted accurately |
-| Credential compromise | Disable identity/rotate secret; review sessions/logs | Least privilege restored and scope assessed |
-| AI unsupported claim | Disable AI response/action; route human/rules | Corpus/prompt/control fix and full regression tests |
-| Mass-cost/retry loop | Disable trigger/retry, cap execution/provider spend | Cause and backlog understood; safe paced replay |
-| Dashboard wrong | Label unavailable; stop decisions based on it | Query/definition corrected and historical impact disclosed |
+| Duplicate outbound messages | Turn off sending, keep receiving leads and stop repeats waiting in the queue | Fix idempotency, compare all affected records and test a replay |
+| Wrong project/person message | Stop the affected template or mapping and keep the evidence | Fix the mapping or identity check. Complete client and privacy review and pass the test set |
+| Opt-out ignored | Stop the related campaigns and queues. Force suppression at the safest layer | Make all systems agree and check every affected person |
+| Lead source not arriving | Start the approved fallback, export or manual intake | Fix the cause, find the missing time period and import it safely |
+| CRM outage | Within approved limits, queue only the minimum event references. Tell the client | When service returns, replay in a controlled way and remove duplicates |
+| Calendar mismatch | Stop confirmations, mark affected visits and have the coordinator check them | Make CRM and calendar agree, then give customers correct information |
+| Credential compromise | Turn off the identity or rotate the secret. Review sessions and logs | Restore least access and judge the full affected scope |
+| AI unsupported claim | Turn off the AI reply or action. Send the case to a person or fixed rules | Fix the knowledge, prompt or control and pass all repeat tests |
+| Mass-cost/retry loop | Turn off the trigger or retry and limit system and provider spending | Understand the cause and backlog, then replay slowly and safely |
+| Dashboard wrong | Mark it unavailable and stop using it for decisions | Fix the query or meaning and tell users how past reports were affected |
 
 ### 28.8 Wrong-recipient response
 
-Do not automatically send an apology that repeats exposed information. Stop the faulty path; determine data/content, recipients, time, delivery/read evidence and ongoing risk; engage the client's privacy/legal owner; follow their approved communication/notification decision; correct identity/routing; test similar cases; document affected records and deletion/containment where feasible. Legal notification decisions are not made by the automation builder alone.
+Do not automatically send an apology that repeats the private information. Stop the faulty path. Find the data or content, recipients, time, delivery and read evidence, and continuing risk. Bring in the client's privacy and legal owner. Follow that owner's approved decision about messages and notices. Fix identity and routing, test similar cases, and list affected records. Where possible, record deletion and containment. The automation builder must not decide legal notification duties alone.
 
 ### 28.9 Manual fallback
 
-Prepare a client-approved minimum continuity mode:
+Prepare a minimum fallback that the client has approved:
 
 ```text
 Source/export or fallback notification
@@ -4024,21 +4024,21 @@ Source/export or fallback notification
 → later import/reconcile using stable IDs
 ```
 
-The fallback specifies access, fields, frequency, duplicate control, retention and the point at which volume exceeds safe manual capacity.
+The fallback must state who can access it, which fields it uses, how often work is done, how duplicates are stopped and how long data is kept. It must also state the volume at which people can no longer handle it safely.
 
 ### 28.10 Recovery and replay checklist
 
-- root cause or safe workaround established;
-- affected interval and record population query reviewed;
-- current customer/visit/suppression state rechecked;
-- dry-run shows exact actions and counts;
-- idempotency/duplicate protection verified;
-- second approver for any bulk customer-facing action;
-- replay rate respects provider limits;
-- canary subset reconciled;
-- monitoring watches backlog and side effects;
-- client confirms operational truth;
-- manual queue is merged without loss/duplication.
+- You know the root cause, or you have a safe workaround.
+- A reviewer checked the affected time period and the query that selects the records.
+- Check each current customer, visit and suppression state again.
+- A dry run shows the exact actions and counts without making real changes.
+- Confirm idempotency and duplicate protection.
+- A second approver checks any bulk action that customers will see.
+- The replay speed stays inside provider limits.
+- Run a small canary group first and make sure its records match.
+- Monitoring watches the backlog and every real-world effect.
+- The client confirms what is true in the real operation.
+- Merge the manual queue without losing or duplicating work.
 
 ### 28.11 Incident update template
 
@@ -4054,41 +4054,41 @@ Decisions/support needed from client
 Next update time
 ```
 
-Do not name individual staff as root cause during the incident, disclose personal data in the update or promise a restoration time without evidence.
+During the incident, do not blame one staff member as the root cause. Do not put personal data in the update. Do not promise a restore time unless evidence supports it.
 
 ### 28.12 Post-incident review
 
-Within a proportionate period, record:
+Within a reasonable time for the seriousness of the incident, record:
 
-- plain-language impact and duration;
-- exact timeline;
-- detection method and why it was/not early;
-- technical, process and organisational contributing causes;
-- which safeguards worked/failed;
-- customer/privacy/security assessments and communications;
-- recovery/reconciliation proof;
-- corrective actions with owner/date/verification;
-- similar systems/clients checked;
-- runbook/test/training changes;
-- commercial/SLA follow-up;
-- learning shared without blame.
+- the effect and length of the incident in simple words;
+- the exact timeline;
+- how it was found and why detection was early or late;
+- the technical, process and company conditions that helped cause it;
+- which protections worked and which failed;
+- customer, privacy and security reviews and messages;
+- proof that service recovered and records now match;
+- each corrective action, owner, date and proof of completion;
+- similar systems and clients that were checked;
+- changes to runbooks, tests and training;
+- any contract or SLA follow-up;
+- what the team learned, without blame.
 
-Root cause is rarely “human error.” Ask why the system allowed one mistake to create impact.
+The root cause is rarely just “human error.” Ask why one person's mistake was able to cause harm.
 
 ### 28.13 Corrective-action priorities
 
 | Priority | Example |
 |---|---|
-| Prevent recurrence | Idempotency, permission check, atomic state control |
-| Reduce blast radius | Tenant isolation, recipient allow-list, rate/cost caps |
-| Detect earlier | Reconciliation, canary, state mismatch alert |
-| Recover faster | Tested fallback/replay/restore runbook |
-| Improve decision | Clear severity/RACI/contact tree |
-| Prove closure | Regression test and monitored release—not merely “fixed” |
+| Prevent recurrence | Idempotency, a permission check and one-step state control |
+| Reduce blast radius | Separate clients, use a recipient allow-list, and limit rates and costs |
+| Detect earlier | Compare records, use a canary, and alert when states do not match |
+| Recover faster | Test the fallback, replay and restore runbook |
+| Improve decision | Make severity, RACI and the contact tree clear |
+| Prove closure | Pass repeat tests and watch the release. Do not accept only the word “fixed” |
 
 ### 28.14 Incident metrics
 
-Track count by severity/type, customer/data impact, time to detect, acknowledge, contain, restore and fully reconcile; recurrence; overdue corrective actions; false/noisy alerts; and percentage detected internally versus by customer. Do not optimise only average resolution time while hiding serious outliers.
+Track the number of incidents by severity and type. Track the effect on customers and data. Measure time to detect, acknowledge, contain, restore and make all records agree. Also track repeats, late corrective actions, false or noisy alerts, and the percentage found by your team instead of the customer. Do not improve only the average resolution time while hiding a few very serious slow cases.
 
 [Back to index](#table-of-contents)
 
@@ -4156,7 +4156,7 @@ Ask these questions for every proposed field:
 7. Can the workflow accept `unknown` instead?
 8. Can you keep it out of logs, alerts, analytics and AI prompts?
 
-Keep these items out of this service by default: Aadhaar/PAN/passport images, bank/card/UPI credentials, OTPs, detailed income statements, health/religion/caste data, precise live location, unrelated family details and secret authentication data. A client may truly need a document later in its sales process. In that case, direct the person to the client’s approved secure process. Do not casually put the document into lead automation.
+Keep identity and money secrets out of this service by default. This includes Aadhaar/PAN/passport images, bank/card/UPI credentials and OTPs. Also exclude detailed income statements, health/religion/caste data and precise live location. Exclude unrelated family details and secret authentication data too. A client may truly need a document later in its sales process. In that case, direct the person to the client’s approved secure process. Do not casually put the document into lead automation.
 
 ### 29.5 Threat model
 
@@ -4278,7 +4278,7 @@ Do not copy these example periods without review. The client or legal owner must
 | Consent/suppression evidence |  | Prove and honour the person’s choice | Keep it only as long as needed; minimum suppression data may remain after the marketing profile | Minimise or anonymise it | Dispute or legal need |  |
 | Message/call metadata |  | Service and audit | Keep it for the approved period | Delete it from the provider and CRM | Complaint or contract need |  |
 | Recordings/transcripts |  | A specific, approved QA purpose | Keep them for a short, stated period | Purge them securely | Investigation |  |
-| Automation/security execution logs |  | Debugging, audit, security and incident response | Keep a rolling minimum of 180 days in India under current CERT-In scope; from 13 May 2027, apply the counsel-approved one-year retention under DPDP Rules 6/8 to relevant logs/personal data | Keep them in a restricted India-resident archive, then purge them securely | Incident or legal hold | Security/privacy owner |
+| Automation/security execution logs |  | Debugging, audit, security and incident response | Under current CERT-In scope, keep a rolling minimum of 180 days in India. From 13 May 2027, use the counsel-approved one-year retention under DPDP Rules 6/8 for relevant logs/personal data | Keep them in a restricted India-resident archive, then purge them securely | Incident or legal hold | Security/privacy owner |
 | Analytics |  | Improve the funnel | Prefer de-identified or aggregated data | Aggregate or delete it | — |  |
 | Backups |  | Recovery | Use a rotating schedule | Let them expire or use cryptographic erasure where supported | Legal or incident need |  |
 | Your sales prospect data |  | B2B relationship | Follow a review, expiry and opt-out rule | Remove it from the CRM or suppress it | Contract or tax need |  |
@@ -4328,7 +4328,7 @@ The client or accountable owner must accept risk. The implementer must not accep
 
 ### 29.18 Security review before each new source/project
 
-Ask whether it adds any new data fields, people, purpose, jurisdiction, vendor, public endpoint, credential, message/template, AI use, retention, user role, volume/cost, availability dependency or regulated property activity. Any `yes` requires the related data-flow, threat, contract and test update.
+Ask whether it adds anything new. Check data fields, people, purpose, jurisdiction, vendor, public endpoint and credential. Also check message/template, AI use, retention, user role, volume/cost, availability dependency and regulated property activity. Any `yes` requires the related data-flow, threat, contract and test update.
 
 ### 29.19 Minimum security baseline before first pilot
 
@@ -4358,7 +4358,7 @@ Ask whether it adds any new data fields, people, purpose, jurisdiction, vendor, 
 
 ### 30.1 Launch-blocking conclusion
 
-This service faces a real risk of being classified under RERA. Section 2(zm) of the Real Estate (Regulation and Development) Act covers a paid person who introduces possible buyers and sellers “through any medium.” Section 9 stops an unregistered real-estate agent from helping with a sale or purchase in a registered project. A paid vendor may fit this wording if the vendor, or its automation, responds to prospects, qualifies them and schedules them. Payment by a retainer instead of commission may not change that result. No official ruling was found that directly covers this exact managed-automation model. Applying the law here is therefore a legal inference, not a final court or regulator decision. Get a written Maharashtra RERA opinion before any live work that faces buyers. [RERA Act, sections 2(zm), 9 and 10](https://www.indiacode.nic.in/indiacode/bitstream/123456789/2158/1/A201616.pdf).
+This service faces a real risk of being classified under RERA. Section 2(zm) of the Real Estate (Regulation and Development) Act applies to a paid person who introduces possible buyers and sellers. It says this can happen “through any medium.” Section 9 says an unregistered real-estate agent cannot help with a sale or purchase in a registered project. A paid vendor may fit this wording if the vendor, or its automation, responds to prospects, qualifies them and schedules them. Payment by a retainer instead of commission may not change that result. No official ruling was found that directly covers this exact managed-automation model. Applying the law here is therefore a legal inference, not a final court or regulator decision. Get a written Maharashtra RERA opinion before any live work that faces buyers. [RERA Act, sections 2(zm), 9 and 10](https://www.indiacode.nic.in/indiacode/bitstream/123456789/2158/1/A201616.pdf).
 
 Section 62 sets a penalty for an agent’s failure to register or breach of section 9 or 10. The penalty is ₹10,000 for each day of default, up to a total of 5% of the relevant property cost. Because of this penalty, do not run informal tests on real customer leads.
 
@@ -4392,7 +4392,7 @@ The national Act sets duties for agents. They must not help with unregistered pr
 | Agent status | Register the correct entity or person. Store the number, scope and expiry |
 | Competency | Before buyer contact, the founder and every staff member who talks with homebuyers must hold the required current competency certificate |
 | Project registration | Check the exact phase, promoter, live status, validity or extension and official URL. A similar project name is not enough |
-| Promoter association | Before any facilitation, the promoter’s disclosure or update must name the founder/entity as agent for the exact project and phase under RERA section 4(2)(j) and the applicable MahaRERA order. Keep portal evidence. Written commercial authority alone is not enough |
+| Promoter association | Before any facilitation, the promoter’s disclosure or update must name the founder/entity as agent. It must cover the exact project and phase under RERA section 4(2)(j) and the applicable MahaRERA order. Keep portal evidence. Written commercial authority alone is not enough |
 | Records/reporting | Keep separate records for each project. Name an owner and calendar MahaRERA filings, such as applicable Form 6 |
 | Content | Use only approved, current facts for the project and phase. Show agent/project numbers and the QR/link where required |
 | Conduct | Do not make false claims about standards, approvals or affiliations. Avoid unfair practices, pressure and misleading comparisons |
@@ -4596,13 +4596,13 @@ Your DPA must not let a contract approval process delay any statutory duty that 
 
 ### 30.18 PMLA/AML escalation
 
-G.S.R. 798(E), dated 28 December 2020, covers a person who provides services related to the sale or purchase of real estate and has annual turnover of ₹20 lakh or more. It treats that person as carrying on a designated business or profession and therefore as a reporting entity. This PMLA test is separate from other tests. MahaRERA registration is a strong reason to review the issue, but it is neither required nor enough on its own. The ₹20 lakh test uses turnover, not profit. If the rule covers you, the duties are mandatory. They include FINnet 2.0 registration; a Principal Officer and Designated Director where applicable; AML risk and policy controls; checks on clients and beneficial owners; required and suspicious-transaction reports; non-tipping-off; and usually five-year record retention. Hire an AML lawyer or CA to review the business at ₹15 lakh annualised turnover. This gives time to prepare before the threshold. Start with [FIU-IND AML legislation/notifications](https://fiuindia.gov.in/files/AML_Legislation/notification.html) and current PMLA material.
+G.S.R. 798(E), dated 28 December 2020, covers a person who provides services related to the sale or purchase of real estate. It applies when that person has annual turnover of ₹20 lakh or more. It treats that person as carrying on a designated business or profession and therefore as a reporting entity. This PMLA test is separate from other tests. MahaRERA registration is a strong reason to review the issue, but it is neither required nor enough on its own. The ₹20 lakh test uses turnover, not profit. If the rule covers you, the duties are mandatory. They include FINnet 2.0 registration and, where applicable, a Principal Officer and Designated Director. They also include AML risk and policy controls, plus checks on clients and beneficial owners. Other duties include required and suspicious-transaction reports, non-tipping-off and usually five-year record retention. Hire an AML lawyer or CA to review the business at ₹15 lakh annualised turnover. This gives time to prepare before the threshold. Start with [FIU-IND AML legislation/notifications](https://fiuindia.gov.in/files/AML_Legislation/notification.html) and current PMLA material.
 
 Do not perform KYC or collect identity or financial documents unless counsel confirms that you must do so and a secure, approved process is ready.
 
 ### 30.19 GST/RERA interaction
 
-Being an agent, earning commission or acting as an intermediary can change the GST place of supply, classification and rate, export treatment, income-tax presumptive eligibility and PMLA analysis. The label “monthly retainer” does not decide the issue. RERA agent, PMLA real-estate service, GST intermediary, income-tax agency or commission and contractual agent are separate statutory tests. One classification is evidence, but it does not automatically decide another. Chapter 31 covers finance controls. The CA needs the real SOW and details of buyer-facing conduct.
+Being an agent, earning commission or acting as an intermediary can change several tax and legal results. These include the GST place of supply, classification and rate, export treatment, income-tax presumptive eligibility and PMLA analysis. The label “monthly retainer” does not decide the issue. RERA agent, PMLA real-estate service, GST intermediary, income-tax agency or commission and contractual agent are separate statutory tests. One classification is evidence, but it does not automatically decide another. Chapter 31 covers finance controls. The CA needs the real SOW and details of buyer-facing conduct.
 
 ### 30.20 MSA/SOW/DPA minimum compliance clauses
 
@@ -4654,7 +4654,7 @@ Reject or stop work when a client asks for any of these:
 
 ### 30.23 Quarterly update checklist
 
-Every quarter, recheck MahaRERA orders and project and agent registrations. Recheck TRAI consolidated regulations and directions, plus provider confirmation. Recheck WhatsApp policy, pricing and templates; DPDP start dates and Board guidance; CERT-In directions and advisories; IT Rules and AI guidance; and GST, Income Tax and PMLA changes. Also recheck vendor subprocessors and data locations, plus client permissions and content. Record the URL, access date, owner, change, decision and affected workflows and tests.
+Every quarter, recheck MahaRERA orders and project and agent registrations. Recheck TRAI consolidated regulations and directions, plus provider confirmation. Recheck WhatsApp policy, pricing and templates. Recheck DPDP start dates and Board guidance. Also recheck CERT-In directions and advisories, IT Rules and AI guidance, and GST, Income Tax and PMLA changes. Recheck vendor subprocessors and data locations, plus client permissions and content. Record the URL, access date, owner, change, decision and affected workflows and tests.
 
 [Back to index](#table-of-contents)
 
@@ -5367,7 +5367,7 @@ Rollback and closeout steps
 
 ### 34.11 Performance measures
 
-Measure acceptance on the first review, defects that escape and their severity, complete documents, reconciliation and incident handling, cycle time after quality checks, client communication and ideas for improvement. Do not reward the number of workflows, messages or closed tickets. Those rewards can cause unneeded automation and hidden failures.
+Measure acceptance on the first review. Measure escaped defects and their severity. Also measure complete documents, reconciliation and incident handling. Track cycle time after quality checks, client communication and ideas for improvement. Do not reward the number of workflows, messages or closed tickets. Those rewards can cause unneeded automation and hidden failures.
 
 ### 34.12 Separation/offboarding
 
@@ -5476,7 +5476,7 @@ Require a score of ≥16/20 before a planned launch. Otherwise, keep the current
 
 ### 35.8 White-label decision
 
-Offer a white-label service only with written rules. Cover account ownership; brand and customer messages; data roles and subprocessors; sales promises; prices and payment; support escalation; IP and configuration; case studies; non-circumvention where lawful and suitable; incident notice; and exit. Reject any deal that lets an agency promise unlimited or illegal results while you carry hidden delivery risk.
+Offer a white-label service only with written rules. Cover who owns each account, plus brand and customer messages. Cover data roles, subprocessors, sales promises, prices and payment. Add support escalation, IP, configuration and case studies. Also cover non-circumvention where lawful and suitable, incident notice and exit. Reject any deal that lets an agency promise unlimited or illegal results while you carry hidden delivery risk.
 
 ### 35.9 Packaging at scale
 
@@ -5520,66 +5520,66 @@ A focused consultancy with 5–15 clients and high margins may reach the founder
 
 ### 36.1 Scoring method
 
-Use `Priority /100 = likelihood (1–5) × impact (1–5) × 4`. This is a triage index, not a statistical probability. Re-score monthly and after a material change. Any legal/ethical kill condition overrides the number.
+Use `Priority /100 = likelihood (1–5) × impact (1–5) × 4`. Likelihood means how likely it is. Impact means how much harm it could cause. This score helps you decide what to handle first; it is not a true probability. Score every risk again each month and after an important change. A legal or ethical stop rule always wins over the score.
 
 | ID | Risk | L | I | Priority /100 | Early signal | Prevent/mitigate | Kill/escalate trigger |
 |---|---|---:|---:|---:|---|---|---|
-| R01 | RERA agent classification/non-registration | 4 | 5 | **80** | Scope includes direct response, qualification, introduction or visit booking | Written Maharashtra opinion; backend-only boundary or registration/certification/project association | No live buyer contact without cleared model |
-| R02 | Employer conflict/moonlighting/IP | 3 | 5 | **60** | Related sector, exclusivity/NOC/IP clause, daytime support | Contract/policy review, written NOC if needed, separate time/device/code/data | Stop until counsel/employer clears |
-| R03 | Unlawful/unsupported lead provenance | 4 | 5 | **80** | Bought sheet, no form/consent/version | Source/evidence gate; client warranty; small audited cohort | Reject list/client if provenance cannot be shown |
-| R04 | WhatsApp/TRAI violation or channel ban | 4 | 5 | **80** | Personal SIM/bulk tool, template bypass, complaints | Client WABA/DLT/registered route, opt-in, suppression, caps, policy review | Stop affected channel on bypass/quality warning |
-| R05 | Misleading project/price/inventory claim | 3 | 5 | **60** | Stale brochure, verbal updates, fake scarcity | Versioned source/expiry/approval, human confirmation | Disable content/project until corrected |
-| R06 | Wrong-recipient/cross-client disclosure | 3 | 5 | **60** | Shared tenant/config, uncertain identity | Isolation, least privilege, recipient guards, canary/tests/kill switch | SEV-1; stop side effect immediately |
-| R07 | Lead loss/silent workflow failure | 4 | 4 | **64** | Source/CRM count drift, no recent events | Durable claim, idempotency, exception queue, reconciliation/fallback | Stop expansion; manual continuity until zero unexplained gap |
-| R08 | Duplicate messages/bookings | 3 | 4 | **48** | Provider retries, CRM/calendar mismatch | Stable IDs, atomic upsert/lock, send intent, replay tests | Disable send/booking; reconcile before replay |
-| R09 | No client human coverage | 4 | 4 | **64** | Leads age despite fast automation | Staffing/roster/SLA prerequisite and fallback manager | Do not launch/renew without coverage |
-| R10 | CRM non-adoption | 4 | 4 | **64** | Shadow sheets, missing outcomes/next actions | Simplify fields, manager ritual, training, visible queues | <80% after correction period = reset/exit |
-| R11 | Low lead quality/product mismatch | 4 | 3 | **48** | Fast attempts but poor contact/qualification | Source cohorts and marketing feedback | Client expects automation to manufacture intent |
-| R12 | No economic buyer/urgency | 4 | 3 | **48** | Junior-only meetings, vague “interesting” | ICP/sponsor/payment gates | No custom build/proposal without owner and pain |
-| R13 | False attribution/ROI claim | 3 | 5 | **60** | Multiple concurrent changes, unstable definitions | Baseline/cohorts/confounder log/sensitivity | Refuse causal guarantee or manipulated denominator |
-| R14 | Insufficient volume/economics | 3 | 4 | **48** | Break-even extra visits exceed total volume | `VISIT-READY` score and contribution range | Paid diagnostic only or reject |
-| R15 | Scope creep/customisation | 5 | 4 | **80** | Extra projects/sources/support in chat | Caps, change order, versioned backlog, margin review | Reprice/reduce/exit below 50% margin |
-| R16 | Underpricing/founder labour omitted | 4 | 4 | **64** | High revenue, no time/cash, support fatigue | Hour tracking, replacement cost, setup/retainer floors | Stop sales until package corrected |
-| R17 | Nonpayment/working-capital gap | 3 | 4 | **48** | Delayed deposit, client asks you to fund tools | Advance billing, client-paid vendors, suspension right | No live work before milestone payment |
-| R18 | Founder burnout/health/family cost | 4 | 4 | **64** | Night incidents, sleep loss, missed job work | Capacity/WIP limits, bounded SLA, recovery time/hire | Pause onboarding/reduce scope |
-| R19 | Single-client concentration | 3 | 4 | **48** | One client >30% revenue or funds hire | Diversify; runway; limit fixed cost | No resignation/hire based on one cancellable client |
-| R20 | Vendor outage/API/deprecation | 4 | 3 | **48** | Errors, renewal/version notice, expired webhook | Tool register, monitoring, queue/fallback, quarterly review | Disable unsafe path; migrate under change plan |
-| R21 | Secret/account compromise | 3 | 5 | **60** | New login/admin/export, token in chat/log | MFA, vault, rotation, access alerts/offboarding | Revoke/rotate/incident immediately |
-| R22 | AI hallucination/unsafe action | 3 | 5 | **60** | Unsupported fact, low-confidence intent, injection | Rules first, approved retrieval, validation, human path/evals | Remove AI until regression passes |
-| R23 | Data-retention/rights failure | 3 | 4 | **48** | Copies/exports cannot be located/deleted | Data map, minimal copies, retention jobs, request drills | Pause new processing if control absent |
-| R24 | Incident-reporting delay | 2 | 5 | **40** | No PoC/clock/timeline/legal owner | CERT-In/DPDP playbook and tabletop; one-hour vendor→client target | Escalate immediately; do not wait for certainty |
-| R25 | PMLA reporting-entity surprise | 2 | 5 | **40** | Services relating to real-estate sale/purchase and annual turnover approaching ₹20L; RERA status is one indicator, not the PMLA test | Independent G.S.R. 798(E) classification; AML review at ₹15L annualised turnover; FINnet/officer/CDD/reporting/records readiness | No threshold crossing without opinion/readiness |
-| R26 | Tax/GST/foreign-service error | 3 | 4 | **48** | ₹20L threshold, UAE client, foreign SaaS, commission | CA memo, monthly turnover, proper invoices/books | Pause affected invoice/structure until classified |
-| R27 | Partner/white-label misconduct | 3 | 4 | **48** | Partner overpromises/spams/hides client | Direct scope/data/promises/incident controls; audit right | Terminate illegal/misleading activity |
-| R28 | Unofficial integration/scraping | 3 | 4 | **48** | Browser extension/session cookie/no supported API | Official connector/manual approved fallback | Reject workaround |
-| R29 | Physical site failure | 3 | 3 | **36** | Wrong map, closure, absent host | Physical verification, roster and disruption workflow | Stop confirmations until site truth restored |
-| R30 | Premature SaaS/UAE expansion | 3 | 4 | **48** | Building before renewals; foreign cold calling | Stage gates, India proof, local counsel/partner | Freeze expansion when prerequisite missing |
+| R01 | RERA may treat you as an agent, but you are not registered | 4 | 5 | **80** | Your work includes replying to buyers, qualifying them, introducing them or booking visits | Get a written Maharashtra opinion. Stay backend-only, or complete registration, certification and project association | Do not contact a live buyer until the model is cleared |
+| R02 | Conflict with your employer, moonlighting rule or IP ownership | 3 | 5 | **60** | Same or related industry, exclusivity, NOC or IP clause, or support needed in job hours | Review the agreement and policy. Get a written NOC if needed. Keep time, device, code and data separate | Stop until the employer or lawyer clears it |
+| R03 | The client cannot prove that a lead was lawfully obtained | 4 | 5 | **80** | A bought sheet, or no form, consent proof or version | Require source evidence and a client promise in the contract. Start with a small checked group | Reject the list or client if its origin cannot be proved |
+| R04 | WhatsApp or TRAI breach, or the channel gets banned | 4 | 5 | **80** | Personal SIM, bulk tool, bypassed template or complaints | Use the client's WABA, DLT and registered route. Check opt-in, suppression, limits and policy | Stop that channel if someone bypasses controls or a quality warning appears |
+| R05 | A false or old project, price or inventory claim | 3 | 5 | **60** | Old brochure, spoken updates only or fake shortage | Use an approved source with version and expiry. Require a person to confirm it | Turn off that content or project until it is corrected |
+| R06 | Data goes to the wrong person or crosses between clients | 3 | 5 | **60** | Shared client setup or unclear identity | Separate clients, give least access, check recipients, and use a canary, tests and kill switch | Treat as SEV-1 and stop the affected action at once |
+| R07 | A lead is lost because the workflow fails silently | 4 | 4 | **64** | Source and CRM counts differ, or no recent events arrive | Keep a durable receipt, idempotency, exception queue, record comparison and fallback | Do not expand. Use manual continuity until every gap is explained |
+| R08 | Duplicate messages or bookings | 3 | 4 | **48** | Provider retries, or CRM and calendar disagree | Use stable IDs, an atomic upsert or lock, saved send intent and replay tests | Turn off sending or booking. Make records agree before replay |
+| R09 | No person at the client can handle leads | 4 | 4 | **64** | Leads become old even though the system is fast | Make staff, roster and SLA a start condition. Name a fallback manager | Do not launch or renew without human coverage |
+| R10 | Staff do not use the CRM | 4 | 4 | **64** | Hidden spreadsheets, missing results or next actions | Make fields simpler. Use a manager routine, training and visible queues | If use stays <80% after a correction period, reset or leave |
+| R11 | Leads are poor or the property does not fit | 4 | 3 | **48** | Fast attempts but low contact or qualification | Group results by source and give feedback to marketing | Escalate if the client expects automation to create buyer intent |
+| R12 | No buyer with budget or no urgent problem | 4 | 3 | **48** | Meetings only with junior staff and vague comments such as “interesting” | Apply the ICP, sponsor and payment gates | Do not build a custom solution or proposal without an owner and real pain |
+| R13 | A false claim about which change caused ROI | 3 | 5 | **60** | Many changes at once or meanings keep changing | Use a baseline, fixed groups, a log of other changes and sensitivity ranges | Refuse a cause-and-effect guarantee or a changed denominator |
+| R14 | Too little volume or value to make the work pay | 3 | 4 | **48** | Extra visits needed to break even are more than total possible visits | Use the `VISIT-READY` score and a range for contribution | Sell only a paid diagnostic, or reject the work |
+| R15 | Scope keeps growing and every client gets custom work | 5 | 4 | **80** | Extra projects, sources or support requested in chat | Set limits, use change orders and a versioned backlog, and review margin | Raise the price, reduce scope or leave if margin is below 50% |
+| R16 | Price is too low because your work time was ignored | 4 | 4 | **64** | Revenue looks high, but time and cash are missing and support is tiring | Track hours, include replacement cost, and set setup and retainer minimums | Stop selling until you fix the package |
+| R17 | Client does not pay, causing a cash gap | 3 | 4 | **48** | Deposit is late or client asks you to pay for tools | Bill early, make client pay vendors and keep a right to suspend work | Do not do live work before the milestone payment |
+| R18 | Founder burnout, poor health or family harm | 4 | 4 | **64** | Night incidents, lost sleep or missed job duties | Limit capacity and work in progress. Set a bounded SLA and recovery time, or hire help | Stop onboarding or reduce scope |
+| R19 | Too much revenue depends on one client | 3 | 4 | **48** | One client is >30% of revenue or pays for a new hire | Add other clients, keep runway and limit fixed costs | Do not quit or hire based on one client who can cancel |
+| R20 | Vendor outage, API change or old version ends | 4 | 3 | **48** | Errors, renewal or version notice, or expired webhook | Keep a tool register, monitoring, queue and fallback. Review every quarter | Turn off the unsafe path and move vendors through a change plan |
+| R21 | Account or secret is stolen | 3 | 5 | **60** | New login, admin or export, or token appears in chat or logs | Use MFA, a vault, rotation, access alerts and proper offboarding | Revoke and rotate it, then start the incident process at once |
+| R22 | AI invents a fact or takes an unsafe action | 3 | 5 | **60** | Unsupported fact, uncertain intent or prompt injection | Use rules first, approved retrieval, fixed validation, a human path and evaluations | Remove AI until all repeat tests pass |
+| R23 | Data cannot be found, deleted or handled for a rights request | 3 | 4 | **48** | Nobody can locate or remove copies and exports | Keep a data map, few copies, automatic retention work and request drills | Pause new data use if the control does not exist |
+| R24 | A required incident report is late | 2 | 5 | **40** | No PoC, correct clock, timeline or legal owner | Keep CERT-In and DPDP playbooks and run a tabletop drill. Use a one-hour vendor → client target | Escalate at once. Do not wait until you are certain |
+| R25 | You unexpectedly become a PMLA reporting entity | 2 | 5 | **40** | Services relate to a real-estate sale or purchase and yearly turnover approaches ₹20L. RERA status is one sign, but not the PMLA test | Get a separate G.S.R. 798(E) classification. Run an AML review at ₹15L annualised turnover. Prepare FINnet, officer, CDD, reporting and record controls | Do not cross the threshold without an opinion and readiness |
+| R26 | Tax, GST or foreign-service treatment is wrong | 3 | 4 | **48** | ₹20L threshold, UAE client, foreign SaaS or commission | Get a CA memo, track turnover monthly, and keep correct invoices and books | Pause that invoice or structure until it is classified |
+| R27 | A partner or white-label seller acts badly | 3 | 4 | **48** | Partner overpromises, spams or hides the real client | Control scope, data, promises and incidents directly. Keep a right to audit | End illegal or misleading activity |
+| R28 | Unofficial integration or scraping | 3 | 4 | **48** | Browser extension, session cookie or no supported API | Use an official connector or an approved manual fallback | Reject the workaround |
+| R29 | The physical site is not ready | 3 | 3 | **36** | Wrong map, closed site or absent host | Check the real location, roster and disruption process | Stop confirmations until the site facts are correct |
+| R30 | SaaS or UAE expansion starts too early | 3 | 4 | **48** | Building before renewals or cold-calling abroad | Use stage gates, proof in India and a local lawyer or partner | Freeze expansion when a required condition is missing |
 
 ### 36.2 Risk review ritual
 
-For the top five risks, assign a named owner, next preventive action/date, leading indicator, residual score and evidence link. Close a risk only when the exposure no longer exists; a completed task may reduce but not eliminate it.
+For each of the top five risks, name an owner. Record the next prevention action and date, the early warning sign, the score after controls, and a link to evidence. Close a risk only when the exposure is gone. Finishing one task may lower the risk without removing it.
 
 ### 36.3 Assumption register
 
 | Assumption | Evidence | Consequence if false | Test/date | Decision owner |
 |---|---|---|---|---|
-| Example: client has ≥300 opted-in inbound leads/month | Export/source report pending | Pilot too small/economics weak | Diagnostic before proposal | Sponsor |
+| Example: client has ≥300 opted-in inbound leads/month | Waiting for export or source report | Pilot may be too small and the economics may fail | Check during the diagnostic before the proposal | Sponsor |
 
-High-impact untested assumptions are risks. Move them into the register instead of presenting them as facts.
+An untested assumption that could cause major harm is a risk. Put it in this register. Never present it as a fact.
 
 ### 36.4 Business continuity priorities
 
 | Priority | Maximum tolerable ambiguity | Continuity action |
 |---|---|---|
-| Stop unauthorised disclosure/contact | None | Kill outbound side effect/suppress |
-| Preserve legitimate inbound lead event | Very low | Durable queue/manual source export |
-| Preserve accurate visit commitment | Very low | Site coordinator/manual calendar reconciliation |
-| Restore owner/tasks | Short agreed delay | Manager queue/manual assignment |
-| Restore dashboards/nurture | Longer | Suspend until operational truth reconciles |
+| Stop contact or disclosure that is not allowed | None | Turn off the outgoing action and apply suppression |
+| Keep a legitimate incoming lead event | Very low | Use a durable queue or manual source export |
+| Keep a visit promise accurate | Very low | Site coordinator checks it and compares the calendar by hand |
+| Restore the owner and tasks | A short, agreed delay | Manager queue and manual assignment |
+| Restore dashboards and nurture | A longer delay is acceptable | Pause them until the real operating records agree |
 
 ### 36.5 Insurance discussion
 
-Ask a broker/lawyer about professional indemnity/errors-and-omissions, cyber/privacy incident response, commercial general liability and employee/fidelity coverage as contracts and data exposure grow. Read exclusions for unlicensed activity, contractual liability, fines/penalties, deliberate acts, prior incidents, cross-border work, subcontractors and social engineering. Insurance is not permission to ignore controls.
+As contracts and data risk grow, ask an insurance broker and lawyer about suitable cover. Ask about professional indemnity or errors-and-omissions cover. Also ask about cyber and privacy incidents, commercial general liability, and employee or fidelity cover. Read every exclusion. Pay special attention to work without a licence, liability accepted in a contract, fines and penalties, deliberate acts, old incidents, work across countries, subcontractors and social engineering. Insurance never gives you permission to ignore controls.
 
 [Back to index](#table-of-contents)
 
@@ -5593,60 +5593,60 @@ Ask a broker/lawyer about professional indemnity/errors-and-omissions, cyber/pri
 
 Before changing anything:
 
-1. State symptom, impact, start time and affected scope.
-2. Freeze evidence: correlation/event/lead/visit/provider IDs and versions.
-3. Check whether customer contact/booking/security is unsafe; contain if so.
-4. Compare authoritative systems instead of trusting one dashboard.
-5. Reproduce with a synthetic/test record where safe.
-6. Form one falsifiable hypothesis at a time.
-7. Change the smallest controlled component.
-8. Run regression/reconciliation and document result.
-9. Roll back if guardrail worsens.
+1. State what you can see, its effect, when it began and what it affects.
+2. Protect the evidence. Save correlation, event, lead, visit and provider IDs, plus versions.
+3. Check whether any customer contact, booking or security action is unsafe. If yes, contain it first.
+4. Compare the official systems. Do not trust only one dashboard.
+5. When safe, recreate the problem with a made-up test record.
+6. Test one idea that can be proved wrong at a time.
+7. Change only the smallest controlled part.
+8. Run repeat tests, make records agree and write down the result.
+9. Roll back the change if a safety measure gets worse.
 
 ### 37.2 Symptom-to-test matrix
 
 | Symptom | First tests | Common causes | Corrective path |
 |---|---|---|---|
-| Source says more leads than CRM | Align period/time zone/unique IDs; inspect reject/quarantine; last webhook | Provider delivery gap, invalid auth/schema, mapping, queue failure | Restore intake, obtain source export, idempotent import/reconcile |
-| CRM has duplicates | Compare source event IDs and person/enquiry design | Replay not controlled, race, phone used as enquiry ID | Unique ledger claim/upsert; merge only reviewed identities; preserve events |
-| Leads unassigned | Check roster/rules/version/fallback/API permissions | No eligible rep, rule first-match, cap, owner disabled | Route monitored fallback; fix master data/rules and replay assignments only |
-| Response “slow” | Separate receive/CRM/assignment/system ack/human attempt/contact | Human coverage, queue, business-hours definition, provider lag | Fix exact bottleneck; do not hide with automated message |
-| Contact rate poor | Source/phone validity, timing, caller identity, attempts by cohort | Bad source, DND, wrong number, rep behaviour | Feed evidence to marketing/telephony; preference-led cadence; not more spam |
-| Qualification falls | Question-level abandonment, inventory fit, language, rep sample | Too many questions, wrong project, script/data issue | Shorten/branch, human path, client product feedback |
-| Many booked, few attended | Verify definitions/outcomes/reschedules/map/host | False bookings, bad slots/directions, weak intent, site issues | Confirmation/reschedule, directions, host process; analyse by site/slot/source |
-| Visits missing from calendar | Compare visit ID/calendar mapping/webhook/sync channel | Partial failure, manual deletion, expired watch | Stop false confirmations, reconcile/recreate idempotently, renew sync |
-| Calendar has two visits | Search deterministic IDs and event creation retries | Ambiguous timeout/blind retry/race | Retain one after coordinator review; deterministic ID/lock |
-| Reminder sent after cancel | Queue/job cancellation and state read time | Cached status, disconnected system, race | Stop queue, reconcile affected contacts, revalidate state at send time |
-| WhatsApp template rejected/paused | Provider reason/category/language/current policy | Variables/content/quality/policy change | Use approved fallback; revise/approve and retest—never free-form bypass |
-| WhatsApp failures spike | Provider/account/quality/rate/number/source status | Account limit, invalid numbers, outage, complaints | Throttle/stop, provider status/support, client compliance review |
-| SMS not delivered | PE/header/template/chain/scrub/provider status | DLT mismatch, DND, variable mismatch | Client/TSP/RTM correction; do not switch to personal SIM |
-| AI gives wrong fact | Source/version/retrieval/prompt/output validation logs | Stale corpus, unsupported generation, injection | Disable AI answer, human route, source/control/eval regression |
-| AI misses opt-out | Exact utterance/language/classifier/threshold | Narrow keyword list, mixed language | Force conservative rules + human; expand reviewed critical set |
-| Dashboard total disagrees | Query version/time/cohort/exclusions/joins/dedup | Many-to-many join, reschedules, mutable status | Reconcile raw IDs, version KPI, restate prior results if needed |
-| Funnel rate “improves” suddenly | Raw denominators/invalid rules/status changes | Reclassification, missing source, immature cohort | Mark measurement break; rerun comparable definitions |
-| Workflow execution cost spikes | Volume by workflow, retries/loops, message jobs | Retry storm, one action per item, bad trigger | Circuit-break/cap, redesign batching/state, vendor plan review |
-| Client says “leads are bad” | Source-specific validity/contact/fit/attendance | Marketing quality or sales/process | Show stage evidence; agree owner; avoid blanket conclusion |
-| Reps bypass CRM | Field burden, mobile UX, incentive, manager use | Process mismatch or weak sponsorship | Reduce fields, integrate, coach, daily exception ownership |
-| Client asks for endless changes | Scope/usage/change log/margin | Vague SOW, free chat requests | Bundle backlog, change order/reprice/refuse |
-| Retainer feels unprofitable | Hours/costs/incidents/scope per client | Founder labour omitted, custom branches | Standardise/reprice/reduce/exit |
-| No one replies to outreach | ICP/list/trigger/message/deliverability by cohort | Generic pitch, wrong buyer, no proof/pain | 10 customer interviews; narrow; change one variable |
-| Discovery calls but no paid pilot | Recorded objections, authority/economics/data/access | Curiosity not pain, free consulting, risk | Paid diagnostic; strengthen prerequisites/proof; disqualify |
+| Source shows more leads than CRM | Use the same period, time zone and unique IDs. Check rejected and held items and the latest webhook | Provider did not deliver, authorisation or data shape is wrong, mapping failed, or queue failed | Restore intake, get a source export, import safely with idempotency, and make records agree |
+| CRM has duplicates | Compare source event IDs and the design for people versus enquiries | Replay was not controlled, two actions happened at once, or a phone number was used as an enquiry ID | Claim each event once in the ledger and upsert. Merge people only after review, and keep all events |
+| Leads have no owner | Check roster, rules, version, fallback and API permissions | No rep is eligible, first matching rule is wrong, capacity is full, or owner is disabled | Use the monitored fallback. Fix master data or rules and replay only the assignments |
+| Response feels “slow” | Measure receive, CRM, assignment, system acknowledgement, human attempt and contact separately | No human coverage, a queue, wrong business-hours meaning or provider delay | Fix the exact blockage. Do not hide it with an automatic message |
+| Contact rate is poor | Check each source, phone validity, time, caller name and attempts by group | Poor source, DND, wrong numbers or rep behaviour | Give evidence to marketing or the phone owner. Follow people's preferences; do not send more spam |
+| Qualification falls | Check where people leave each question, property fit, language and a sample by rep | Too many questions, wrong project, or a problem in script or data | Ask fewer or branching questions, offer a person, and give product feedback to the client |
+| Many visits booked, few attended | Check meanings, results, reschedules, map and host | Bookings were not real, slots or directions were bad, intent was weak, or site had a problem | Improve confirmation, rescheduling, directions and host work. Split results by site, slot and source |
+| Visits missing from calendar | Compare visit ID, calendar mapping, webhook and sync channel | Part of the workflow failed, someone deleted it, or the watch expired | Stop false confirmations. Make records agree or recreate safely with idempotency, and renew sync |
+| Calendar has two visits | Search for the fixed IDs and retries that created events | Timeout result was unclear, retry was blind, or two actions happened at once | Coordinator reviews and keeps one. Add a fixed ID or lock |
+| Reminder sent after cancellation | Check queue or job cancellation and when state was read | Old cached state, systems not connected or two actions happened at once | Stop the queue, check all affected contacts and read current state again just before sending |
+| WhatsApp template rejected or paused | Read the provider's reason, category, language and current policy | Wrong variables or content, quality issue or policy change | Use an approved fallback. Fix, approve and test again. Never bypass it with free-form text |
+| WhatsApp failures suddenly rise | Check provider, account, quality, rate, number and source status | Account limit, bad numbers, outage or complaints | Slow or stop sending. Check provider status and support, and have client review compliance |
+| SMS not delivered | Check PE, header, template, registered chain, scrub and provider status | DLT does not match, DND applies or variable does not match | Client, TSP or RTM fixes it. Never move to a personal SIM |
+| AI gives a wrong fact | Check source, version, retrieval, prompt and output-validation logs | Old knowledge, unsupported generation or injection | Turn off the AI answer, send to a person, fix the source and control, and repeat all evaluations |
+| AI misses an opt-out | Check the exact words, language, classifier and limit | Keyword list is too narrow or language is mixed | Use strict fixed rules plus a person. Add reviewed cases to the critical test set |
+| Dashboard total does not match | Check query version, time, group, exclusions, joins and duplicate removal | Many-to-many join, reschedules or a state that changed | Compare raw IDs, version the KPI and correct old results if needed |
+| Funnel rate suddenly “improves” | Check raw denominators, validity rules and state changes | Records were reclassified, a source is missing or recent group is not mature | Mark the break in measurement. Run the comparison again with matching meanings |
+| Workflow cost suddenly rises | Split volume by workflow and inspect retries, loops and message jobs | Retry storm, one paid action for every item, or bad trigger | Use a circuit breaker and cost limit. Redesign batching and state, and review the vendor plan |
+| Client says “leads are bad” | Check validity, contact, fit and attendance for each source | Marketing quality or the sales process | Show evidence for each stage, agree the owner and avoid one broad conclusion |
+| Reps avoid the CRM | Check too many fields, mobile use, incentives and whether managers use it | Process does not fit or sponsor is weak | Remove fields, connect the tools, coach users and give someone daily ownership of exceptions |
+| Client asks for endless changes | Check scope, use, change log and margin | SOW is unclear or chat requests are treated as free | Group the backlog, use a change order, raise the price or refuse |
+| Retainer loses money | Check hours, costs, incidents and scope for that client | Founder time was ignored or too many custom paths exist | Standardise, raise the price, reduce work or leave |
+| Nobody replies to outreach | Compare ICP, list, trigger, message and delivery by group | Generic message, wrong buyer, no proof or no painful problem | Run 10 customer interviews, narrow the target and change one thing at a time |
+| Discovery calls do not become paid pilots | Review recorded objections, authority, economics, data and access | Curiosity without pain, too much free advice or risk is too high | Sell a paid diagnostic, make conditions and proof stronger, or reject the lead |
 
 ### 37.3 Reconciliation repair rules
 
 | Gap | Safe repair |
 |---|---|
-| Source event missing in CRM | Revalidate current consent/project/status; import with original ID/time; suppress outdated side effects |
-| CRM lead missing message | Check eligibility/current conversation and existing provider send intent/status; do not automatically resend |
-| Message exists, CRM activity missing | Attach provider ID/status to existing lead; no new customer message |
-| CRM visit missing calendar | Verify customer/site truth; create deterministic event or mark exception before communication |
-| Calendar visit missing CRM | Search by private opaque visit ID/owner/time; create/link only after identity review |
-| Opt-out differs by system | Apply safest suppression immediately, then resolve scope/evidence |
-| Owner differs across tools | Preserve history; client manager selects canonical current owner; prevent loops |
+| Source event missing in CRM | Check current consent, project and state again. Import with the first ID and time. Block any old action that should no longer happen |
+| CRM lead has no message | Check current eligibility and conversation, plus the provider's existing send intent and status. Do not resend automatically |
+| Message exists but CRM activity is missing | Add the provider ID and status to the existing lead. Do not send the customer another message |
+| CRM visit has no calendar event | Check what the customer and site actually agreed. Create an event with a fixed ID, or mark an exception before communicating |
+| Calendar visit has no CRM record | Search by the private opaque visit ID, owner and time. Create or link only after checking identity |
+| Opt-out differs between systems | Apply the safest suppression at once. Then find its proper scope and evidence |
+| Owner differs between tools | Keep the history. Client manager chooses the official current owner. Stop update loops |
 
 ### 37.4 Bad-data correction
 
-Never fix production data directly without ticket, authorised actor, before/after record, source evidence, affected downstream states and regression/reconciliation. Bulk corrections need dry-run count, backup/export, second approval, canary and rollback.
+Never change live data directly without a ticket and an authorised person. Keep the before and after record, source evidence, affected later states, repeat-test results and proof that systems agree. A bulk correction also needs a dry-run count, backup or export, second approval, small canary and rollback.
 
 ### 37.5 “No improvement” diagnosis order
 
@@ -5662,15 +5662,15 @@ definitions/data comparable?
 → continue one experiment, reduce scope or exit
 ```
 
-Do not add AI as the default answer.
+Do not treat AI as the automatic answer to this problem.
 
 ### 37.6 Escalation packet to a vendor/client admin
 
-Include account/tenant (non-secret), timestamps/time zone, endpoint/API/version, safe request ID/correlation ID, response/error code, minimal reproduction, expected/actual, impact/count, retries/containment and permission for support access. Redact tokens and unnecessary customer data.
+Include the non-secret account or tenant name, times and time zone. Add the endpoint, API and version, plus a safe request or correlation ID. Give the response or error code and the smallest way to recreate the problem. State the expected result, actual result, effect and count. Add retries, containment and permission for support access. Hide tokens and customer data that support does not need.
 
 ### 37.7 When to stop troubleshooting
 
-Escalate/exit when the client refuses authoritative data/access/owner, a vendor path is unsupported, continuing risks illegal contact/data loss, the same root cause returns without client action, scope economics fail, or a qualified lawyer/CA/security professional is required. Persistence does not mean bypassing authority.
+Escalate or leave when the client will not provide official data, needed access or an owner. Also stop when a vendor path is not supported. Stop if continuing could cause illegal contact or data loss. Escalate if the same root cause returns because the client will not act, or if the scope cannot make money. Get a qualified lawyer, CA or security professional when the issue needs one. Being persistent does not mean acting without authority.
 
 [Back to index](#table-of-contents)
 
@@ -5682,77 +5682,77 @@ Escalate/exit when the client refuses authoritative data/access/owner, a vendor 
 
 ### 38.1 Outcome at day 90
 
-Success is not “business launched.” It is:
+Success does not mean only saying, “I launched a business.” At the end of this plan, success means:
 
-- employment/RERA/tax operating model cleared;
-- 25 qualified interviews completed;
-- at least 100 manually researched target accounts and 10 partners;
-- one narrow synthetic demo and standard diagnostic;
-- 15 discovery calls, 3–5 qualified proposals;
-- at least one unrelated paid pilot, ideally two;
-- no unauthorised live buyer messaging;
-- one accepted implementation or a documented evidence-based pivot/kill decision;
-- ≤₹75,000 cumulative experiment spend.
+- your employment, RERA and tax operating model is cleared;
+- you completed 25 interviews with suitable target customers;
+- you researched at least 100 target accounts and 10 possible partners by hand;
+- you built one small demo with made-up data and one standard diagnostic;
+- you held 15 discovery calls and sent 3–5 qualified proposals;
+- at least one unrelated client paid for a pilot, and ideally two did;
+- you sent no live buyer a message without authority;
+- you have one accepted setup, or a written decision based on evidence to change or stop;
+- total test spending is ≤₹75,000.
 
 ### 38.2 Days 1–7 — legal boundary and focus
 
 | Day | Action | Output/evidence |
 |---:|---|---|
-| 1 | Read employment contract/policies; list conflicts/IP/NOC questions | Written boundary; lawyer/HR question list |
-| 2 | Choose provisional Model A backend-only; prepare exact one-page SOW behaviour | Counsel can assess actual facts |
-| 3 | Book Maharashtra RERA lawyer and CA; do not contact buyer leads | Written consultation dates/budget |
-| 4 | Define one ICP: Pune CP/mandate firm, 5–25 reps, active registered project, meaningful inbound | ICP card and rejection list |
-| 5 | Draft interview questions and evidence sheet; no pitch | Script and CRM fields |
-| 6 | Research first 20 accounts/projects using public official/business sources | Source URLs, project/agent verification, buyer hypothesis |
-| 7 | Weekly review, money/time blocks and stop list | Calendar, spend ledger, decision log |
+| 1 | Read your employment agreement and policies. List questions about conflicts, IP and an NOC | Written work boundary and a question list for lawyer or HR |
+| 2 | Use Model A, backend-only, for now. Write one page describing the exact SOW actions | The lawyer can judge the real work, not a vague label |
+| 3 | Book a Maharashtra RERA lawyer and CA. Do not contact buyer leads | Written meeting dates and budget |
+| 4 | Define one ICP: a Pune CP or mandate firm with 5–25 reps, an active registered project and meaningful incoming volume | ICP card and rejection list |
+| 5 | Write interview questions and an evidence sheet. Do not pitch | Interview script and CRM fields |
+| 6 | Research the first 20 accounts and projects through public official or business sources | Source URLs, proof of project and agent, and your idea about the buyer |
+| 7 | Review the week. Set money and time blocks and a list of work you will refuse | Calendar, spending ledger and decision log |
 
 ### 38.3 Weeks 2–4 — 25 interviews, zero custom build
 
 | Week | Activity target | Deliverable | Gate |
 |---:|---|---|---|
-| 2 | 20 accounts, 10 contacts, 5 interviews | Five real last-lead journeys and exact words | No repeated pain → change micro-segment |
-| 3 | 30 accounts, 10 contacts, 7 interviews, 2 partners | Problem frequency/cost/owner table | No data/owner access → diagnostic-only proposition |
-| 4 | 30 accounts, 13 interviews, 3 partner calls | 25-interview evidence map and ranked problem | <5 repeat same pain → do not build |
+| 2 | 20 accounts, 10 contacts and 5 interviews | Five real recent lead journeys and the person's exact words | If the same pain does not repeat, change the small target segment |
+| 3 | 30 accounts, 10 contacts, 7 interviews and 2 partners | Table showing how often the problem happens, its cost and its owner | If no data or owner can be accessed, offer only a diagnostic |
+| 4 | 30 accounts, 13 interviews and 3 partner calls | Evidence map from 25 interviews and problems in priority order | If <5 people report the same pain, do not build |
 
 Interview rules:
 
-- no free custom workflow design;
-- ask about the last real case, not hypothetical desire;
-- quantify raw/valid/contact/qualified/scheduled/attended and response tail where possible;
-- ask what they tried and paid for;
-- record actual buyer, urgency, access and next step;
-- reject scraping/spam/guarantee requests;
-- ask for introductions only after value/trust.
+- Do not design a custom workflow for free.
+- Ask about the last real case, not what the person might want in theory.
+- Where possible, count raw, valid, contacted, qualified, scheduled and attended leads. Also measure the slow-response tail.
+- Ask what they already tried and what they paid.
+- Record the real buyer, urgency, access and next step.
+- Reject requests for scraping, spam or guarantees.
+- Ask for an introduction only after you have given value and built trust.
 
 ### 38.4 Week 5 — freeze offer and paid diagnostic
 
-Create:
+Create these items:
 
-1. `Lead-to-Site-Visit Leakage Diagnostic`, ₹10,000–₹15,000 credited to pilot.
-2. Scope: one project, approved aggregate/pseudonymised 6–8-week data, funnel dictionary, response P50/P90, top three leaks, risk/economic sensitivity and implementation plan.
-3. Data request, NDA/DPA/access approach.
-4. `VISIT-READY` account score.
-5. Proposal/SOW with client obligations and RERA operating model.
-6. No guarantee; no production access or buyer contact.
+1. A `Lead-to-Site-Visit Leakage Diagnostic` priced at ₹10,000–₹15,000. Credit this amount toward the pilot.
+2. Its scope covers one project and approved grouped or pseudonymised data for 6–8 weeks. It includes a funnel dictionary, P50 and P90 response times, the top three leaks, risk and money sensitivity, and a setup plan.
+3. A data request and the approach for the NDA, DPA and access.
+4. A `VISIT-READY` score for the account.
+5. A proposal and SOW stating client duties and the RERA operating model.
+6. No guarantee, no live-system access and no buyer contact.
 
-Gate: three interviewed buyers say this diagnostic would inform a current decision, and counsel/CA boundary is documented.
+Pass this gate only when three buyers you interviewed say the diagnostic would help a decision they face now. You must also have the lawyer and CA boundary in writing.
 
 ### 38.5 Week 6 — synthetic demo and proof assets
 
-Build only with synthetic/test data:
+Build only with made-up test data:
 
-- one authenticated source event;
-- separate contact/inquiry/visit records;
-- duplicate replay protection;
-- project/roster mapping and fallback;
-- internal acknowledgement/task—buyer messaging only in safe test channel;
-- qualification fields;
-- collision-safe visit lifecycle;
-- daily reconciliation and failure alert;
-- dashboard with frozen funnel counts/P50/P90;
-- opt-out/kill-switch/failure demo.
+- one source event whose identity is checked;
+- separate records for the contact, enquiry and visit;
+- protection from a duplicate replay;
+- project and roster mapping, with a fallback;
+- an internal acknowledgement or task. Send buyer messages only through a safe test channel;
+- fields for qualification;
+- the full visit lifecycle with protection from two people taking the same slot;
+- a daily comparison of records and an alert for failure;
+- a dashboard with fixed funnel counts and P50 and P90;
+- a demo of opt-out, kill switch and failure handling.
 
-Record a 5–7 minute walkthrough; do not imply client/results you do not have.
+Record a walkthrough of 5–7 minutes. Never suggest that you have a client or result that you do not have.
 
 ### 38.6 Weeks 7–8 — sell the first paid engagement
 
@@ -5765,93 +5765,93 @@ Record a 5–7 minute walkthrough; do not imply client/results you do not have.
 | Discovery calls | 3 |
 | Paid diagnostic/pilot proposals | 1–2 |
 
-Use one truthful trigger and one question. After roughly five relevant touches over about 21 business days with no engagement, send a close-the-loop note and stop. Do not cold WhatsApp consumers or bulk-message directories.
+Use one true reason for contacting the account and ask one question. If there is no reply after roughly five useful contacts over about 21 business days, send a final note and stop. Do not cold-message consumers on WhatsApp. Do not send bulk messages to names from a directory.
 
 ### 38.7 Week 9 — diagnostic
 
-1. Collect advance and signed documents.
-2. Receive minimum approved data/access.
-3. Freeze definitions/exclusions/date range.
-4. Reconcile sources and calculate data-quality score.
-5. Map current journey and root causes.
-6. Estimate break-even with client contribution ranges.
-7. Identify one controllable bottleneck.
-8. Present `proceed / instrument first / client-fix / no-fit` recommendation.
+1. Collect the advance payment and signed documents.
+2. Receive only the minimum approved data and access.
+3. Fix the meanings, exclusions and date range before analysis.
+4. Make source records agree and calculate the data-quality score.
+5. Map the current journey and the real causes of failure.
+6. Estimate break-even using a range for the client's contribution.
+7. Find one blockage that this work can control.
+8. Give one recommendation: `proceed / instrument first / client-fix / no-fit`.
 
-An honest no-build conclusion is a successful diagnostic.
+If the honest answer is “do not build,” the diagnostic still succeeded.
 
 ### 38.8 Week 10 — pilot blueprint
 
-If the client qualifies and legal model is clear:
+If the client passes the checks and the legal model is clear, limit the pilot to:
 
-- one client, one registered project phase, ≤2 sources, one CRM, one approved channel, ≤10 users and capped leads;
-- signed RACI, data flow, campaign manifest and project/agent evidence;
-- baseline, success/guardrail metrics and confounder plan;
-- architecture/data model/workflows/acceptance tests;
-- support hours/manual fallback/incident contacts;
-- client-owned accounts/vendor billing;
-- 60% payment before build and remainder before live traffic;
-- no AI/voice unless strictly needed and separately approved.
+- one client, one registered project phase, ≤2 sources, one CRM, one approved channel, ≤10 users and a fixed lead limit;
+- a signed RACI, data flow and campaign manifest, plus project and agent evidence;
+- the starting baseline, measures of success and safety, and a plan for other changes that could affect results;
+- the architecture, data model, workflows and tests for acceptance;
+- support hours, a manual fallback and incident contacts;
+- accounts owned by the client and vendor bills paid by the client;
+- 60% payment before you build and the rest before live traffic starts;
+- no AI or voice unless it is truly needed and separately approved.
 
 ### 38.9 Week 11 — build and UAT
 
 | Day | Focus |
 |---|---|
-| 1 | Test environment/access, source schema and durable intake |
-| 2 | Identity/dedup/project mapping/CRM upsert |
-| 3 | Assignment/SLA/fallback/internal tasks |
-| 4 | Approved customer path or client-staff handoff, suppression |
-| 5 | Visit states/calendar transaction/reminders |
-| 6 | Reporting/reconciliation/alerts/retention |
-| 7 | Full positive/negative/race/outage/security UAT and fixes |
+| 1 | Set up the test area and access. Check the source data shape and durable intake |
+| 2 | Build identity, duplicate handling, project mapping and CRM upsert |
+| 3 | Build assignment, SLA timers, fallback and internal tasks |
+| 4 | Build the approved customer path or hand-off to client staff, plus suppression |
+| 5 | Build visit states, safe calendar action and reminders |
+| 6 | Build reports, record comparison, alerts and retention |
+| 7 | Run full UAT for success, failure, two actions at once, outage and security. Fix problems |
 
-No open critical/high defect at launch.
+At launch, no critical or high defect may still be open.
 
 ### 38.10 Week 12 — limited go-live/hypercare
 
-Release test → canary → limited cohort. Reconcile every event, sample every high-risk conversation, check today's visits/opt-outs/queues daily, freeze nonessential changes and give client one factual daily status. Abort affected side effects on a guardrail breach.
+Move in this order: test → canary → limited group. Compare every event. Check every high-risk conversation in the sample. Each day, check today's visits, opt-outs and queues. Stop changes that are not needed, and give the client one factual daily update. If a safety limit is broken, stop the affected real-world action.
 
 ### 38.11 Days 85–90 — decision review
 
-If 30 live days are not complete, this is an interim operational review—not a final uplift claim.
+If you do not yet have 30 live days, call this an early operating review. Do not call it a final claim of improvement.
 
 | Decision | Evidence |
 |---|---|
-| Convert to retainer | Acceptance passed; controllable metric/adoption improved; economics plausible; no critical unresolved issue |
-| Extend observation | Volume/maturation insufficient but system/adoption sound; fixed end date/no free scope expansion |
-| Correct/retest | In-scope defect/root cause with clear plan and limit |
-| Client prerequisite | Staffing/data/content/CRM ownership prevents outcome; client commits owner/date |
-| Hand off/stop | No controllable value, poor economics, no sponsor, illegal conduct or scope refusal |
+| Convert to retainer | Acceptance passed, a measure you control or staff use improved, the economics look possible, and no critical issue remains open |
+| Extend observation | There is not enough volume or time for results, but system and use are sound. Set a fixed end date and add no free scope |
+| Correct/retest | A defect or root cause is inside scope, and there is a clear limited plan |
+| Client prerequisite | Staff, data, content or CRM ownership blocks the result. Client names an owner and date |
+| Hand off/stop | There is no value you can control, economics are poor, no sponsor exists, conduct is illegal, or client refuses scope controls |
 
 ### 38.12 Ninety-day scoreboard
 
 | Metric | Green | Amber | Red/action |
 |---|---:|---:|---|
-| Qualified interviews | ≥25 | 15–24 | <15: increase disciplined outreach/referrals |
-| Repeated pain | ≥5 independent | 3–4 | <3: change ICP/problem |
-| Target accounts researched | ≥100 | 60–99 | <60: fix schedule |
-| Discovery held | ≥15 | 8–14 | <8: list/message/referral problem |
-| Paid proposals | 3–5 | 1–2 | 0: insufficient qualification/offer |
-| Unrelated paying clients | ≥2 | 1 | 0: no payment validation; do not scale spend |
-| Cumulative spend | ≤₹75k | ₹75–100k | >₹100k pre-revenue: stop |
-| RERA/employment/tax status | Written cleared | Advice pending/no live work | Live work unclear: stop |
-| Critical production incident | 0 | — | Any: contain/review before expansion |
-| Standard reusable scope | ≥70% | 40–69% | <40%: too custom |
+| Qualified interviews | ≥25 | 15–24 | <15: do more careful outreach and referral work |
+| Repeated pain | ≥5 independent | 3–4 | <3: change the ICP or problem |
+| Target accounts researched | ≥100 | 60–99 | <60: fix your work schedule |
+| Discovery held | ≥15 | 8–14 | <8: fix the account list, message or referrals |
+| Paid proposals | 3–5 | 1–2 | 0: qualification or offer is too weak |
+| Unrelated paying clients | ≥2 | 1 | 0: payment demand is not proven, so do not increase spending |
+| Cumulative spend | ≤₹75k | ₹75–100k | >₹100k before revenue: stop |
+| RERA/employment/tax status | Cleared in writing | Advice is pending and no live work happens | Live work is unclear: stop |
+| Critical production incident | 0 | — | Any: contain and review it before expanding |
+| Standard reusable scope | ≥70% | 40–69% | <40%: the work is too custom |
 
 ### 38.13 If no one buys by day 90
 
-Do not buy ads, build SaaS or reduce price blindly. Categorise evidence:
+Do not blindly buy ads, build SaaS or lower the price. Put the evidence into the right group:
 
-- problem not frequent/costly → change problem;
-- wrong buyer → target owner/presales/marketing head;
-- no trust → narrow paid diagnostic, partner/channel, stronger synthetic evidence;
-- no urgency → trigger-based accounts only;
-- no economic fit → higher-volume/value segment;
-- compliance burden too high → strict backend RevOps for client staff or choose adjacent non-regulated vertical;
-- many proposals but no close → review recordings, scope/risk/payment and objections;
-- client wants prohibited practice → reject market slice, not standards.
+- the problem is not common or costly → choose a different problem;
+- you spoke to the wrong buyer → target the owner, presales head or marketing head;
+- people do not trust you → offer a smaller paid diagnostic, use a partner or channel, or show stronger proof made with test data;
+- there is no urgency → contact only accounts with a real trigger;
+- the economics do not work → choose a segment with more volume or value;
+- compliance costs too much → do strict backend RevOps for client staff, or choose a nearby industry with less regulation;
+- you send many proposals but none closes → review call recordings, scope, risk, payment and objections;
+- the client wants a banned practice → reject that part of the market, not your standards.
 
-Then run one new 30-day hypothesis with a written stop rule. Preserve the ₹5 lakh.
+Then test one new idea for 30 days with a written stop rule. Protect the ₹5 lakh.
 
 [Back to index](#table-of-contents)
 
@@ -5863,62 +5863,62 @@ Then run one new 30-day hypothesis with a written stop rule. Preserve the ₹5 l
 
 ### 39.1 Direct answer: what I would do in your place
 
-Given ₹1 lakh monthly in-hand salary, ₹5 lakh bank savings and ₹50,000/month investable capacity, I would:
+You receive ₹1 lakh each month after deductions. You have ₹5 lakh in the bank and can invest ₹50,000/month. If I were in your place, I would do this:
 
-1. Keep roughly ₹3.5 lakh as a separate personal emergency reserve, adjusted to actual essential expenses.
-2. Continue the ₹50,000 monthly long-term investment/saving plan; use a SEBI-registered investment adviser for personal asset allocation and taxes.
-3. Allocate at most ₹75,000 cumulatively to a 90-day business test and release it only by evidence gates.
-4. Start with **backend Lead-to-Site-Visit RevOps** for one Pune ICP while obtaining the written RERA/employment/tax opinions.
-5. If direct buyer response/qualification/booking remains in scope and counsel does not clearly exclude it, complete MahaRERA agent registration/competency/project-association requirements before live work.
-6. Sell a ₹10k–₹15k paid leakage diagnostic, then a ₹30k–₹45k narrow paid pilot; do not build a CRM or AI caller.
-7. Target a licensed 5–25-person channel-partner/mandate team or emerging developer with roughly 300+ opted-in inbound leads/month, eight weeks of data, human coverage and a live registered project.
-8. Keep the job until the conservative resignation gate in Chapter 33 is satisfied.
+1. Keep about ₹3.5 lakh in a separate emergency fund. Change this amount if your real essential expenses show that you need a different reserve.
+2. Continue the ₹50,000 monthly long-term saving and investment plan. Ask a SEBI-registered investment adviser to help with your asset mix and taxes.
+3. Spend no more than ₹75,000 in total on the 90-day business test. Release money only when the evidence gate allows it.
+4. Start with **backend Lead-to-Site-Visit RevOps** for one Pune ICP. At the same time, get written opinions on RERA, your employment and tax.
+5. Direct replies to buyers, qualification or booking may still be treated as agent work. If your lawyer does not clearly say they are outside that rule, complete MahaRERA agent registration, competency and project-association requirements before live work.
+6. First sell a ₹10k–₹15k paid diagnostic that finds leaks. Then sell a small ₹30k–₹45k paid pilot. Do not build a CRM or AI caller.
+7. Target a licensed channel-partner or mandate team with 5–25 people, or an emerging developer. Look for roughly 300+ opted-in incoming leads/month, eight weeks of records, people available to respond and a live registered project.
+8. Keep your job until you pass the careful resignation gate in Chapter 33.
 9. Put **₹0 of the ₹5 lakh into day trading as a FIRE strategy**.
-10. Invest business distributable profit rather than confusing revenue/setup-fee cash with wealth.
+10. Invest business profit that is truly available to distribute. Do not mistake revenue or setup-fee cash for wealth.
 
 ### 39.2 Why not day trading
 
-SEBI reported that 7 out of 10 individual intraday traders in the equity cash segment made losses in its July 2024 study. Its September 2024 derivatives study reported 93% of individual equity F&O traders lost money across FY22–FY24, with aggregate losses exceeding ₹1.8 lakh crore; SEBI's later FY25 analysis reported around 91% loss-makers. These population results do not prove every individual will lose, but they make leveraged/speculative trading a poor primary FIRE plan: [SEBI cash intraday study](https://www.sebi.gov.in/media-and-notifications/press-releases/jul-2024/sebi-study-finds-that-7-out-of-10-individual-intraday-traders-in-equity-cash-segment-make-losses_84948.html), [SEBI F&O FY22–FY24 study](https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2024/updated-sebi-study-reveals-93-of-individual-traders-incurred-losses-in-equity-fando-between-fy22-and-fy24-aggregate-losses-exceed-1-8-lakh-crores-over-three-years_86906.html), [SEBI FY25 analysis](https://www.sebi.gov.in/sebi_data/attachdocs/jul-2025/1751900271726.pdf).
+In a July 2024 study, SEBI reported that 7 out of 10 individual intraday traders in the equity cash market lost money. Its September 2024 derivatives study found that 93% of individual equity F&O traders lost money across FY22–FY24. Together, their losses were more than ₹1.8 lakh crore. A later SEBI FY25 study reported that around 91% lost money. These group results do not prove that every person will lose. But they show why leveraged or speculative trading is a poor main plan for FIRE: [SEBI cash intraday study](https://www.sebi.gov.in/media-and-notifications/press-releases/jul-2024/sebi-study-finds-that-7-out-of-10-individual-intraday-traders-in-equity-cash-segment-make-losses_84948.html), [SEBI F&O FY22–FY24 study](https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2024/updated-sebi-study-reveals-93-of-individual-traders-incurred-losses-in-equity-fando-between-fy22-and-fy24-aggregate-losses-exceed-1-8-lakh-crores-over-three-years_86906.html), [SEBI FY25 analysis](https://www.sebi.gov.in/sebi_data/attachdocs/jul-2025/1751900271726.pdf).
 
-The newest SEBI FY25–FY26 profitability/trading studies were published 20 August 2026; review them before quoting newer figures: [SEBI profitability study page](https://www.sebi.gov.in/reports-and-statistics/research/aug-2026/study-profitability-of-individual-traders-in-the-equity-derivatives-segment-fy25-fy26-_103835.html).
+SEBI published its newest FY25–FY26 profit and trading studies on 20 August 2026. Read them before you repeat any newer numbers: [SEBI profitability study page](https://www.sebi.gov.in/reports-and-statistics/research/aug-2026/study-profitability-of-individual-traders-in-the-equity-derivatives-segment-fy25-fy26-_103835.html).
 
 ### 39.3 Business-choice scorecard
 
-Scores are decision-model judgements for your stated situation, not measured probabilities. Higher is better; for “competition/regulatory ease,” high means easier/more attractive.
+These scores are reasoned judgements for your situation. They are not measured chances of success. A higher score is better. For “competition/regulatory ease,” a higher score means the path is easier or more attractive.
 
 | Factor | Lead-to-visit RevOps /100 | Day trading /100 | Inventory-led e-commerce /100 | Reason for RevOps score |
 |---|---:|---:|---:|---|
-| Bootstrap capital efficiency | **92** | 55 | 48 | Interviews/service first; client owns production tools |
-| Ability to keep salary | **82** | 75 | 58 | Bounded service possible, but support hours must be contracted |
-| Time to first paid validation | **76** | 100 to place a trade, not validate profit | 70 | 4–12 weeks if outreach works; legal gate adds time |
-| Control over value creation | **84** | 25 | 62 | Process/sales/delivery are learnable; client dependencies remain |
-| Recurring revenue potential | **86** | 10 | 68 | Retainer after setup/outcome proof |
-| Cash downside containment | **90** | 25 | 40 | ₹75k capped test versus trading/inventory/ad loss |
-| Scalability | 72 | 35 | **80** | Must standardise/hire; product module later |
-| Competitive ease | 48 | 10 | 35 | CRMs/agencies exist; differentiation is managed outcomes |
-| Regulatory ease | 30 | 40 | 60 | RERA/privacy/telecom are serious launch gates |
-| Skill transferability | **90** | 35 | 75 | CRM/API/sales/ops/security skills transfer across B2B sectors |
-| Evidence-based FIRE suitability | **82** | 10 | 58 | Can create investable cash flow without staking core capital |
-| Weighted overall fit | **79** | 31 | 59 | RevOps wins only if legal/ethical operating model is cleared |
+| Bootstrap capital efficiency | **92** | 55 | 48 | Start with interviews and a service. The client owns the live tools |
+| Ability to keep salary | **82** | 75 | 58 | You can limit the service, but the contract must state support hours |
+| Time to first paid validation | **76** | 100 to place a trade, not validate profit | 70 | It may take 4–12 weeks if outreach works. Legal checks add time |
+| Control over value creation | **84** | 25 | 62 | You can learn the process, sales and delivery skills. You still depend on the client |
+| Recurring revenue potential | **86** | 10 | 68 | A monthly retainer can follow proof from the setup |
+| Cash downside containment | **90** | 25 | 40 | The test is limited to ₹75k, unlike possible trading, stock or ad losses |
+| Scalability | 72 | 35 | **80** | You must standardise and hire. A product module can come later |
+| Competitive ease | 48 | 10 | 35 | CRMs and agencies already exist. Your difference is running and proving the result |
+| Regulatory ease | 30 | 40 | 60 | RERA, privacy and telecom are serious gates before launch |
+| Skill transferability | **90** | 35 | 75 | CRM, API, sales, operations and security skills work in other B2B industries too |
+| Evidence-based FIRE suitability | **82** | 10 | 58 | It can create cash to invest without risking your main savings |
+| Weighted overall fit | **79** | 31 | 59 | RevOps wins only after the legal and ethical model is cleared |
 
-E-commerce can be a valid business, but it usually requires product selection, supplier/quality/returns, marketplace/ad dependence, working capital and inventory or brand risk. This service better matches a ₹75k validation budget because the first asset is customer understanding—not stock.
+E-commerce can be a good business. But it often needs product selection, suppliers, quality control, returns, marketplaces, ads, working capital and inventory. It also carries brand risk. This service fits a ₹75k test budget better because your first asset is knowledge about customers, not goods in stock.
 
 ### 39.4 What ₹5 crore means
 
-Define your number as investable net worth available to fund living costs. Track separately:
+Define this number as net wealth that you can invest and use to pay living costs. Track these parts separately:
 
-- liquid emergency reserve;
-- long-term financial portfolio;
-- business cash needed for operations/tax;
-- illiquid home/property;
-- uncertain business valuation;
-- debt and contingent liabilities.
+- emergency money that you can quickly access;
+- your long-term investment portfolio;
+- business cash needed for operations and tax;
+- a home or property that cannot quickly become cash;
+- a business value that is uncertain;
+- debt and possible future liabilities.
 
-Do not count a hoped-for agency valuation or invoices receivable at face value. The roadmap below treats ₹5 crore as a **nominal portfolio target**, not guaranteed purchasing power.
+Do not count the price you hope someone may pay for the agency. Do not count unpaid invoices at their full face value. The plan below treats ₹5 crore as a **nominal portfolio target**, which means the number of rupees shown in the future. It does not promise today's buying power.
 
 ### 39.5 Spending-based reality check
 
-Your current implied personal spend is roughly ₹50,000/month or ₹6 lakh/year. A PFRDA-hosted Indian-context research chapter argues that the often-cited 4% withdrawal rule may be too high for India and suggests roughly 3.0%–3.5% as more appropriate in its model; it is research, not a guarantee or personal advice: [PFRDA publication](https://www.pfrda.org.in/documents/33652/198397/Pension%2BSecurity%2Bin%2BIndia-Book.pdf).
+Your numbers suggest that you currently spend about ₹50,000/month, or ₹6 lakh/year. A research chapter hosted by PFRDA looks at India. It says the commonly quoted 4% withdrawal rule may be too high for India. Its model suggests roughly 3.0%–3.5% instead. This is research, not a guarantee or advice made for you: [PFRDA publication](https://www.pfrda.org.in/documents/33652/198397/Pension%2BSecurity%2Bin%2BIndia-Book.pdf).
 
 | Corpus | 3.0% first-year withdrawal | 3.5% | 4.0% reference only |
 |---:|---:|---:|---:|
@@ -5926,11 +5926,11 @@ Your current implied personal spend is roughly ₹50,000/month or ₹6 lakh/year
 | ₹3 crore | ₹9L; ₹75k/month | ₹10.5L; ₹87.5k/month | ₹12L; ₹1L/month |
 | **₹5 crore** | **₹15L; ₹1.25L/month** | **₹17.5L; ₹1.46L/month** | ₹20L; ₹1.67L/month |
 
-All are before tax, fees, healthcare, dependants and sequence risk. A spending plan, not a round number alone, determines financial independence.
+Every amount is before tax, fees, healthcare, dependants and sequence risk, which is the risk of poor returns early in retirement. Financial independence depends on your spending plan, not only a round target number.
 
 ### 39.6 Inflation
 
-At an assumed 6% annual inflation—not a forecast—₹5 crore of today's purchasing power would require:
+This example assumes 6% inflation each year. That is an assumption, not a forecast. To keep the buying power of ₹5 crore today, the future number would need to be:
 
 | Years from now | Future nominal equivalent of ₹5 crore today |
 |---:|---:|
@@ -5941,24 +5941,24 @@ At an assumed 6% annual inflation—not a forecast—₹5 crore of today's purch
 | 15 | ₹11.98 crore |
 | 20 | ₹16.04 crore |
 
-Therefore maintain two trackers: `nominal portfolio` and `today's-rupee target = nominal ÷ inflation index`.
+So keep two records. `nominal portfolio` is the future number of rupees. `today's-rupee target = nominal ÷ inflation index` shows buying power in today's money.
 
 ### 39.7 Salary-only path
 
-Assumptions: ₹1.5 lakh investable starting capital after retaining ₹3.5 lakh emergency cash; ₹50,000 invested at each month-end; no withdrawals/tax/fees; steady nominal annual return converted to an effective monthly rate. Returns are planning scenarios, not promises.
+This example starts with ₹1.5 lakh invested after keeping ₹3.5 lakh as emergency cash. It adds ₹50,000 at the end of every month. It assumes no withdrawals, tax or fees. It changes the stated yearly return into an effective monthly rate and assumes that return stays steady. Real returns do not stay steady. These are planning examples, not promises.
 
 | Nominal return assumption | Approximate time to nominal ₹5 crore | Age from 29 | Warning |
 |---:|---:|---:|---|
-| 6% | 30.17 years | ~59 | Inflation materially reduces real value |
-| 8% | 25.83 years | ~55 | Actual returns vary and taxes/fees slow it |
-| 10% | 22.83 years | ~52 | Central illustration, not expected return guarantee |
-| 12% | 20.50 years | ~49–50 | Optimistic long-run assumption; larger drawdowns likely |
+| 6% | 30.17 years | ~59 | Inflation greatly lowers what the money can buy |
+| 8% | 25.83 years | ~55 | Real returns change, and tax and fees make the journey slower |
+| 10% | 22.83 years | ~52 | This is the main example, not a guaranteed expected return |
+| 12% | 20.50 years | ~49–50 | This is an optimistic long-term assumption. Large falls are more likely |
 
-Investing all ₹5 lakh rather than keeping the ₹3.5 lakh reserve shortens the 10% illustration only from about 22.83 to 22.25 years; the safety reserve is worth more than that small theoretical gain.
+If you invest all ₹5 lakh instead of keeping the ₹3.5 lakh reserve, the 10% example falls only from about 22.83 to 22.25 years. The emergency protection is worth more than this small theoretical saving in time.
 
 ### 39.8 Business-accelerated contribution scenarios
 
-These use the same ₹1.5 lakh starting portfolio and 10% nominal return assumption. “Monthly invested” means salary plus **after-tax/distributable** business cash actually transferred to investments—not revenue.
+These examples also start with a ₹1.5 lakh portfolio and assume a 10% nominal return. “Monthly invested” means money from salary plus **after-tax/distributable** business cash that you actually move into investments. It does not mean business revenue.
 
 | Scenario | Monthly invested Y1 | Y2 | Y3 | Y4 onward | Approx. nominal ₹5Cr time | ₹5Cr real value at 6% inflation at arrival |
 |---|---:|---:|---:|---:|---:|---:|
@@ -5968,7 +5968,7 @@ These use the same ₹1.5 lakh starting portfolio and 10% nominal return assumpt
 | Strong service company | ₹50k | ₹1.5L | ₹3L | ₹5L | **8.08 years** | ~₹3.12Cr |
 | Breakout company | ₹50k | ₹2L | ₹5L | ₹8L | **6.25 years** | ~₹3.47Cr |
 
-The “high-end time” of about **6.25 years** requires a breakout path sustaining ₹8 lakh/month invested from year 4 plus the assumed return. It is mathematically possible under those inputs, not a forecast. The validated-agency case around **10.67 years** is a more useful ambitious planning scenario, still far from guaranteed.
+The fastest number shown, about **6.25 years**, needs the breakout path. That path must keep investing ₹8 lakh/month from year 4 and also earn the assumed return. The maths works with those inputs, but it is not a forecast. The validated-agency case of about **10.67 years** is a more useful ambitious case. It is still far from guaranteed.
 
 ### 39.9 Return sensitivity for the same contribution paths
 
@@ -5980,20 +5980,20 @@ The “high-end time” of about **6.25 years** requires a breakout path sustain
 | Strong company | 8.75y | 8.42y | 8.08y | 7.83y |
 | Breakout company | 6.58y | 6.42y | 6.25y | 6.17y |
 
-As contribution grows, business execution matters far more than squeezing an extra 2% assumed portfolio return. Do not take day-trading risk to chase the least important variable.
+As the amount you invest grows, building the business well matters much more than assuming an extra 2% investment return. Do not take day-trading risk to chase the less important part of the model.
 
 ### 39.10 Business downside, low, base and stretch ranges
 
-These are bottom-up planning cases from package/client counts—not market benchmarks or promises. Profit means pre-tax operating surplus after cash expenses and a reasonable replacement cost for delivery labour, before owner personal investment. True downside exists.
+These are planning cases built from the price of packages and number of clients. They are not market averages or promises. Here, profit means money left before tax after cash costs and a fair cost to replace the delivery work. It is measured before the owner makes a personal investment. A real loss is possible.
 
 | Case | Year 1 revenue / profit | Year 2 | Year 3 | What must be true |
 |---|---|---|---|---|
-| Validation fails/downside | ₹0–₹1L revenue; **−₹75k to ₹0 profit** | Business stopped; salary plan continues | Business stopped | No repeated paid pain or legal model uneconomic; obey kill gate |
-| Low-success | ₹2–₹5L / **₹0–₹1L** | ₹10–₹18L / **₹1–₹5L** | ₹20–₹35L / **₹4–₹10L** | 1–2 then 3–8 clients, learning/rework and modest price |
-| Base execution | ₹5–₹9L / **₹1–₹3L** | ₹24–₹36L / **₹7–₹13L** | ₹45–₹65L / **₹16–₹26L** | Renewals, ₹30k–₹50k blended retainers, ≥55% gross contribution, first delivery help |
-| Stretch—not plan | ₹10–₹15L / **₹3–₹6L** | ₹50–₹75L / **₹18–₹30L** | ₹1–₹1.5Cr / **₹35–₹60L** | Fast proof, high-ticket mix, team/partners, low churn and disciplined scope |
+| Validation fails/downside | ₹0–₹1L revenue; **−₹75k to ₹0 profit** | Stop the business and continue the salary plan | Business remains stopped | Buyers do not repeatedly pay to solve the pain, or the legal model costs too much. Follow the stop gate |
+| Low-success | ₹2–₹5L / **₹0–₹1L** | ₹10–₹18L / **₹1–₹5L** | ₹20–₹35L / **₹4–₹10L** | First 1–2 and then 3–8 clients, with learning, repeated work and a modest price |
+| Base execution | ₹5–₹9L / **₹1–₹3L** | ₹24–₹36L / **₹7–₹13L** | ₹45–₹65L / **₹16–₹26L** | Clients renew, average retainers are ₹30k–₹50k, gross contribution is ≥55%, and the first delivery helper joins |
+| Stretch—not plan | ₹10–₹15L / **₹3–₹6L** | ₹50–₹75L / **₹18–₹30L** | ₹1–₹1.5Cr / **₹35–₹60L** | Proof comes fast, prices are high, a team and partners help, few clients leave, and scope stays controlled |
 
-Your earlier request for a “low-end annual profit” has one honest answer: it can be negative in year 1 and zero thereafter if you stop. Any table showing guaranteed positive startup profit is false.
+There is only one honest answer to your earlier request for “low-end annual profit.” It can be negative in year 1. It can then be zero if you stop the business. A table that guarantees positive startup profit is false.
 
 ### 39.11 Client-count economics
 
@@ -6004,53 +6004,53 @@ Your earlier request for a “low-end annual profit” has one honest answer: it
 | Strong agency | ₹50k | ₹10L | 35%–45% | ₹3.5L–₹4.5L | 20 |
 | ₹8L/month distributable ambition | ₹60k | ₹20L+ | ~40% before owner tax/distribution | ~₹8L | ~34 clients |
 
-Setup/change fees can add revenue but consume delivery capacity. The final row is a real company with managers and delivery pods—not one founder working nights.
+Setup and change fees can raise revenue, but the work uses delivery capacity. The last row needs a real company with managers and delivery teams. One founder working at night cannot run it alone.
 
 ### 39.12 Five-year operating milestones
 
 | Year | Focus | End-state ambition—not forecast | Do not advance without |
 |---:|---|---|---|
-| 1 | Legal model, Pune proof and standard pilot | 2–5 retained clients, 1–2 defensible cases, standard runbook | Two unrelated payments and renewal evidence |
-| 2 | Repeatable acquisition/delivery | 6–10 clients, implementation/QA support, ≥55% contribution | Stable setup cycle, quality and founder capacity |
-| 3 | Pune/PCMC leadership and adjacent Maharashtra tests | 10–18 clients, partner channel, productised modules | Low concentration and trained team |
-| 4 | Higher-ticket multi-project or selected-city expansion | 15–25 clients with delivery pods/CS | Local/legal/support playbook and economics |
-| 5 | Profitable specialist company or narrow product layer | Investable owner cash grows; optional national/cross-border | Repeatable demand, not vanity scale |
+| 1 | Legal model, proof in Pune and a standard pilot | 2–5 clients on retainers, 1–2 cases you can defend, and a standard runbook | Payments from two unrelated clients and proof of renewal |
+| 2 | A repeatable way to win and serve clients | 6–10 clients, help with setup and QA, and ≥55% contribution | A stable setup cycle, good quality and enough founder time |
+| 3 | Strong position in Pune and PCMC, with tests in nearby Maharashtra markets | 10–18 clients, a partner channel and standard product-like modules | No dangerous concentration and a trained team |
+| 4 | Higher-priced multi-project work or entry into selected cities | 15–25 clients served by delivery pods and customer-success staff | A local, legal and support playbook with working economics |
+| 5 | A profitable specialist company or a small product layer | The owner's investable cash grows. National or cross-border work is optional | Demand that repeats, not growth only for appearance |
 
 ### 39.13 Personal investment operating rules
 
-This book does not prescribe securities or asset allocation. Use a SEBI-registered investment adviser for a plan covering goals, emergency fund, insurance, debt, tax, risk capacity, diversification, rebalancing and succession. General controls:
+This book does not tell you which security to buy or what asset mix to use. Ask a SEBI-registered investment adviser for a plan. It should cover goals, emergency fund, insurance, debt, tax, how much risk you can take, spreading investments, rebalancing and succession. Follow these general controls:
 
-- automate the ₹50,000 monthly contribution separately from the business;
-- do not borrow to invest or use emergency/client/tax money;
-- avoid leverage/F&O/intraday as the FIRE engine;
-- diversify rather than bet on one stock, property, client or your own company;
-- match short-term business/emergency money to liquidity/capital-safety needs;
-- review annually or on life change, not daily market noise;
-- include taxes/fees and maintain nominee/will/records as appropriate;
-- count insurance as risk transfer, not investment return;
-- do not let business success cause lifestyle inflation automatically.
+- automate the ₹50,000 monthly investment separately from business money;
+- never borrow to invest, and never use emergency, client or tax money;
+- do not use leverage, F&O or intraday trading as the engine for FIRE;
+- spread risk instead of betting on one stock, property, client or your own company;
+- keep short-term business and emergency money in places that meet the need for quick access and capital safety;
+- review the plan each year or after a major life change, not because of daily market noise;
+- include taxes and fees. Keep nominees, a will and records where appropriate;
+- treat insurance as protection from risk, not as an investment return;
+- do not automatically raise your lifestyle spending when the business succeeds.
 
-SEBI's investor education material emphasises risk assessment, diversification and investing according to objectives/risk appetite: [SEBI Investor education](https://investor.sebi.gov.in/iematerial.html).
+SEBI's investor education material stresses checking risk, spreading investments and investing for your goals and risk appetite: [SEBI Investor education](https://investor.sebi.gov.in/iematerial.html).
 
 ### 39.14 Monthly FIRE dashboard
 
 | Metric | Formula/entry |
 |---|---|
-| Personal essential monthly spend | 12-month normalised amount |
-| Emergency months | Liquid emergency reserve / essential spend |
-| Investable net worth | Financial assets − relevant liabilities; exclude business operating cash |
-| Today's-rupee FIRE target | Annual expected spend / chosen adviser-reviewed withdrawal rate |
+| Personal essential monthly spend | Use a normal amount based on the last 12-month period |
+| Emergency months | Emergency cash you can access / essential monthly spending |
+| Investable net worth | Financial assets − related debts. Leave out cash needed to run the business |
+| Today's-rupee FIRE target | Expected yearly spending / withdrawal rate chosen after adviser review |
 | Nominal target at horizon | Today's target × `(1 + inflation assumption)^years` |
-| Salary contribution | Actual invested this month |
-| Business distributable contribution | Cash transferred after tax/delivery/buffer |
-| Savings rate | Total invested / after-tax personal cash inflow; define business treatment |
-| Concentration | Largest asset/client/business exposure as appropriate |
-| Progress | Investable net worth / inflation-adjusted target |
-| Assumption review | Return, inflation, spending, tax, horizon and plan version |
+| Salary contribution | Amount from salary actually invested this month |
+| Business distributable contribution | Cash moved to investments after tax, delivery costs and a safety buffer |
+| Savings rate | Total invested / personal cash received after tax. State how business cash is treated |
+| Concentration | Your largest suitable exposure to one asset, client or business |
+| Progress | Investable net worth / target after adjusting for inflation |
+| Assumption review | Return, inflation, spending, tax, time horizon and plan version |
 
 ### 39.15 Decision rule
 
-Judge the business quarterly on paid demand, legal operability, client outcome, renewal, margin, founder health and investable cash. Judge the portfolio annually with a qualified adviser. Never rescue a failing business with FIRE capital or rescue a slow investment plan with trading leverage.
+Every quarter, judge the business on paying demand, whether it can operate legally, client results, renewals, margin, your health and cash available to invest. Review the investment portfolio each year with a qualified adviser. Never use FIRE money to save a failing business. Never use borrowed or leveraged trading to speed up a slow investment plan.
 
 [Back to index](#table-of-contents)
 
@@ -6064,321 +6064,321 @@ Judge the business quarterly on paid demand, legal operability, client outcome, 
 
 ### 40.1 How to use these checklists
 
-A checked box means evidence exists, not that somebody remembers doing the task. Link each material item to a document, screenshot, ticket, export, approval or test result. Write `N/A — reason — approver — date` when an item truly does not apply. Never convert an unresolved legal, privacy, wrong-recipient, duplicate-message or false-confirmation item into “accepted risk” without the accountable client's written decision and qualified advice where required.
+A tick means you have evidence. It does not mean someone only remembers doing the work. For every important item, link a document, screenshot, ticket, export, approval or test result. If an item truly does not apply, write `N/A — reason — approver — date`. Do not casually mark an open legal or privacy issue as “accepted risk.” The same rule applies to a wrong-recipient, duplicate-message or false-confirmation issue. You need a written decision from the responsible client owner and qualified advice when required.
 
 Use four labels:
 
-- `BLOCKER`: no affected production activity may start or continue;
-- `REQUIRED`: close before the named stage ends;
-- `CONDITIONAL`: complete when its trigger applies;
-- `IMPROVEMENT`: prioritise after the safe minimum works.
+- `BLOCKER`: the affected live work must not start or continue;
+- `REQUIRED`: finish it before that stage ends;
+- `CONDITIONAL`: finish it when the stated condition applies;
+- `IMPROVEMENT`: give it priority after the safe minimum is working.
 
 ### 40.2 Founder pre-start checklist
 
-- [ ] `BLOCKER` Read the employment agreement, handbook, IP/confidentiality, moonlighting, non-solicitation and conflict rules.
-- [ ] `BLOCKER` Get written clarification/advice for any overlap with the employer's time, market, customers, data, code, equipment or intellectual property.
-- [ ] `BLOCKER` Write the exact operating model: backend-only RevOps or registered/authorised buyer-facing VisitOps.
-- [ ] `BLOCKER` Give that actual activity description to a Maharashtra RERA lawyer and retain the written opinion.
-- [ ] `REQUIRED` Give the entity, GST, income-tax, professional-tax, bookkeeping and invoicing facts to a CA.
-- [ ] `REQUIRED` Keep personal emergency cash separate; record the amount and the expenses it covers.
-- [ ] `REQUIRED` Create a ₹75,000 maximum 90-day experiment budget with category caps.
-- [ ] `REQUIRED` Open a separate business email, password-manager vault, records folder and money ledger.
-- [ ] `REQUIRED` Enable MFA and full-disk encryption; update the operating system and browser.
-- [ ] `REQUIRED` Define one ICP, one problem, one pilot and one stop rule.
-- [ ] `REQUIRED` Schedule 10–15 weekly hours that do not conflict with employment.
-- [ ] `REQUIRED` List activities you will refuse: bought/scraped consumer lists, personal-SIM bulk messages, false urgency, unsupported claims, unregistered agent work and unapproved production access.
-- [ ] `CONDITIONAL` Register/qualify as a MahaRERA real-estate agent and complete project association/advertising controls if the approved model requires it.
-- [ ] `CONDITIONAL` Review PMLA reporting-entity exposure before the stated revenue/activity trigger.
+- [ ] `BLOCKER` Read your employment agreement and handbook. Read the rules on IP, confidentiality, outside work, non-solicitation and conflicts.
+- [ ] `BLOCKER` Get written clarification or advice if this work overlaps with your employer's time, market, customers, data, code, equipment or intellectual property.
+- [ ] `BLOCKER` Write the exact model you will run: backend-only RevOps, or registered and authorised buyer-facing VisitOps.
+- [ ] `BLOCKER` Give the description of the real work to a Maharashtra RERA lawyer. Keep the written opinion.
+- [ ] `REQUIRED` Give a CA all facts about the entity, GST, income tax, profession tax, books and invoices.
+- [ ] `REQUIRED` Keep emergency money separate. Record its amount and which expenses it can pay.
+- [ ] `REQUIRED` Set a maximum budget of ₹75,000 for the 90-day test. Put a limit on each category.
+- [ ] `REQUIRED` Create a separate business email, password-manager vault, records folder and money ledger.
+- [ ] `REQUIRED` Turn on MFA and full-disk encryption. Update your operating system and browser.
+- [ ] `REQUIRED` Choose one ICP, one problem, one pilot and one stop rule.
+- [ ] `REQUIRED` Put 10–15 hours each week on your calendar. They must not conflict with your job.
+- [ ] `REQUIRED` List the work you will refuse. Include bought or scraped consumer lists and bulk messages from a personal SIM. Also refuse fake urgency, claims without support, unregistered agent work and live access without approval.
+- [ ] `CONDITIONAL` If the approved model requires it, register and qualify as a MahaRERA real-estate agent. Complete project-association and advertising controls.
+- [ ] `CONDITIONAL` Before the stated revenue or activity trigger, review whether PMLA reporting-entity duties apply.
 
 ### 40.3 Target-account qualification checklist
 
-- [ ] Legal business name, decision-maker, public business contact and source URL recorded.
-- [ ] Active project/phase independently checked on MahaRERA where applicable.
-- [ ] Promoter/agent status and relationship checked; no assumption from a logo or brochure.
-- [ ] Account is a 5–25-person sales/CP/mandate team or other deliberately chosen segment.
-- [ ] At least approximately 300 legitimate inbound enquiries/month, or enough volume/value for a measurable pilot.
-- [ ] At least eight weeks of usable funnel history exists, or the baseline limitation is accepted.
-- [ ] Named economic buyer, process owner, CRM/admin owner, privacy/legal approver and sales champion can participate.
-- [ ] Existing CRM or authoritative lead store exists; client is willing to own it and production channel accounts.
-- [ ] Human coverage exists for escalations and visits during agreed hours.
-- [ ] One registered project/phase and no more than two supported sources can form a narrow pilot.
-- [ ] A costly observable failure exists: missing capture, slow assignment, poor follow-up visibility, visit coordination or attribution.
-- [ ] Client is willing to provide aggregate/redacted diagnostic evidence before requesting live access.
-- [ ] Client accepts a paid diagnostic/pilot, explicit scope, approval duties and no sales guarantee.
-- [ ] No disqualifier: bought data, illegal messaging, fake project claims, credential sharing refusal, zero owner, chronic nonpayment, or demand for commission-based unregistered conduct.
+- [ ] Record the legal business name, decision-maker, public business contact and source URL.
+- [ ] Where applicable, independently check the active project and phase on MahaRERA.
+- [ ] Check the promoter or agent status and their relationship. A logo or brochure is not proof.
+- [ ] The account is a sales, CP or mandate team with 5–25 people, or another segment you chose on purpose.
+- [ ] It has about 300 legitimate incoming enquiries/month, or enough volume and value to measure a pilot.
+- [ ] It has at least eight weeks of usable funnel history, or the client accepts the limit on the baseline.
+- [ ] A named buyer with budget, process owner, CRM or admin owner, privacy or legal approver, and sales champion can take part.
+- [ ] A CRM or other official lead store already exists. The client will own it and the live channel accounts.
+- [ ] People are available for escalations and visits during the agreed hours.
+- [ ] A small pilot can use one registered project or phase and no more than two supported sources.
+- [ ] You can see a costly failure: missed capture, slow assignment, poor view of follow-up, weak visit coordination or unclear source credit.
+- [ ] Before asking for live access, the client will give grouped or hidden diagnostic evidence.
+- [ ] The client accepts a paid diagnostic or pilot, clear scope, approval duties and no guarantee of sales.
+- [ ] No rejection reason applies: bought data, illegal messages, fake project claims, refusal of safe credential handling, no owner, repeated non-payment, or demand for commission-based work without registration.
 
 ### 40.4 Customer interview checklist
 
-- [ ] Interview is framed as research, not a disguised demo.
-- [ ] Participant performed or managed the process recently.
-- [ ] Ask for the last actual lead/visit journey, not opinions about hypothetical AI.
-- [ ] Map source, timestamps, systems, hand-offs, queues, owners and exception paths.
-- [ ] Ask frequency, consequence, current workaround, budget already spent and change attempts.
-- [ ] Ask what happens at night, on leave, during launch spikes and when a site/rep is unavailable.
-- [ ] Ask how opt-outs, wrong numbers, duplicate leads and complaints are handled.
-- [ ] Ask how booked, confirmed, attended, cancelled, rescheduled and no-show are defined.
-- [ ] Ask who can approve messages, project facts, integrations, data processing and go-live.
-- [ ] Record direct evidence separately from inference; do not upload real lead data to a casual note/AI tool.
-- [ ] End with next step, referral request and permission for any future contact.
+- [ ] Clearly call the interview research. Do not hide a demo inside it.
+- [ ] The person recently did or managed this process.
+- [ ] Ask about the last real lead and visit journey. Do not ask only what AI might do.
+- [ ] Map the source, times, systems, hand-offs, queues, owners and exception paths.
+- [ ] Ask how often it happens, what it causes, the current workaround, money already spent and earlier attempts to change it.
+- [ ] Ask what happens at night, when someone is on leave, during a launch spike, and when the site or rep is unavailable.
+- [ ] Ask how they handle opt-outs, wrong numbers, duplicate leads and complaints.
+- [ ] Ask what booked, confirmed, attended, cancelled, rescheduled and no-show mean to them.
+- [ ] Ask who can approve messages, project facts, integrations, data use and launch.
+- [ ] Keep direct evidence separate from your own conclusion. Do not upload real lead data to a casual note or AI tool.
+- [ ] End with a next step, a referral request and permission for any future contact.
 
 ### 40.5 Diagnostic and baseline checklist
 
-- [ ] Signed diagnostic scope, confidentiality terms, fee and data-minimisation approach.
-- [ ] Date range, time zone, sources, projects and cohorts frozen.
-- [ ] Funnel/status dictionary and metric definitions approved before calculating results.
-- [ ] Aggregate counts requested first; sample personal data minimised/redacted.
-- [ ] Source totals reconciled to CRM-created records.
-- [ ] Duplicate, invalid, test and spam treatment documented.
-- [ ] Arrival, assignment, first-human-attempt and first-successful-contact timestamps distinguished.
-- [ ] Assignment coverage, unowned leads, queue age and reassignment examined.
-- [ ] Site-visit records linked to leads; reschedules do not inflate booking count.
-- [ ] Attendance evidence and owner identified; auto-marking rejected.
-- [ ] Opt-outs, complaints, message failures and wrong-recipient events reviewed.
-- [ ] Root causes separated into people, process, policy, data, integration and measurement.
-- [ ] Opportunity range includes uncertainty and client dependencies; no fake revenue attribution.
-- [ ] Findings ranked by impact, confidence, effort, compliance risk and reversibility.
-- [ ] Client validates the current-state map and selects one pilot hypothesis.
+- [ ] Sign the diagnostic scope, confidentiality terms, fee and plan to use the least data.
+- [ ] Fix the date range, time zone, sources, projects and groups before analysis.
+- [ ] Approve the funnel and status dictionary and every measure before calculating results.
+- [ ] Ask for grouped counts first. Use the least personal sample and hide identifying details.
+- [ ] Compare source totals with the records created in the CRM.
+- [ ] Write down how duplicates, invalid items, tests and spam are treated.
+- [ ] Keep arrival, assignment, first attempt by a person and first successful contact as different times.
+- [ ] Check assignment coverage, leads with no owner, queue age and reassignment.
+- [ ] Link visit records to leads. Do not let reschedules increase the booking count.
+- [ ] Name the attendance evidence and owner. Do not accept an automatic attendance mark.
+- [ ] Review opt-outs, complaints, message failures and wrong-recipient events.
+- [ ] Put root causes into people, process, policy, data, integration and measurement groups.
+- [ ] Show a range for the opportunity that includes uncertainty and client dependencies. Do not invent revenue credit.
+- [ ] Rank findings by effect, confidence, effort, compliance risk and ease of reversing the change.
+- [ ] Client confirms the current process map and chooses one idea for the pilot.
 
 ### 40.6 Pre-proposal and contracting checklist
 
-- [ ] Economic buyer and operational sponsor attended solution review.
-- [ ] Baseline/problem, target users, project, sources, CRM, channel and volume are known.
-- [ ] Legal operating model and responsibilities are stated, not hidden in a generic title.
-- [ ] Deliverables, exclusions, milestones, acceptance tests and observation period are explicit.
-- [ ] Setup, retainer, usage, tax, travel, change and reactivation costs are separated.
-- [ ] Client-owned accounts/billing are required wherever practical.
-- [ ] RACI covers project facts, RERA, consent, notices, message approval, sales staffing, CRM data, incidents and rights requests.
-- [ ] Security schedule covers access, MFA, sub-processors, secrets, logs, backup, breach cooperation, deletion/return and audit evidence.
-- [ ] Data-processing roles, instructions, purpose, categories, retention and cross-border/vendor issues are reviewed.
-- [ ] SLA distinguishes system acknowledgement, assignment and human response.
-- [ ] No guarantee of visits, sales, revenue, lead quality, platform approval or uninterrupted vendors.
-- [ ] Liability, indemnity, IP, confidentiality, publicity, non-solicitation, termination and dispute clauses are lawyer-reviewed.
-- [ ] Change-control and client-delay rules are included.
-- [ ] Payment schedule and GST/TDS treatment are CA-reviewed; advance clears before work.
-- [ ] Proposal, SOW, contract and invoice describe the same scope and price.
+- [ ] The buyer with budget and the operating sponsor joined the solution review.
+- [ ] You know the baseline and problem, target users, project, sources, CRM, channel and volume.
+- [ ] State the legal operating model and each duty. Do not hide them under a general title.
+- [ ] Clearly state what you will deliver, what is excluded, milestones, acceptance tests and the time allowed to observe results.
+- [ ] Show setup, retainer, usage, tax, travel, change and reactivation costs separately.
+- [ ] Where practical, require the client to own the accounts and pay their bills.
+- [ ] The RACI covers project facts, RERA, consent, notices, message approval, sales staffing, CRM data, incidents and rights requests.
+- [ ] The security schedule covers access, MFA, subprocessors, secrets, logs, backups, help during a breach, deletion or return, and audit evidence.
+- [ ] Review data-processing roles, instructions, purpose, categories, retention, vendors and movement across countries.
+- [ ] The SLA treats system acknowledgement, assignment and response by a person as different events.
+- [ ] Give no guarantee of visits, sales, revenue, lead quality, platform approval or uninterrupted vendors.
+- [ ] A lawyer reviews liability, indemnity, IP, confidentiality, publicity, non-solicitation, termination and dispute clauses.
+- [ ] Include rules for controlling changes and delays caused by the client.
+- [ ] A CA reviews payment dates and GST and TDS treatment. The advance must clear before work starts.
+- [ ] The proposal, SOW, contract and invoice all show the same scope and price.
 
 ### 40.7 Onboarding and access checklist
 
-- [ ] Commercial handoff reconciles every promise with the signed SOW.
-- [ ] Sponsor, project owner, sales manager, CRM admin, IT/security contact, site coordinator, privacy/legal approver and incident contact named.
-- [ ] Contact tree contains primary/backup and after-hours boundary.
-- [ ] Client confirms it owns or validly controls CRM, WABA, domains, phone numbers, ad/portal accounts and calendars.
-- [ ] Least-privilege named accounts created; no passwords sent in chat/email or shared admin logins.
-- [ ] MFA enabled; service credentials placed in approved secret storage.
-- [ ] Access register records system, role, approver, date, purpose, expiry and revocation owner.
-- [ ] Data-flow diagram, vendor/sub-processor list and data-location facts approved.
-- [ ] Retention/deletion schedule and test-data rules approved.
-- [ ] Project/phase manifest, current content, inventory/price source, map pin and roster approved.
-- [ ] Consent/notice evidence and channel registration/template status supplied by accountable client owner.
-- [ ] Baseline, KPI dictionary, guardrails and success/stop criteria signed.
-- [ ] Environments, backup/export, rollback, change window and maintenance owner identified.
-- [ ] Training users and attendance plan confirmed.
-- [ ] No production data is copied until all blocking conditions close.
+- [ ] At the commercial hand-off, compare every sales promise with the signed SOW.
+- [ ] Name the sponsor, project owner, sales manager, CRM admin, IT or security contact, site coordinator, privacy or legal approver, and incident contact.
+- [ ] The contact tree has a main person, backup person and clear limit for after-hours contact.
+- [ ] Client confirms that it owns or lawfully controls the CRM, WABA, domains, phone numbers, ad and portal accounts, and calendars.
+- [ ] Create named accounts with the least access. Never send passwords in chat or email, and never share an admin login.
+- [ ] Turn on MFA. Put service credentials in approved secret storage.
+- [ ] In the access register, record the system, role, approver, date, purpose, expiry and person who will remove access.
+- [ ] Approve the data-flow diagram, vendor and subprocessor list, and data-location facts.
+- [ ] Approve the schedule for keeping and deleting data, plus rules for test data.
+- [ ] Approve the project and phase manifest, current content, source for inventory and price, map pin and roster.
+- [ ] The responsible client owner gives proof of consent and notice, plus channel-registration and template status.
+- [ ] Sign the baseline, KPI dictionary, safety measures and success and stop conditions.
+- [ ] Identify the separate environments, backup or export, rollback, change window and maintenance owner.
+- [ ] Confirm who needs training and how attendance will be recorded.
+- [ ] Do not copy live data until every blocker is closed.
 
 ### 40.8 Project/campaign activation checklist
 
-- [ ] Project and current phase appear on the official MahaRERA register where required.
-- [ ] Promoter and every acting/advertised real-estate agent registration are valid for the activity.
-- [ ] Required competency certificate and promoter-agent association/updates are confirmed.
-- [ ] MahaRERA registration number, QR code and prescribed advertising/display treatment are counsel/client approved.
-- [ ] Only authorised project name, location, configuration, price basis, availability source, offer terms and disclaimers are active.
-- [ ] Expiry dates and owners exist for price sheet, inventory, offer, approval, project and agent evidence.
-- [ ] Lead source, collection notice, affirmative action, timestamp, purpose, brand/project and revocation evidence are mapped.
-- [ ] WhatsApp business identity, opt-in path, approved templates, category/language, 24-hour logic, quality status and human escalation are verified.
-- [ ] SMS/voice uses the client principal entity, registered headers/templates/telemarketer chain and scrubbing/number route required by current TRAI/TSP rules.
-- [ ] Suppression list includes opt-out, DND where applicable, complaint, invalid/wrong person and litigation/manual hold.
-- [ ] Counsel has decided whether each message is promotional, service/transactional or otherwise and what evidence/rules apply.
-- [ ] All content has maker-checker approval and a version/effective period.
-- [ ] Preflight fails closed if any registration, permission, content or template becomes invalid/expired.
+- [ ] Where required, the project and current phase appear in the official MahaRERA register.
+- [ ] The promoter and every agent doing or advertising the work have a valid registration for that activity.
+- [ ] Confirm the required competency certificate and promoter-agent association and updates.
+- [ ] Lawyer and client approve how the MahaRERA registration number, QR code and required advertising details will appear.
+- [ ] Use only the approved project name, location, configuration, price basis, availability source, offer terms and warnings.
+- [ ] Record an expiry date and owner for every price sheet, inventory record, offer, approval, project and agent proof.
+- [ ] Map the lead source, collection notice, clear action by the person, time, purpose, brand or project, and proof of later withdrawal.
+- [ ] Check the WhatsApp business identity, opt-in path, approved templates, category and language, 24-hour rule, quality status and path to a person.
+- [ ] For SMS and voice, use the client's principal entity and registered headers and templates. Use the registered telemarketer chain. Follow the scrub and number route required by current TRAI and TSP rules.
+- [ ] The suppression list covers opt-out, DND where it applies, complaints, invalid or wrong people, legal disputes and manual holds.
+- [ ] A lawyer decides whether each message is promotional, service, transactional or another type, and which evidence and rules apply.
+- [ ] A maker prepares and a different checker approves all content. Every item has a version and period in which it is valid.
+- [ ] The preflight check must stop safely if a registration, permission, content item or template becomes invalid or expires.
 
 ### 40.9 Build-readiness checklist
 
-- [ ] Workflow specification has ID/version, purpose, trigger, schema, preconditions, state transition, side effects, owner, retries, audit and rollback.
-- [ ] Stable source event ID or deterministic fallback idempotency key exists.
-- [ ] Immutable authenticated `tenant_id` appears in every entity, unique/foreign key, query, queue/cache/object path and authorisation test.
-- [ ] Event ledger atomically claims the tenant-scoped unique key before acknowledgement or any side effect.
-- [ ] Lead/person/project/event identities are separate; uncertain person merges go to review.
-- [ ] Source payload is durably stored or acknowledged only after recoverable persistence.
-- [ ] CRM is the system of record; duplicate operational databases are justified and minimised.
-- [ ] Upsert key and merge policy are documented; source data cannot silently overwrite authoritative fields.
-- [ ] Assignment handles working hours, capacity, leave, skill/project eligibility and fallback owner.
-- [ ] Suppression check precedes every optional communication side effect.
-- [ ] Message eligibility, approved rendering, variables, language, send cap and quiet hours are deterministic.
-- [ ] Outbound `send_intent_id` persists before provider call; delivery-status events append and derived status cannot regress.
-- [ ] AI input/output schema, approved retrieval source, confidence threshold, refusal and human route are set.
-- [ ] Calendar availability is rechecked at commit; confirmation follows durable reservation.
-- [ ] Retry policy distinguishes transient, permanent and ambiguous outcomes; attempt/cost caps exist.
-- [ ] Dead-letter queue has owner, age SLA, replay safety and reconciliation.
-- [ ] Circuit breaker, poison-event terminal rule, paced recovery and current-state/permission revalidation are configured.
-- [ ] Correlation ID links source, CRM, message, calendar and audit events.
-- [ ] Reconciliation defines source zone, high-water mark, lag/overlap, immutable row IDs, rerun/repair authority and unresolved-age SLA.
-- [ ] Logs redact tokens and unnecessary personal data; clocks/time zones are normalised.
-- [ ] Alerts are actionable, tested and routed to a staffed owner.
-- [ ] Feature flags/kill switches can stop messages, bookings and AI independently while preserving safe intake.
-- [ ] Configuration export/backup and restore/fallback are tested.
-- [ ] Self-hosted workflow database/config and credential-encryption key are backed up separately and restored in the correct order; OAuth reauthorisation is documented.
+- [ ] The workflow document has its ID and version, purpose, trigger, data shape, conditions before it runs, state change, real-world effects, owner, retry rules, audit trail and rollback.
+- [ ] Use a stable source event ID. If none exists, use a fixed fallback key that makes repeats safe.
+- [ ] An authenticated `tenant_id` that cannot change appears in every entity, unique and foreign key, query, queue, cache and object path, and every authorisation test.
+- [ ] Before acknowledgement or any real-world action, the event ledger claims the unique key for that client in one atomic step.
+- [ ] Keep lead, person, project and event identities separate. Send an uncertain person merge for review.
+- [ ] Store the source payload in a durable way. Acknowledge it only after storage can be recovered.
+- [ ] Keep the CRM as the official system. Explain why any second operating database is needed and keep it small.
+- [ ] Write down the upsert key and merge rule. Source data must not quietly replace an official field.
+- [ ] Assignment handles work hours, capacity, leave, skill and project eligibility, plus a fallback owner.
+- [ ] Check suppression immediately before every optional message or call.
+- [ ] Fixed rules decide whether a message is allowed, how approved content is filled, its variables and language, the sending limit and quiet hours.
+- [ ] Save the outgoing `send_intent_id` before calling the provider. Add every delivery-state event, and do not let a later event move the final state backward.
+- [ ] Set the AI input and output shape, approved knowledge source, confidence limit, refusal and path to a person.
+- [ ] Check calendar capacity again when committing the booking. Confirm only after the reservation is durable.
+- [ ] Retry rules separate temporary, permanent and unclear results. Limit attempts and cost.
+- [ ] The dead-letter queue has an owner, age SLA, safe replay and record comparison.
+- [ ] Set a circuit breaker, a final state for poison events, slow recovery, and checks of current state and permission before acting again.
+- [ ] One correlation ID links source, CRM, message, calendar and audit events.
+- [ ] The comparison process states the source time zone, high-water mark, normal delay and overlap. It also states the row IDs that never change, who may rerun or repair, and the SLA for an unexplained old item.
+- [ ] Logs hide tokens and personal data that is not needed. Use consistent clocks and time zones.
+- [ ] Alerts tell someone what to do, have been tested and reach a person who is available.
+- [ ] Separate feature flags or kill switches can stop messages, bookings and AI while safe lead intake continues.
+- [ ] Test the setup export or backup, restore and fallback.
+- [ ] If you host it yourself, back up the workflow database and setup separately from the credential-encryption key. Restore them in the right order. Write down how to authorise OAuth again.
 
 ### 40.10 UAT checklist
 
-- [ ] Test plan maps every contractual acceptance criterion to an ID and evidence.
-- [ ] Synthetic, consented or properly de-identified data is used outside approved production testing.
-- [ ] Happy paths pass for every source/project/language/working-hours combination in scope.
-- [ ] Missing, malformed, oversized, unknown-source and malicious inputs fail safely.
-- [ ] Duplicate, replayed, delayed and out-of-order events create one intended business effect.
-- [ ] Concurrent lead assignment and concurrent last-slot booking are tested.
-- [ ] CRM/API timeout before and after remote commit is tested.
-- [ ] Provider 4xx, 429 and 5xx paths, retry/back-off and dead-letter behaviour pass.
-- [ ] Opt-out before send, during sequence, after booking and across duplicate identities is tested.
-- [ ] Wrong number, reassigned number, complaint and do-not-contact paths suppress correctly.
-- [ ] Expired conversation context/unapproved template is blocked.
-- [ ] Stale/unknown price, inventory, offer, map pin and unavailable site/rep route to humans.
-- [ ] AI hallucination, prompt injection, abusive language, low confidence and unsupported advice tests fail closed.
-- [ ] Time-zone, midnight, daylight/date formatting and local-language rendering are checked.
-- [ ] Tenant isolation, horizontal/vertical authorisation and export permission tests pass.
-- [ ] Secret/signature verification, replay protection and rate/cost limits pass.
-- [ ] Monitoring, alert delivery, on-call acknowledgement and dashboard freshness are tested.
-- [ ] Backup restore, kill switch, rollback and safe replay drills pass.
-- [ ] No open critical/high defect; medium exceptions have owner/date/client acceptance.
-- [ ] Client business, CRM, sales, site and compliance owners sign results.
+- [ ] The test plan links every acceptance condition in the contract to a test ID and evidence.
+- [ ] Outside approved live testing, use made-up data, data used with consent, or data properly stripped of identity.
+- [ ] The normal success path passes for every source, project, language and work-hours combination inside scope.
+- [ ] Missing, broken, oversized, unknown-source and harmful input stops safely.
+- [ ] Duplicate, replayed, late and out-of-order events create only one intended business result.
+- [ ] Test two lead assignments at once and two people trying to take the last slot at once.
+- [ ] Test a CRM or API timeout both before and after the other system saves the change.
+- [ ] Provider 4xx, 429 and 5xx cases pass, including delay before retry and dead-letter handling.
+- [ ] Test an opt-out before sending, during a sequence, after booking and across identities that may be duplicates.
+- [ ] A wrong or reassigned number, complaint and do-not-contact state all cause correct suppression.
+- [ ] Block an expired conversation context or template that is not approved.
+- [ ] Send old or unknown price, inventory, offer or map details, and an unavailable site or rep, to a person.
+- [ ] AI tests for invented facts, prompt injection, abuse, low confidence and unsupported advice must stop safely.
+- [ ] Check time zones, midnight, daylight and date display, and local-language display.
+- [ ] Pass tests for separation between clients, access to records at the same and higher levels, and permission to export.
+- [ ] Pass secret and signature checks, replay protection, and rate and cost limits.
+- [ ] Test monitoring, delivery of alerts, acknowledgement by the on-call person and how current the dashboard is.
+- [ ] Pass drills for restoring a backup, using the kill switch, rolling back and replaying safely.
+- [ ] No critical or high defect remains open. Each medium exception has an owner, date and client acceptance.
+- [ ] Client owners for business, CRM, sales, site and compliance sign the results.
 
 ### 40.11 Go-live checklist
 
-- [ ] Signed launch authorisation names exact project, phase, sources, cohort, volume cap, time and rollback owner.
-- [ ] Production configuration checksum/version matches accepted UAT release.
-- [ ] Current project/content/roster/calendar/template/permission manifest revalidated.
-- [ ] Credentials rotated from implementation where appropriate; least privilege reconfirmed.
-- [ ] Suppression and do-not-contact lists synchronised immediately before start.
-- [ ] Reconciliation baseline/counters set to zero and dashboard timestamps checked.
-- [ ] Human responders and backups are online for launch window.
-- [ ] Incident channel, severity rules, vendor contacts and customer update owner ready.
-- [ ] Canary uses a small legitimate cohort and conservative rate limit.
-- [ ] First records are traced end-to-end manually before expanding.
-- [ ] Wrong-recipient, duplicate, false-confirmation, uncontrolled-cost and monitoring-blindness abort thresholds active.
-- [ ] Nonessential changes frozen through hypercare.
-- [ ] Daily hypercare review and end date scheduled.
+- [ ] The signed launch approval names the exact project, phase, sources, group, volume limit, time and rollback owner.
+- [ ] The live setup checksum and version match the release accepted in UAT.
+- [ ] Check the current project, content, roster, calendar, template and permission manifest again.
+- [ ] Where needed, rotate credentials used during setup. Confirm least access again.
+- [ ] Make suppression and do-not-contact lists match just before launch.
+- [ ] Set comparison starting values and counters to zero. Check dashboard times.
+- [ ] Human responders and their backups are online during the launch window.
+- [ ] The incident channel, severity rules, vendor contacts and owner of customer updates are ready.
+- [ ] Use a small lawful group and a careful rate limit for the canary.
+- [ ] Trace the first records by hand through the full path before increasing volume.
+- [ ] Turn on stop limits for wrong recipients, duplicates, false confirmations, uncontrolled costs and loss of monitoring.
+- [ ] Freeze changes that are not needed during hypercare.
+- [ ] Schedule a daily hypercare review and an end date.
 
 ### 40.12 Daily operations checklist
 
-- [ ] Intake totals by source reconcile with records created/updated/quarantined.
-- [ ] Oldest unprocessed event, unassigned lead, SLA breach and dead-letter age checked.
-- [ ] Message delivered/failed/suppressed/complaint/opt-out counts and quality warnings reviewed.
-- [ ] Today's and tomorrow's proposed/booked/confirmed visits reconciled across CRM/calendar/site roster.
-- [ ] Cancellation/reschedule/site-closure/host-unavailable exceptions owned.
-- [ ] Stale content, registration, template, roster or inventory expiry alerts reviewed.
-- [ ] AI low-confidence/refusal/unsafe-output queues sampled.
-- [ ] Cost/usage anomaly and vendor status checked.
-- [ ] Critical security/access/config changes reviewed.
-- [ ] Client receives a concise exception/action summary during hypercare or as contracted.
+- [ ] For each source, the intake total matches records created, updated and held for review.
+- [ ] Check the oldest unprocessed event, lead without an owner, SLA breach and dead-letter item.
+- [ ] Review message counts for delivered, failed, suppressed, complaint and opt-out. Review quality warnings.
+- [ ] Make today's and tomorrow's proposed, booked and confirmed visits agree across CRM, calendar and site roster.
+- [ ] Give every cancellation, reschedule, site closure and unavailable-host exception an owner.
+- [ ] Review alerts for old content or an expiring registration, template, roster or inventory record.
+- [ ] Check samples from AI queues for low confidence, refusal and unsafe output.
+- [ ] Check unusual cost or use and the status of each vendor.
+- [ ] Review every critical change to security, access or setup.
+- [ ] During hypercare, or as the contract says, send the client a short summary of exceptions and actions.
 
 ### 40.13 Weekly operations and client review checklist
 
-- [ ] Funnel counts and conversion denominators use the frozen KPI version.
-- [ ] Latency percentiles and business-hours treatment reported, not only averages.
-- [ ] Cohort maturity and source/project mix changes disclosed.
-- [ ] Exceptions, defects, incidents, opt-outs, complaints and wrong-recipient events reviewed.
-- [ ] Five random journeys and every serious anomaly traced end-to-end.
-- [ ] Sales adoption checked: login/task completion, disposition hygiene, contact attempts and visit outcome evidence.
-- [ ] Root causes assigned to vendor, system, content, data, staffing, adoption or measurement.
-- [ ] Open actions have one owner and date; stale actions escalated.
-- [ ] Hours, vendor usage, margin and scope consumption checked internally.
-- [ ] One controlled improvement at most is chosen with hypothesis, guardrail and rollback.
-- [ ] Prospecting scoreboard and cash ledger updated by founder.
+- [ ] Funnel counts and conversion bottom numbers use the fixed KPI version.
+- [ ] Report time percentiles and how business hours are handled, not only averages.
+- [ ] State how mature each group is and any change in the mix of sources or projects.
+- [ ] Review exceptions, defects, incidents, opt-outs, complaints and wrong-recipient events.
+- [ ] Trace five random journeys and every serious unusual event through the full path.
+- [ ] Check whether sales staff use the system: logins, completed tasks, useful results, contact attempts and proof of visit outcome.
+- [ ] Put each root cause under vendor, system, content, data, staffing, adoption or measurement.
+- [ ] Every open action has one owner and date. Escalate an old action.
+- [ ] Internally check hours, vendor use, margin and how much scope has been used.
+- [ ] Choose no more than one controlled improvement. State the idea, safety measure and rollback.
+- [ ] Founder updates the prospecting scorecard and cash ledger.
 
 ### 40.14 Monthly governance checklist
 
-- [ ] Access/user/service-account review and leaver revocation complete.
-- [ ] Vendor/sub-processor, pricing, data-location, policy and integration changes checked.
-- [ ] Registration, project, content, consent, template and legal update register reviewed.
-- [ ] Retention deletion/archival jobs reconciled; rights-request log reviewed.
-- [ ] Backup/config restore sample and incident contact test completed.
-- [ ] Security/availability/cost/reliability SLO trends reviewed.
-- [ ] Client outcome, controllable metrics, guardrails, adoption and ROI range reviewed.
-- [ ] Scope/change allowance, margin, invoice, collections, tax reserve and vendor bills reconciled.
-- [ ] Client concentration, renewal date, champion risk and referral/case-study eligibility updated.
-- [ ] One SOP/test/data-dictionary improvement released under change control.
+- [ ] Finish the review of user and service-account access. Remove access for every person who left.
+- [ ] Check changes to vendors, subprocessors, prices, data locations, policies and integrations.
+- [ ] Review the update register for registrations, projects, content, consent, templates and law.
+- [ ] Make deletion and archive jobs agree with the retention plan. Review the rights-request log.
+- [ ] Test a sample backup and setup restore. Test the incident contact route.
+- [ ] Review trends in security, availability, cost and reliability SLOs.
+- [ ] Review client results, measures you control, safety measures, staff use and the ROI range.
+- [ ] Make the scope and change allowance, margin, invoice, collection, tax reserve and vendor bills agree.
+- [ ] Update client concentration, renewal date, risk of losing the champion, and whether a referral or case study is allowed.
+- [ ] Release one improvement to an SOP, test or data dictionary through change control.
 
 ### 40.15 Site-visit-day checklist
 
-- [ ] Site open hours, host roster, capacity, access instructions and map pin confirmed from authorised owner.
-- [ ] Every active visit has one durable booking ID, project/phase, lead/person link, local start/end, host and status.
-- [ ] Customer confirmation reflects the committed slot, not a merely proposed one.
-- [ ] Reminders stop after cancel/reschedule/opt-out or site disruption as policy requires.
-- [ ] Host/coordinator receives minimum necessary information through approved channel.
-- [ ] Check-in/attendance evidence method and grace period are understood.
-- [ ] No-show is never marked solely because the scheduled minute passed.
-- [ ] Walk-ins/late arrivals/companions are handled without unsafe identity merging.
-- [ ] Outcome and next action are entered by authorised staff on time.
-- [ ] Day-end CRM/calendar/site reconciliation has zero unexplained active bookings.
+- [ ] An authorised owner confirms the site's open hours, host roster, capacity, entry instructions and map pin.
+- [ ] Every active visit has one durable booking ID, project and phase, lead and person link, local start and end, host and state.
+- [ ] A message to the customer shows the slot that was truly reserved, not only suggested.
+- [ ] As policy requires, stop reminders after a cancellation, reschedule, opt-out or site disruption.
+- [ ] Give the host or coordinator only the information needed, through an approved channel.
+- [ ] Everyone understands how check-in or attendance is proved and how long the grace period is.
+- [ ] Never mark a no-show only because the scheduled minute has passed.
+- [ ] Handle walk-ins, late arrivals and companions without merging people in an unsafe way.
+- [ ] Authorised staff enter the result and next action on time.
+- [ ] At the end of the day, CRM, calendar and site records agree, with no unexplained active booking.
 
 ### 40.16 Incident first-response checklist
 
-- [ ] Stop or isolate the harmful side effect; preserve safe intake when possible.
-- [ ] Record discovery time, reporter, affected tenant/project/workflow and preliminary severity.
-- [ ] Protect evidence: logs, request/correlation IDs, config versions and provider responses; never expose secrets.
-- [ ] Determine whether people, personal data, property claims, bookings, money, channels or availability are affected.
-- [ ] Invoke the client/vendor/privacy/legal/CERT-In contact path appropriate to facts.
-- [ ] Do not wait for perfect root cause before making required factual notifications.
-- [ ] Identify last known good state and affected IDs/time window.
-- [ ] Communicate known facts, impact, containment, workaround and next update time; label unknowns.
-- [ ] Repair/replay only after idempotency and current eligibility are revalidated.
-- [ ] Reconcile every affected record/side effect and obtain business confirmation.
-- [ ] Complete root cause, contributing controls, corrective actions, owner/date and regression test.
-- [ ] Review statutory/contractual notification timelines with qualified owners; preserve the decision record.
+- [ ] Stop or separate the harmful action. Where safe, continue receiving leads.
+- [ ] Record when it was found, who reported it, the affected client, project and workflow, and an early severity.
+- [ ] Protect logs, request and correlation IDs, setup versions and provider replies. Never expose secrets.
+- [ ] Find out whether the issue affects people, personal data, property claims, bookings, money, channels or system availability.
+- [ ] Use the client, vendor, privacy, legal and CERT-In contact route that fits the facts.
+- [ ] Do not wait for the full root cause before sending a factual notice that is already required.
+- [ ] Find the last state known to be good and the affected IDs and time period.
+- [ ] State known facts, effect, containment, workaround and the next update time. Clearly label what is unknown.
+- [ ] Repair or replay only after checking idempotency and current eligibility again.
+- [ ] Make every affected record and real-world action agree. Get confirmation from the business owner.
+- [ ] Record the root cause, controls that helped cause it, corrective actions, owner and date, and repeat test.
+- [ ] Qualified owners review notice times required by law and contract. Keep the decision record.
 
 ### 40.17 Change-release checklist
 
-- [ ] Change request identifies business reason, exact objects, risk, dependencies and scope/price impact.
-- [ ] Data flow, legal/permission, content and vendor implications assessed.
-- [ ] Versioned configuration/code and rollback plan exist.
-- [ ] Positive, negative, duplicate, failure and regression tests pass.
-- [ ] Maker and checker are different people for consequential changes when team size permits.
-- [ ] Client approvers sign content/business rule/compliance changes.
-- [ ] Release window, canary, monitoring and abort threshold named.
-- [ ] Documentation/data dictionary/runbook/training updated.
-- [ ] Post-release reconciliation completed before closure.
+- [ ] The change request states the business reason, exact affected items, risk, dependencies, and effect on scope and price.
+- [ ] Check effects on data flow, law, permission, content and vendors.
+- [ ] Keep a version of the setup or code and a rollback plan.
+- [ ] Pass success, failure, duplicate and repeat tests.
+- [ ] For an important change, use different people as maker and checker when the team is large enough.
+- [ ] Client approvers sign changes to content, business rules and compliance.
+- [ ] Name the release window, small canary, monitoring and stop limit.
+- [ ] Update documents, data dictionary, runbook and training.
+- [ ] After release, make all records agree before closing the change.
 
 ### 40.18 Offboarding checklist
 
-- [ ] Termination date, final service window, open visits/incidents/requests and handoff owner agreed.
-- [ ] Client receives current configuration, data dictionary, workflow/runbook, reports and agreed exports in usable formats.
-- [ ] Ownership of WABA, CRM, domains, numbers, calendars, templates and vendor accounts verified.
-- [ ] Service accounts/API keys revoked or rotated; users removed; forwarding/webhooks disabled safely.
-- [ ] Scheduled jobs, messages, reminders, alerts and renewals stopped or transferred.
-- [ ] Open queues/dead letters reconciled; no hidden automation remains.
-- [ ] Vendor subscriptions and billing responsibility ended/handed over.
-- [ ] Data returned/deleted/anonymised under approved retention schedule; backup lifecycle documented.
-- [ ] Access and deletion attestation shared; statutory/contractual records retained separately and minimally.
-- [ ] Final invoice/TDS/GST/payment reconciled.
-- [ ] Case study/testimonial use only with specific written approval; otherwise keep confidential.
-- [ ] Post-engagement lessons and reusable non-client-confidential improvements recorded.
+- [ ] Agree the end date, last service window, open visits, incidents and requests, and hand-off owner.
+- [ ] Give the client the current setup, data dictionary, workflow, runbook, reports and agreed exports in formats it can use.
+- [ ] Check who owns the WABA, CRM, domains, phone numbers, calendars, templates and vendor accounts.
+- [ ] Revoke or rotate service accounts and API keys. Remove users. Safely turn off forwarding and webhooks.
+- [ ] Stop or transfer scheduled jobs, messages, reminders, alerts and renewals.
+- [ ] Make open queues and dead letters agree. Leave no hidden automation running.
+- [ ] End or hand over vendor subscriptions and responsibility for bills.
+- [ ] Return, delete or anonymise data under the approved retention plan. Write down what happens to backups.
+- [ ] Give proof of access removal and deletion. Keep legal and contract records separately and only in the amount needed.
+- [ ] Make the final invoice, TDS, GST and payment agree.
+- [ ] Use a case study or testimonial only with specific written approval. Otherwise, keep it private.
+- [ ] Record lessons and reusable improvements that contain no private client information.
 
 ### 40.19 Hiring checklist
 
-- [ ] Hire only against a measured bottleneck and repeatable paid workload.
-- [ ] Role scorecard defines outcomes, tasks, hours, availability, authority and metrics.
-- [ ] Employee/contractor classification, agreement, tax/labour, confidentiality, IP and data terms reviewed.
-- [ ] Background/reference checks are proportionate and lawful.
-- [ ] Least-privilege sandbox access first; no shared credentials.
-- [ ] Training covers data minimisation, messages, RERA boundary, incidents, escalation and client confidentiality.
-- [ ] Candidate passes synthetic workflow, documentation and security exercises.
-- [ ] Shadow → supervised → sampled-independent progression has sign-offs.
-- [ ] Quality, timeliness, documentation and escalation—not raw message volume—drive review.
-- [ ] Backup/leave/exit and immediate access-revocation process tested.
+- [ ] Hire only for a measured blockage and paid work that keeps repeating.
+- [ ] The role scorecard states results, tasks, hours, availability, authority and measures.
+- [ ] Review whether the person is an employee or contractor, plus the agreement, tax and labour rules, confidentiality, IP and data terms.
+- [ ] Keep background and reference checks lawful and no broader than the role needs.
+- [ ] Start with the least access in a sandbox. Never share credentials.
+- [ ] Training covers using the least data, messages, the RERA boundary, incidents, escalation and client privacy.
+- [ ] Candidate passes exercises using a made-up workflow, documents and security cases.
+- [ ] Get approval at each step: shadow → supervised → independently doing sampled work.
+- [ ] Judge quality, speed, documents and escalation. Do not judge only the number of messages.
+- [ ] Test the backup person, leave and exit process, including immediate removal of access.
 
 ### 40.20 Scale, resignation and FIRE checklist
 
-- [ ] Two unrelated paying pilots validate payment, not only interest.
-- [ ] Five to ten clients demonstrate substantial workflow similarity before software productisation.
-- [ ] At least three cohorts show renewals or clear recurring value.
-- [ ] Gross contribution includes founder/replacement delivery labour and all vendor/rework/support costs.
-- [ ] No client exceeds 30% of revenue at the resignation gate.
-- [ ] Post-tax owner cash is at least ₹1.5 lakh/month for 9–12 consecutive months.
-- [ ] Twelve months of personal essential expenses are separate from business runway/tax/customer funds.
-- [ ] Delivery, sales, finance, security and incident responsibilities have trained backups.
-- [ ] Monthly long-term investing continues; business distributions, tax and operating cash are separated.
-- [ ] ₹5 crore tracker excludes speculative business valuation and reports today's-rupee purchasing power.
-- [ ] No leverage, intraday or F&O is being used to “catch up.”
-- [ ] Exit/resignation decision is reviewed with family and qualified legal/tax/investment professionals.
+- [ ] Two unrelated clients paid for pilots. This proves payment, not only interest.
+- [ ] Before building a software product, five to ten clients show that most of the workflow is the same.
+- [ ] At least three groups show renewals or clear value that repeats.
+- [ ] Gross contribution includes the founder's work or its replacement cost, plus every vendor, repeat-work and support cost.
+- [ ] At the resignation gate, no one client is more than 30% of revenue.
+- [ ] The owner's cash after tax is at least ₹1.5 lakh/month for 9–12 months in a row.
+- [ ] Keep twelve months of essential personal expenses apart from business runway, tax and customer money.
+- [ ] Trained backup people can handle delivery, sales, finance, security and incidents.
+- [ ] Continue long-term investing each month. Keep business distributions, tax and operating cash separate.
+- [ ] The ₹5 crore record leaves out an uncertain business value and also shows buying power in today's rupees.
+- [ ] You are not using leverage, intraday trading or F&O to “catch up.”
+- [ ] Review the decision to leave your job with family and qualified legal, tax and investment professionals.
 
 ### 40.21 One-page production launch sign-off
 
@@ -6418,7 +6418,7 @@ Conditions and expiry:
 
 ### 41.1 Template rules
 
-Replace every bracketed field, delete instructions and obtain the required approvals. These are operational issue-spotting skeletons, not legal documents, regulator-approved forms, channel-approved templates or tax advice. A lawyer must draft/review the contract, privacy/data-processing and regulated-activity language; a CA must approve tax/invoice treatment; the client and platform must approve customer-facing content.
+Replace every item inside brackets. Remove all instructions before you send the final version. Get every required approval. These are starting templates that help you spot operating issues. They are not legal documents, forms approved by a regulator, messages approved by a channel, or tax advice. A lawyer must write or review contract terms, privacy and data-processing terms, and wording about regulated work. A CA must approve tax and invoice treatment. The client and platform must approve anything a customer will see.
 
 ### 41.2 Target-account card
 
@@ -6428,31 +6428,31 @@ Legal/business name:
 Website/public source:
 Pune micro-market(s):
 Business type: [promoter / CP / mandate firm / brokerage]
-Decision-maker / role / lawful business contact:
-Team size estimate and evidence:
+Person who decides / role / lawful business contact:
+Estimated team size and proof:
 Active project(s), phase(s), MahaRERA link/ID:
-Agent/promoter registration evidence:
+Proof of agent/promoter registration:
 Likely lead sources and CRM:
-Estimated monthly legitimate inbound volume / evidence / confidence:
-Observed trigger event:
-Specific leakage hypothesis:
-Likely economic consequence (range, not invented fact):
+Estimated valid incoming leads each month / proof / confidence:
+Trigger event you observed:
+Exact place you think leads are leaking:
+Likely money effect (use a range, not a made-up fact):
 Why now:
-Known compliance or reputation flags:
-Disqualifiers checked:
-Personalised outreach angle:
-Source URLs / dates accessed:
+Known law, policy or reputation warnings:
+Reasons to reject the account that you checked:
+Personal reason for your outreach:
+Source URLs / dates you opened them:
 Next action / owner / due date:
 ```
 
 ### 41.3 Research-interview invitation
 
 ```text
-Subject: 20-minute Pune property enquiry-process research
+Subject: 20-minute study of how Pune property enquiries are handled
 
-Hi [Name] — I am studying how [specific type of team] handles an online enquiry from arrival through assignment, follow-up and site visit. I am not asking for customer data or pitching a finished product. Your experience with [specific public project/process clue] looks relevant.
+Hi [Name] — I am studying how a [specific type of team] handles an online enquiry from the moment it arrives until assignment, follow-up and a site visit. I am not asking for customer data. I am also not trying to sell a finished product. Your work with [specific public project/process clue] seems useful for this study.
 
-Could I ask about one recent real workflow for 20 minutes? I will share the anonymised leakage checklist afterward. If you are not the owner of this process, who would be the right person?
+May I ask you about one recent real case for 20 minutes? I will share the checklist of places where leads can leak. It will contain no identifying information. If you do not own this process, who is the right person?
 
 Regards,
 [Full name]
@@ -6463,36 +6463,36 @@ Regards,
 
 ```text
 Interview ID / date / participant role:
-Segment and qualification evidence:
-Permission for notes / recording, if any:
+Target segment and proof that this person fits:
+Permission to take notes or record, if any:
 
 LAST REAL JOURNEY
 Source and arrival:
-Systems touched:
-People/handoffs:
-Timestamps/queues:
-What failed or required rework:
+Systems used:
+People involved and hand-offs:
+Times and waiting queues:
+What failed or had to be done again:
 What happened to the customer:
-Business consequence:
+Effect on the business:
 
 FREQUENCY AND ECONOMICS
-How often / evidence:
-Current labour/vendor/ad cost:
-Lost-time or value range / confidence:
+How often it happens / proof:
+Current staff, vendor and ad cost:
+Range for lost time or value / confidence:
 Previous fixes and why they failed:
 Priority versus other problems:
 
 CONTROL AND CHANGE
-Economic buyer:
+Person who controls the budget:
 Process / CRM / compliance / site owners:
-Procurement/security/legal path:
+Buying, security and legal approval path:
 Next trigger/date:
 
 EVIDENCE CLASS
-Observed/exported:
-Participant-reported:
-Founder inference:
-Unknown/to verify:
+Seen directly or found in an export:
+Said by the person:
+My conclusion from the evidence:
+Unknown and still to check:
 
 Next step / referral / future-contact permission:
 ```
@@ -6500,32 +6500,32 @@ Next step / referral / future-contact permission:
 ### 41.5 Discovery call agenda and note
 
 ```text
-Purpose: decide whether a paid diagnostic is justified; no production access today.
+Purpose: decide whether a paid diagnostic makes sense. Do not open the live system today.
 Time: 45 minutes.
 
-0–5: desired decision and participants
-5–15: last actual enquiry-to-visit journey
-15–25: volume, delays, exceptions, baseline and economic consequence
+0–5: decision wanted and people on the call
+5–15: last real enquiry-to-visit journey
+15–25: volume, delays, unusual cases, starting measure and money effect
 25–32: systems, vendors, data, permissions and registrations
-32–38: ownership, staffing, timing, budget and change constraints
-38–43: reflect problem/hypothesis and disqualifiers
-43–45: one dated next step or close
+32–38: owners, staff, timing, budget and limits on change
+38–43: repeat your understanding of the problem and test idea; check reasons to reject
+43–45: agree one next step with a date, or close the opportunity
 
 Client:
 Call date / participants / roles:
-Trigger and priority:
+Reason for action now and priority:
 Current process in one paragraph:
-Quantified facts with source/date:
-Definitions used:
-Pain / consequence / current workaround:
+Facts with numbers, source and date:
+Meanings used for each measure:
+Pain / result / current workaround:
 Why existing CRM/process has not solved it:
 Project/source/channel/volume:
-RERA/consent/WhatsApp/DLT/privacy posture owner:
-Human coverage and site workflow:
-Decision criteria / buyer / procurement / budget / date:
-Risks/disqualifiers:
-Provisional pilot hypothesis:
-Open evidence requests:
+Owner of RERA, consent, WhatsApp, DLT and privacy decisions:
+People available to respond and the site process:
+Decision rules / person with budget / buying path / budget / date:
+Risks and reasons to reject:
+Early test idea for the pilot:
+Evidence still needed:
 Decision: [diagnostic / nurture / disqualify]
 Next step / owner / date:
 ```
@@ -6533,24 +6533,24 @@ Next step / owner / date:
 ### 41.6 Minimum diagnostic data request
 
 ```text
-Please do not email passwords, API keys, identity documents or an unrestricted customer export.
+Please do not email any password, API key, identity document or full customer export.
 
 Requested date range and time zone:
 Projects/phases/sources in scope:
-1. Aggregate lead counts by day/source/project.
-2. Aggregate counts by current status and owner.
-3. Available arrival, assignment, first-attempt, first-contact timestamps.
-4. Visit proposed/booked/confirmed/attended/cancelled/rescheduled/no-show counts and definitions.
-5. Duplicate/invalid/test/spam rules and counts.
-6. Message attempt/delivery/failure/suppression/opt-out/complaint counts.
-7. Current routing, working-hours, escalation and leave rules.
-8. Screenshots or redacted schemas of source → CRM mapping.
-9. Approved project/content/template/consent process, without secrets.
-10. Five redacted journeys representing normal, duplicate, no-response, reschedule and failure paths.
+1. Grouped lead counts for each day, source and project.
+2. Grouped counts for each current state and owner.
+3. Available times for arrival, assignment, first attempt and first successful contact.
+4. Counts and meanings for visit proposed, booked, confirmed, attended, cancelled, rescheduled and no-show.
+5. Rules and counts for duplicates, invalid records, tests and spam.
+6. Counts for message attempts, deliveries, failures, suppression, opt-outs and complaints.
+7. Current rules for routing, work hours, escalation and leave.
+8. Screenshots, or data shapes with private details hidden, showing source → CRM mapping.
+9. The approved process for project facts, content, templates and consent, with no secrets.
+10. Five journeys with identifying details hidden. Include normal, duplicate, no-response, reschedule and failure paths.
 
 Transfer method:
 Client data owner/approver:
-Permitted purpose:
+Allowed purpose:
 Access expiry:
 Return/deletion date:
 ```
@@ -6559,103 +6559,103 @@ Return/deletion date:
 
 ```text
 Finding ID / title:
-Observed condition:
-Evidence / period / sample / source owner:
-Expected process/control:
-Affected stage and volume:
-Likely consequence range:
+What you observed:
+Proof / time period / sample / owner of source:
+Process or control that should exist:
+Affected funnel stage and volume:
+Range of likely effects:
 Confidence: [high / medium / low]
-Root-cause category: [people / process / policy / data / integration / measurement]
-Compliance/security implication:
-Recommended smallest intervention:
-Client prerequisite:
-Success metric / guardrail / observation window:
-Effort / dependency / reversibility:
-Priority and rationale:
+Root-cause group: [people / process / policy / data / integration / measurement]
+Effect on compliance or security:
+Smallest change you recommend:
+What the client must do first:
+Success measure / safety measure / time to observe:
+Work needed / dependency / ease of reversing it:
+Priority and reason:
 Decision / owner / due date:
 ```
 
 ### 41.8 Diagnostic executive summary
 
 ```text
-Decision requested: [approve narrow pilot / correct prerequisite / do not proceed]
+Decision needed: [approve narrow pilot / fix a required condition / do not continue]
 
-Between [dates], [count] legitimate enquiries entered [sources]. We could reconcile [x%] to [system]. Under the agreed definitions, [fact 1], [fact 2] and [fact 3]. Data limitations are [limitations].
+Between [dates], [count] legitimate enquiries came through [sources]. We could match [x%] of them to [system]. Using the agreed meanings, we found [fact 1], [fact 2] and [fact 3]. The data has these limits: [limitations].
 
-The highest-confidence controllable failure is [failure], primarily caused by [cause], with an estimated [operational/economic] consequence of [range and formula]. It is not yet valid to claim [excluded attribution].
+The failure we are most sure we can control is [failure]. Its main cause is [cause]. Its estimated effect on [operations/money] is [range and formula]. The evidence does not yet allow us to claim [excluded attribution].
 
-Recommended pilot: [one project, sources, CRM, channel, users, duration]. It will change [specific process], measure [leading metric(s)] and protect [guardrail(s)]. The client must provide [owners, staffing, approvals, accounts and data].
+Recommended pilot: [one project, sources, CRM, channel, users, duration]. It will change [specific process]. It will measure [leading metric(s)] and protect [guardrail(s)]. The client must provide [owners, staffing, approvals, accounts and data].
 
-Commercial range: [setup] + [managed fee] + client-paid vendor usage/tax. Go/no-go date: [date].
+Price range: [setup] + [managed fee] + vendor use and tax paid by client. Decision date: [date].
 ```
 
 ### 41.9 Proposal skeleton
 
 ```text
-1. Executive decision and validity period
-2. Client context and evidence-backed problem
-3. Baseline, definitions, data limitations and assumptions
-4. Proposed operating model and legal boundary
-5. In-scope project/users/sources/CRM/channel/cohort
-6. Deliverables and milestone outputs
-7. Explicit exclusions
-8. Client prerequisites and RACI
-9. Data flow, access, security and privacy responsibilities
-10. Project/content/consent/channel approval responsibilities
-11. Implementation plan and client-dependent timeline
-12. UAT, acceptance and limited-launch method
-13. Metrics, observation period, guardrails and attribution limits
-14. Support hours, severity/SLA and maintenance/change allowance
-15. Fees: setup, retainer, usage, tax, travel and change work
-16. Payment milestones and late/client-delay/reactivation treatment
-17. Risks and dependency register
-18. Options and recommended choice
-19. Decision/signature/payment next step
-20. Contract/SOW/DPA/security schedules to be lawyer-reviewed
+1. Decision needed from the buyer and how long this proposal is valid
+2. Client situation and the problem proved by evidence
+3. Starting measures, meanings, limits in data and assumptions
+4. Proposed way of working and legal limit
+5. Project, users, sources, CRM, channel and group inside scope
+6. Items you will deliver at each milestone
+7. Work clearly outside scope
+8. Work the client must do first and the RACI
+9. Duties for data flow, access, security and privacy
+10. Duties for approval of project facts, content, consent and channels
+11. Setup plan and timeline that depends on the client
+12. UAT, acceptance and how the small launch will work
+13. Measures, time to observe, safety measures and limits on source credit
+14. Support hours, severity and SLA, maintenance and included changes
+15. Fees for setup, retainer, usage, tax, travel and change work
+16. Payment milestones and rules for late payment, client delay and restart
+17. Register of risks and dependencies
+18. Choices and the option you recommend
+19. Next step for the decision, signature and payment
+20. Contract, SOW, DPA and security schedules for a lawyer to review
 ```
 
 ### 41.10 SOW issue-list skeleton for counsel
 
 ```text
 Parties and legal names:
-Purpose and actual regulated/unregulated activities:
-Term / pilot / renewal / termination:
-Scope, deliverables and excluded conduct:
+Purpose and the exact work that is regulated or not regulated:
+Length / pilot / renewal / ending the agreement:
+Scope, items to deliver and actions that are not allowed:
 Project/phase/source/channel/user/volume limits:
-Acceptance test, defect and deemed/non-deemed acceptance rules:
-Client dependencies and delay procedure:
+Acceptance tests, defects and rules for whether silence counts as acceptance:
+Work needed from the client and what happens if it is late:
 Service hours, support, maintenance and incident process:
 Fees, expenses, taxes, usage, change orders and payment:
-RERA/promoter/agent/advertising allocation and representations:
-Consent/notice/DLT/WABA/content/inventory/price allocation:
-Data-processing instructions, roles, categories, purpose, retention, rights and subprocessors:
-Security controls, access, audit evidence and incident cooperation:
-Confidentiality, IP/background tools, client data and licence:
-No guarantee / dependency / force-majeure concepts:
-Liability cap, exclusions, indemnity and insurance:
+Who is responsible for RERA, promoter, agent and advertising duties, and what each party promises:
+Who is responsible for consent, notice, DLT, WABA, content, inventory and price:
+Instructions and roles for data use, data types, purpose, retention, rights and subprocessors:
+Security controls, access, audit proof and help during an incident:
+Confidentiality, IP and old tools, client data and licence rights:
+No guarantee, outside dependencies and force majeure:
+Limit on liability, items outside the limit, indemnity and insurance:
 Publicity, case study and logo approval:
-Non-solicitation/non-circumvention only if lawful/appropriate:
-Exit assistance, data return/deletion and credential transfer:
-Governing law, venue/dispute and notices:
-Schedules: solution, RACI, data flow, security, pricing, SLA, change form:
+Non-solicitation and non-circumvention only when lawful and suitable:
+Help at exit, returning or deleting data, and moving credentials:
+Law that applies, place and method for disputes, and legal notices:
+Schedules for the solution, RACI, data flow, security, price, SLA and change form:
 ```
 
 ### 41.11 RACI template
 
 | Activity | Client sponsor | Sales/site owner | CRM/IT owner | Privacy/legal owner | Service owner |
 |---|---|---|---|---|---|
-| Project/phase authority and current facts | A | R | I | C | C |
-| RERA/agent/advertising determination | A | C | I | R | C |
-| Purpose, notice, consent and channel eligibility | A | C | I | R | C |
-| Message/template approval | A | R | C | C | C/configures |
-| CRM fields, routing and authoritative data | C | C | A/R | I | R/configures |
-| Human response, advice and site hosting | I | A/R | I | I | C/escalates |
-| Security/access/vendor approval | I | I | A/R | C | R/implements |
-| UAT and launch | A | R | R | R for controls | R |
-| Incident/statutory/customer decision | A | C | R | R | R/detects and assists |
-| KPI/ROI definitions and review | A | R | R | I | R |
+| Authority for the project and phase, and current facts | A | R | I | C | C |
+| Decision on RERA, agent and advertising rules | A | C | I | R | C |
+| Purpose, notice, consent and whether the channel may be used | A | C | I | R | C |
+| Approval of messages and templates | A | R | C | C | C/configures |
+| CRM fields, routing and official data | C | C | A/R | I | R/configures |
+| Reply by a person, advice and hosting at the site | I | A/R | I | I | C/escalates |
+| Approval of security, access and vendors | I | I | A/R | C | R/implements |
+| UAT and start of live work | A | R | R | R for controls | R |
+| Decision about an incident, law or customer | A | C | R | R | R/detects and assists |
+| Meaning and review of KPI and ROI | A | R | R | I | R |
 
-Replace roles with named people and backups. `A` means one accountable owner, `R` performs, `C` is consulted and `I` informed.
+Replace each role with a person's name and backup. `A` is the one person finally accountable. `R` does the work. `C` is asked before a decision. `I` is told about it.
 
 ### 41.12 Data-flow and processing register
 
@@ -6663,13 +6663,13 @@ Replace roles with named people and backups. `A` means one accountable owner, `R
 |---|---|---|---|---|---|---|---|---|
 | DF-01 | [lead form] → [CRM] | create/update legitimate enquiry | [minimum] | [record/link/version] | [vendor/region] | [signature/TLS/RBAC] | [period/event] | [name] |
 
-Add every analytics export, automation store, AI call, messaging provider, calendar, log, backup and support transfer. A diagram is not enough without this register.
+Add every report export, automation store, AI call, message provider, calendar, log, backup and transfer to support. A picture of the data flow is not enough; keep this written register too.
 
 ### 41.13 Data dictionary row
 
 | Field | Business definition | Type/allowed values | Required when | Authoritative source | May update | Personal? | Retention | Validation/failure |
 |---|---|---|---|---|---|---|---|---|
-| `lead_received_at` | First durable receipt of the source event | UTC timestamp + source zone | valid event | intake ledger | system only | indirect | per schedule | quarantine missing/invalid |
+| `lead_received_at` | First time the source event is saved in a durable way | UTC time + source time zone | valid event | intake ledger | system only | indirect | as the schedule says | hold for review if missing or invalid |
 
 ### 41.14 Project/campaign manifest
 
@@ -6677,116 +6677,116 @@ Add every analytics export, automation store, AI call, messaging provider, calen
 Manifest ID/version/effective dates/approvers:
 Client/promoter legal name:
 Project / phase / MahaRERA ID and official URL:
-Acting agent legal name / registration / certificate / association evidence:
-Approved brand/project display, registration number and QR treatment:
-Approved address/map pin/site hours/access instructions:
-Approved configurations and factual descriptions:
-Price representation/basis/date/source/owner/expiry:
-Inventory source/owner/freshness limit and unknown response:
-Offer/benefit terms, eligibility, disclaimer and expiry:
-Lead sources, notice/consent records and permitted purposes:
-WhatsApp templates/categories/languages/status/version:
+Acting agent's legal name / registration / certificate / proof of association:
+Approved display of brand and project, registration number and QR code:
+Approved address, map pin, site hours and entry instructions:
+Approved home types and factual descriptions:
+How price is shown / basis / date / source / owner / expiry:
+Inventory source / owner / age limit / what to say when unknown:
+Offer or benefit terms, who qualifies, warning and expiry:
+Lead sources, notice and consent records, and allowed purposes:
+WhatsApp templates, categories, languages, status and version:
 SMS/voice PE/header/template/RTM/TSP route:
-Sales roster, skills, capacity, hours, leave and fallback:
-Site hosts/capacity/calendar/resource mapping:
-Suppression and complaint route:
-Change/expiry alert owner:
+Salespeople, skills, capacity, work hours, leave and fallback:
+Site hosts, capacity, calendar and mapping to each resource:
+How to stop contact and handle a complaint:
+Owner of alerts for a change or expiry:
 ```
 
 ### 41.15 Workflow specification
 
 ```text
 Workflow ID / name / version / owner / approvers:
-Business purpose and metric:
-Trigger and source contract:
-Preconditions and eligibility:
-Input schema / validation / size limits:
-Idempotency and correlation keys:
-Current state / allowed transition / resulting state:
-Ordered decision rules and configuration version:
-Authoritative facts retrieved and freshness rule:
-Side effects in exact order:
-Human task/escalation and deadline:
-Timeouts / transient retries / permanent failures / ambiguous commit handling:
-Dead-letter and reconciliation:
-Audit events and redaction:
-Rate, volume and cost caps:
-Suppression/quiet-hours/channel controls:
-Security/threat controls:
-Acceptance and regression test IDs:
+Business purpose and measure:
+Event that starts it and the source agreement:
+Conditions before it runs and who qualifies:
+Shape of input / checks / size limits:
+Keys that make repeats safe and link records:
+Current state / allowed move / new state:
+Decision rules in order and setup version:
+Official facts it reads and how fresh they must be:
+Real-world actions in their exact order:
+Task or escalation to a person and deadline:
+Timeouts / retries for temporary failure / permanent failure / unclear save result:
+Dead-letter queue and how records are made to agree:
+Events saved for audit and information that is hidden:
+Limits on speed, volume and cost:
+Controls for suppression, quiet hours and the channel:
+Controls against security threats:
+IDs for acceptance and repeat tests:
 Feature flag / kill switch / rollback / safe replay:
-Dependencies and known limitations:
+Systems it depends on and known limits:
 ```
 
 ### 41.16 Lead qualification and routing configuration
 
 ```text
 Qualification version/date:
-Mandatory questions/fields:
-Permitted “unknown / prefer not to say” values:
-Hard eligibility rules:
-Priority factors and weights:
-Prohibited factors/proxies:
-Score bands and exact action—not “quality” labels:
-Low-confidence/contradiction route:
-Human override roles and reason codes:
-Expiry/requalification event:
+Questions and fields that are required:
+Allowed “unknown / prefer not to say” answers:
+Fixed rules for who is eligible:
+Priority factors and their weights:
+Factors and stand-ins that are banned:
+Score groups and the exact action—do not call people “quality” leads:
+Where to send low confidence or conflicting information:
+Roles that may override and the reason codes:
+When the qualification expires or must be done again:
 
 Routing order:
-1. valid project/team eligibility
-2. language/skill requirement
-3. working/leave status
-4. capacity/active-load limit
-5. ownership/dedup continuity
-6. fair rotation/tie-break
-7. acknowledgement/task
-8. acceptance timeout
-9. fallback manager/queue
+1. valid project and team eligibility
+2. needed language and skill
+3. whether the person is working or on leave
+4. capacity and active-work limit
+5. keep the existing owner and handle duplicates
+6. fair rotation and tie-break rule
+7. acknowledgement and task
+8. time allowed to accept
+9. fallback manager or queue
 
-Test cohort / fairness review / approvers:
+Test group / fairness review / approvers:
 ```
 
 ### 41.17 Consent and contact-evidence record
 
 ```text
 Evidence ID / lead-person ID:
-Collection source and exact brand/project:
-Collection URL/form/ad/call event:
-Notice text/version/link shown:
-Affirmative action or request made:
-Timestamp/time zone/source event ID/IP-device evidence only if justified:
-Purposes and channels clearly covered:
-Recipient business identity covered:
-Template/context eligibility decision and version:
-Revocation/opt-out event and propagation status:
-Dispute/complaint/manual hold:
-Evidence retention owner/period:
+Source of collection and exact brand or project:
+URL, form, ad or call event that collected it:
+Notice wording, version and link shown:
+Clear action or request made by the person:
+Time, time zone and source event ID. Keep IP or device proof only when justified:
+Purposes and channels that it clearly covers:
+Business identity that may contact the person:
+Decision and version for template or conversation eligibility:
+Withdrawal or opt-out event and whether it reached every system:
+Dispute, complaint or manual hold:
+Owner and period for keeping the proof:
 ```
 
-Consent is specific evidence, not a CRM checkbox somebody can toggle without provenance.
+Consent is a set of exact evidence. It is not only a CRM checkbox that anyone can change without a record of where it came from.
 
 ### 41.18 Customer-message drafting cards
 
-These are drafts for client, counsel and platform approval; they are not pre-approved templates.
+These are only drafts. The client, lawyer and platform must approve them. They are not already approved templates.
 
 ```text
 ACKNOWLEDGEMENT
-Hello [name]. You contacted [client/project] through [source/context]. We received your enquiry about [verified interest]. A [client role/name] can help during [approved hours]. Would you prefer [bounded next step]? Reply STOP to stop optional messages. [Required identity/disclosure].
+Hello [name]. You contacted [client/project] through [source/context]. We received your question about [verified interest]. A [client role/name] can help during [approved hours]. Would you like [bounded next step]? Reply STOP if you do not want optional messages. [Required identity/disclosure].
 
 CLARIFY ONE FIELD
-To route this correctly, which is closest: [approved choices]? You can also say “not sure” and a person will help.
+To send this to the right person, which option is closest: [approved choices]? You can also say “not sure.” A person will help you.
 
 HUMAN HANDOFF
-I do not want to guess about [price/availability/legal/finance/negotiation issue]. I have sent this to [named role/team]. Reference: [case ID]. Expected response: [honest window].
+I do not want to guess about [price/availability/legal/finance/negotiation issue]. I sent your question to [named role/team]. Reference: [case ID]. They should reply within [honest window].
 
 VISIT SLOT PROPOSAL — NOT CONFIRMATION
-The currently available options are [A] or [B], subject to final reservation. Which do you prefer? We will send a separate confirmation after the slot is secured.
+The options currently shown are [A] or [B]. The slot is not reserved yet. Which one do you prefer? We will send a separate confirmation after we reserve it.
 
 VISIT CONFIRMATION
-Your visit is confirmed for [local date/time] at [approved project/site]. Host: [name/team/contact]. Map/access: [approved link/instructions]. Reference: [booking ID]. Reply RESCHEDULE or CANCEL if needed. [Necessary disclosures].
+Your visit is confirmed for [local date/time] at [approved project/site]. Your host is [name/team/contact]. Map and entry steps: [approved link/instructions]. Booking reference: [booking ID]. Reply RESCHEDULE or CANCEL if needed. [Necessary disclosures].
 
 OPT-OUT ACKNOWLEDGEMENT
-Understood. Optional messages for [scope/brand] have been stopped. [Explain any strictly necessary open-visit/service communication only if client policy/law allows]. Contact [human route] for help.
+Understood. We stopped optional messages for [scope/brand]. [Explain any message that is strictly needed for an open visit or service, but only if client policy and law allow it]. For help, contact [human route].
 ```
 
 ### 41.19 Human-escalation card
@@ -6794,57 +6794,57 @@ Understood. Optional messages for [scope/brand] have been stopped. [Explain any 
 ```text
 Case/correlation ID:
 Lead/person/project:
-Reason: [unknown fact / legal-finance / complaint / opt-out ambiguity / abusive-risk / low confidence / system failure / VIP not a reason to bypass controls]
-Original customer wording and channel/time:
-Verified context/facts:
-What automation did/did not do:
-Deadline and promised response window:
-Assigned human / backup / acceptance time:
-Allowed next actions:
-Prohibited action or risk:
-Resolution / customer response / timestamp:
-Knowledge/workflow correction needed:
+Reason: [unknown fact / legal or money question / complaint / unclear opt-out / abuse or danger / low confidence / system failure / VIP is not a reason to bypass controls]
+Customer's exact words, channel and time:
+Context and facts that were checked:
+What the automation did and did not do:
+Deadline and reply time promised:
+Assigned person / backup / time accepted:
+Next actions that are allowed:
+Action that is banned or risk to avoid:
+Solution / reply to customer / time:
+Knowledge or workflow fix needed:
 ```
 
 ### 41.20 Site-visit record
 
 ```text
-Visit journey ID / booking ID / predecessor-successor IDs:
-Lead/person and project/phase IDs:
-Proposed slots and expiry:
-Committed local start/end and UTC values:
-Site resource/capacity lock:
-Host / backup / roster version:
+Visit journey ID / booking ID / earlier and later booking IDs:
+Lead and person IDs, plus project and phase IDs:
+Suggested slots and when they expire:
+Reserved local start and end, plus UTC times:
+Site resource and capacity reservation:
+Host / backup / version of staff list:
 Calendar event ID / CRM activity ID:
-Confirmation message ID/version/time:
-Reminder schedule and suppression state:
-Reschedule/cancel reason, actor and time:
-Check-in/attendance evidence / authorised recorder:
-Outcome: [attended / cancelled / rescheduled / no-show after grace/manual verification / disputed]
+Confirmation-message ID, version and time:
+Reminder times and whether messages are stopped:
+Reason for reschedule or cancellation, who did it and when:
+Proof of check-in or attendance / authorised person who recorded it:
+Result: [attended / cancelled / rescheduled / no-show after grace period and manual check / disputed]
 Next action / owner / date:
-Reconciliation status:
+Whether all systems now agree:
 ```
 
 ### 41.21 UAT evidence row
 
 | Test ID/version | Requirement/risk | Preconditions/data | Steps/event order | Expected result and prohibited side effect | Actual evidence | Result | Defect/owner/date |
 |---|---|---|---|---|---|---|---|
-| UAT-DUP-01 | replay idempotency | same valid event ID twice | submit concurrently | one lead update, one intended acknowledgement, audit both receipts | [links] | [pass/fail] | [ticket] |
+| UAT-DUP-01 | a replay must be safe | send the same valid event ID twice | submit both at the same time | update one lead and send one planned acknowledgement, but record both receipts for audit | [links] | [pass/fail] | [ticket] |
 
 ### 41.22 Go-live authorisation
 
 ```text
 Release/version and UAT report:
-Exact scope/cohort/volume/time:
-Open exceptions and expiry:
-Human owners/backups confirmed:
-Configuration/content/roster/permission revalidation:
-Dashboard/alerts/incident channel tested:
-Canary and expansion gates:
-Abort thresholds:
-Kill-switch/rollback/reconciliation owner:
+Exact scope, group, volume and time:
+Open exceptions and when approval ends:
+Named people and backups confirmed:
+Setup, content, staff list and permission checked again:
+Dashboard, alerts and incident channel tested:
+Small canary and rules for increasing traffic:
+Limits that will stop the launch:
+Owner of kill switch, rollback and making records agree:
 
-I authorise only the stated limited production release.
+I approve only the small live release written above.
 Business owner / signature / date:
 CRM/IT owner / signature / date:
 Privacy/legal owner / signature / date:
@@ -6856,19 +6856,19 @@ Service owner / signature / date:
 
 ```text
 CR ID/requester/date:
-Business reason and expected outcome:
-Current behaviour/version:
-Exact proposed change:
+Business reason and result expected:
+What happens now and current version:
+Exact change requested:
 Affected project/users/data/vendors/workflows/content:
-RERA/privacy/channel/security assessment:
-Scope/fee/timeline/support impact:
-Migration/backfill/replay required:
-Test/regression IDs:
-Release/canary/monitoring/abort plan:
-Rollback and data-repair plan:
-Documentation/training changes:
+Check of RERA, privacy, channel and security effects:
+Effect on scope, fee, timeline and support:
+Need to move, add old records or replay:
+Test and repeat-test IDs:
+Plan for release, small canary, monitoring and stopping:
+Plan to roll back and repair data:
+Changes to documents and training:
 Approvers and effective date:
-Post-release result/reconciliation:
+Result after release and whether systems agree:
 ```
 
 ### 41.24 Incident update
@@ -6877,13 +6877,13 @@ Post-release result/reconciliation:
 INCIDENT [ID] — UPDATE [number] — [timestamp/time zone]
 Severity / status:
 Affected client/project/workflow/time window:
-Known impact and count:
+Known effect and count:
 What is not affected:
-Containment completed:
+Actions already stopped or contained:
 Current safe workaround:
-Investigation facts; unknowns clearly labelled:
+Facts from the investigation; clearly mark what is unknown:
 Customer/data/channel/booking action required now:
-Relevant privacy/legal/vendor escalation owner:
+Owner for the needed privacy, legal or vendor escalation:
 Next update at:
 Incident commander / contact:
 ```
@@ -6891,74 +6891,74 @@ Incident commander / contact:
 ### 41.25 Blameless post-incident review
 
 ```text
-Summary and customer/business impact:
-Detection source and complete timeline:
-Expected versus actual controls:
+Summary and effect on customer and business:
+How it was found and the full timeline:
+Controls that should have worked and what actually happened:
 Technical root cause:
-Process/ownership/design contributing factors:
-Why blast radius was this size:
+Process, ownership and design factors that helped cause it:
+Why this many people or records were affected:
 What worked:
-What delayed detection/containment/recovery:
-Affected-event reconciliation and confirmation:
-Notification decisions/evidence:
+What made detection, containment or recovery slower:
+Proof that all affected events now agree:
+Decisions and evidence about notices:
 
 Actions:
-- prevent recurrence / owner / date / proof
-- reduce blast radius / owner / date / proof
-- detect earlier / owner / date / proof
+- stop it happening again / owner / date / proof
+- reduce how many people or records it can affect / owner / date / proof
+- find it earlier / owner / date / proof
 - recover faster / owner / date / proof
-- documentation/training / owner / date / proof
+- improve documents and training / owner / date / proof
 
-Regression test IDs and monitored release:
+Repeat-test IDs and watched release:
 Closure approvers/date:
 ```
 
 ### 41.26 Weekly client report
 
 ```text
-Week / cohort maturity / scope / KPI version:
+Week / how mature the group is / scope / KPI version:
 
 EXECUTIVE SUMMARY
 - What changed:
-- Material outcome/guardrail:
+- Important result and safety measure:
 - Decision needed:
 
 FUNNEL
 Received / valid unique / assigned / attempted / contacted / qualified /
 visit proposed / booked / confirmed / attended / cancelled / rescheduled / no-show
-with denominators, source/project mix and comparison period.
+with bottom numbers, source and project mix, and the period used for comparison.
 
 OPERATIONS
-Latency p50/p90/p95; exceptions; SLA; delivery/failure/suppression;
-dashboard freshness; vendor status; adoption/status hygiene.
+Response-time p50/p90/p95; unusual cases; SLA; delivered, failed and suppressed messages;
+how current the dashboard is; vendor status; staff use and complete states.
 
 QUALITY AND RISK
 Opt-outs / complaints / wrong-recipient / incidents / AI reviews /
-expired content-permission checks / open control actions.
+checks for old content and permission / open control actions.
 
 ECONOMICS
-Client-approved value inputs/range; service/vendor usage; attribution limitations.
+Client-approved money inputs and range; service and vendor use; limits on giving source credit.
 
 ACTIONS
 Action / owner / due date / status / blocker.
 
 NEXT CONTROLLED CHANGE
-Hypothesis / cohort / metric / guardrail / rollback / approver.
+Idea to test / group / measure / safety measure / rollback / approver.
 ```
 
 ### 41.27 Quarterly business review
 
 ```text
-1. Original business outcome and current decision
-2. Comparable-cohort funnel and data-quality trends
-3. Controllable versus downstream outcomes
-4. Adoption, staffing and process changes
-5. Reliability, security, privacy, channel and compliance review
-6. Incidents/root causes/corrective-action closure
-7. Service hours, vendor usage, scope and economics
-8. Renewal risks and dependency register
-9. Roadmap options: keep / improve / expand / remove
-10. Signed 90-day success plan, owners and commercial change
+1. The first business goal and the decision needed now
+2. Funnel for comparable groups and trends in data quality
+3. Results the service can control versus later results
+4. Changes in staff use, staffing and process
+5. Review of reliability, security, privacy, channels and compliance
+6. Incidents, root causes and proof that corrective actions closed
+7. Service hours, vendor use, scope and money results
+8. Renewal risks and the dependency register
+9. Roadmap choices: keep / improve / expand / remove
+10. Signed 90-day success plan, named owners and price or scope change
 ```
 
 ### 41.28 ROI range calculator
@@ -6984,12 +6984,12 @@ ROI range = net value range / incremental cost
 Payback = incremental cost / monthly benefit range
 
 Required disclosures:
-- observational or experimental design;
-- cohort/sample/maturity;
-- seasonality, campaign, inventory, price, staff and market changes;
-- missing/offline attribution;
-- source and approver for every economic input;
-- low/base/high range; no single false-precision number.
+- whether you only observed the change or ran a controlled test;
+- the group, sample and how much time it had to develop;
+- seasonal, campaign, inventory, price, staff and market changes;
+- missing source credit and offline influence;
+- source and approver for every money input;
+- low, base and high values. Do not show one falsely exact number.
 ```
 
 ### 41.29 Invoice-input checklist
@@ -6999,27 +6999,27 @@ Supplier legal/trade name, address, PAN/GSTIN if applicable:
 Client legal name/address/GSTIN/place of supply:
 Unique invoice number and date:
 PO/SOW/milestone/service period:
-Description and SAC/HSN treatment approved by CA:
-Professional fee / pass-through usage / reimbursable split:
-Taxable value, GST components/rate/reverse-charge/export treatment as advised:
+Description and SAC or HSN treatment approved by CA:
+Your fee / vendor use passed to client / costs client pays back:
+Taxable value, GST parts and rate, reverse charge and export treatment as advised:
 Total, currency, due date and bank details:
-TDS expectation/certificate follow-up:
-Payment received/date/reference and ledger match:
-Credit/debit note linkage if any:
-Supporting acceptance/time/usage evidence:
+Expected TDS and follow-up for its certificate:
+Payment received, date and reference, and whether the ledger agrees:
+Link to a credit or debit note, if any:
+Proof of acceptance, time or use that supports the invoice:
 ```
 
 ### 41.30 Case-study and referral request
 
 ```text
-Hi [Name] — during [period], the agreed system changed [controllable process] from [verified baseline] to [verified result], subject to [important limitation]. Would you be comfortable with one of these options?
+Hi [Name] — during [period], the agreed system changed [process we could control] from [verified starting measure] to [verified result]. The result has this important limit: [important limitation]. Would you be comfortable with one of these choices?
 
-1. Private reference call with a similar qualified buyer;
-2. Written quote using wording you approve;
-3. An anonymised case study; or
-4. Named case study/logo use under a separate written approval.
+1. A private reference call with a similar suitable buyer;
+2. A written quote using words you approve;
+3. A case study with the identity hidden; or
+4. A named case study or use of your logo under a separate written approval.
 
-There is no obligation, and we will not disclose customer data, confidential economics or unsupported sales attribution. If a referral comes to mind, an introduction to the person who owns [specific process] would help.
+You do not have to agree. We will not share customer data, private money details or unsupported claims about what caused sales. If you know someone suitable, an introduction to the person who owns [specific process] would help.
 ```
 
 ### 41.31 Access and offboarding register
@@ -7039,14 +7039,14 @@ There is no obligation, and we will not disclose customer data, confidential eco
 ```text
 Week / available hours / energy:
 Cash: personal reserve / business cash / tax reserve / receivables / committed spend:
-Acquisition: researched / first contacts / follow-ups / referrals / discoveries / proposals / payments:
-Delivery: active milestones / exceptions / incidents / client actions / hours / margin:
-Evidence learned: confirmed / contradicted / unknown:
+Sales: researched / first contacts / follow-ups / referrals / discovery calls / proposals / payments:
+Delivery: active milestones / unusual cases / incidents / client actions / hours / margin:
+What the evidence showed: confirmed / proved wrong / unknown:
 Biggest bottleneck and root cause:
 One outcome for next week:
 Three scheduled actions:
-Stop/defer list:
-Risk or legal boundary requiring help:
+Items to stop or do later:
+Risk or legal limit where you need help:
 Investment transfer completed:
 Decision log updated:
 ```
@@ -7061,100 +7061,100 @@ Decision log updated:
 
 | Term | Plain-language meaning in this book |
 |---|---|
-| Acceptance criterion | An observable condition that must be true before a deliverable is accepted. |
-| Acknowledgement | System confirmation that an enquiry was received; it is not necessarily a human response or successful contact. |
-| Agent / real-estate agent | A legal/business role whose exact scope is defined by RERA and facts; not merely a software “agent.” |
-| AI agent | Software that uses a model and tools to take bounded actions; never assume autonomy makes an action lawful or correct. |
-| API | A documented interface through which systems exchange requests and data. |
-| Assignment | Giving a valid lead to an eligible accountable person/queue. |
-| At-least-once delivery | An event may arrive more than once; the receiver must make repeat processing safe. |
-| Attribution | Reasoned allocation of an outcome to a source/intervention; correlation alone is not causation. |
-| Audit event | Tamper-resistant-enough record of who/what acted, when, on which object, under which version, and with what result. |
-| Authoritative source | The system/person formally approved to define a fact such as price, inventory or attendance. |
-| Backend RevOps | Model where you configure/monitor client systems but do not communicate with or introduce buyers. |
-| Baseline | Pre-change measurement using frozen definitions and an appropriate comparable period/cohort. |
-| BSP | Business Solution Provider supporting the official WhatsApp Business Platform. |
-| Canary | First small production cohort used to detect defects before expanding. |
-| Campaign manifest | Versioned record of project, authority, content, consent, channel, roster and expiry facts for a live workflow. |
-| Channel partner (CP) | Property intermediary; legal registration/role must be verified rather than assumed from the label. |
-| Client-owned tenant | CRM/channel/vendor account legally and operationally controlled by the client. |
-| Cohort | Leads grouped by a shared start period/source/project so outcomes mature comparably. |
-| Confirmation | Statement sent only after a booking/resource is durably committed. |
-| Consent evidence | Provenance of the notice, affirmative action, purpose, channel, recipient identity, time and revocation—not a bare Boolean. |
-| Contact rate | Leads with a defined successful two-way/human contact divided by eligible valid unique leads. Define it. |
-| Conversion rate | Numerator outcome divided by a named eligible denominator; meaningless without both definitions. |
-| Correlation ID | Identifier connecting one journey across source, workflow, CRM, provider and calendar logs. |
-| CRM | Customer relationship management system; normally the operational system of record. |
-| Data fiduciary | DPDP Act role determining purpose and means of personal-data processing. Counsel maps actual parties. |
-| Data processor | Person processing personal data on behalf of a data fiduciary under instructions. |
-| Data principal | Individual to whom personal data relates under the DPDP framework. |
-| Dead-letter queue (DLQ) | Controlled holding area for events that cannot safely complete after defined attempts. |
-| Deduplication | Deciding that two events/records represent the same enquiry or person; event dedup and person merge are different. |
-| Deterministic rule | Same approved inputs/version produce the same decision; preferred for consequential controls. |
-| DLT | Telecom distributed-ledger ecosystem used for Indian commercial-communication registrations/templates/chain controls. |
-| DND | Do-not-disturb/preference controls within the Indian telecom framework; exact applicability depends on communication type. |
-| DPA | Data-processing agreement or schedule allocating instructions, security, assistance and lifecycle duties. |
-| Enquiry | A person-initiated or lawfully sourced expression of interest; not automatically a qualified sales opportunity. |
-| Event | Immutable occurrence, such as lead received or message delivered, distinct from current record state. |
-| Feature flag | Switch enabling/disabling a capability without redeploying the entire system. |
-| FIRE | Financial independence/retire early; here, an investable portfolio that can support planned spending with risk buffers. |
-| First attempt | First logged human/contact attempt; distinct from automated acknowledgement and successful contact. |
-| Funnel | Defined progression from received enquiry through valid, assigned, contacted, qualified and visit outcomes. |
-| Gross margin | Revenue less directly attributable delivery/vendor costs, under a stated founder-labour convention. |
-| Guardrail | Metric/control that must not deteriorate while improving a target, such as complaint or wrong-recipient rate. |
-| Hallucination | AI output presented without adequate support in approved facts. |
-| Human handoff | Durable assignment of a case to a named staffed person/queue with deadline and context. |
-| Idempotency | Repeating the same request/event does not create an unintended duplicate business effect. |
-| ICP | Ideal customer profile: account-level traits predicting pain, ability, authority, fit and economics. |
-| Incident | Unplanned event harming or threatening confidentiality, integrity, availability, compliance or customer outcome. |
-| Intake ledger | Durable receipt record of source events, validation, processing state, attempts and correlation IDs. |
-| Kill switch | Tested control that stops a risky side effect such as messages/bookings while preserving safe recovery where possible. |
-| Lead | CRM/business record representing an enquiry/opportunity; one person can generate multiple lead events. |
-| Lead source | Originating channel/event; your service normally captures client-generated leads and does not manufacture them. |
-| Least privilege | Grant only the access needed, for the needed period, to a named identity. |
+| Acceptance criterion | A condition you can check. It must be true before the client accepts an item you deliver. |
+| Acknowledgement | A system message saying an enquiry arrived. It does not prove a person replied or made contact. |
+| Agent / real-estate agent | A legal and business role defined by RERA and the real work done. It does not mean only a software “agent.” |
+| AI agent | Software that uses an AI model and tools to take limited actions. Acting on its own does not make an action legal or correct. |
+| API | A documented way for two systems to send requests and data to each other. |
+| Assignment | Giving a valid lead to a suitable person or queue that is responsible for it. |
+| At-least-once delivery | The same event may arrive more than once. The receiving system must handle repeats safely. |
+| Attribution | A reasoned decision about which source or change gets credit for a result. Two things moving together does not prove one caused the other. |
+| Audit event | A record that is hard enough to alter. It shows who or what acted, when, on which item, under which version and with what result. |
+| Authoritative source | The person or system formally approved to state a fact, such as price, inventory or attendance. |
+| Backend RevOps | You set up and watch the client's systems, but you do not talk to buyers or introduce them. |
+| Baseline | The starting measure before a change. It uses fixed meanings and a fair comparison period or group. |
+| BSP | A Business Solution Provider that supports the official WhatsApp Business Platform. |
+| Canary | The first small group sent through a live change. It helps find problems before you increase traffic. |
+| Campaign manifest | A versioned record for a live workflow. It lists the project, authority, content, consent, channel, staff and expiry facts. |
+| Channel partner (CP) | A middle party in a property deal. Check its legal role and registration; the name alone proves nothing. |
+| Client-owned tenant | A CRM, channel or vendor account that the client controls in law and in daily use. |
+| Cohort | A group of leads with the same starting period, source or project. This lets their results develop and be compared fairly. |
+| Confirmation | A message sent only after the booking or resource has truly been reserved. |
+| Consent evidence | Proof of the notice, clear action, purpose, channel, business identity, time and any later withdrawal. It is more than a yes/no field. |
+| Contact rate | Leads with a defined successful two-way or human contact / eligible unique valid leads. Always state the meaning. |
+| Conversion rate | The number that reached an outcome / the named eligible starting number. The rate means nothing unless both are defined. |
+| Correlation ID | One ID that links a journey across the source, workflow, CRM, provider and calendar logs. |
+| CRM | Customer relationship management system. It is normally the main operating record for leads. |
+| Data fiduciary | Under the DPDP Act, the party that decides why and how personal data is used. A lawyer should map the real parties. |
+| Data processor | A person or company that uses personal data for the data fiduciary and follows its instructions. |
+| Data principal | The person whose personal data is being used under the DPDP framework. |
+| Dead-letter queue (DLQ) | A controlled holding place for events that still cannot finish safely after the allowed attempts. |
+| Deduplication | Deciding whether two events or records are the same enquiry or person. Removing repeat events and merging people are different decisions. |
+| Deterministic rule | With the same approved input and version, it gives the same answer. Use it for controls with serious effects. |
+| DLT | India's telecom distributed-ledger system for business-message registrations, templates and the registered sending chain. |
+| DND | Do-not-disturb and customer-preference controls in India's telecom rules. The communication type decides exactly how they apply. |
+| DPA | A data-processing agreement or schedule. It assigns instructions, security, help and duties across the life of the data. |
+| Enquiry | Interest started by a person or obtained through a lawful source. It is not automatically a qualified sales chance. |
+| Event | Something that happened and does not change, such as a lead arriving or a message being delivered. It is different from the record's current state. |
+| Feature flag | A switch that turns one feature on or off without releasing the whole system again. |
+| FIRE | Financial independence/retire early. Here, it means an investment portfolio that can pay planned spending with safety buffers. |
+| First attempt | The first recorded attempt by a person to contact the lead. It is not an automatic acknowledgement or successful contact. |
+| Funnel | The defined steps from enquiry received to valid, assigned, contacted, qualified and visit results. |
+| Gross margin | Revenue minus direct delivery and vendor costs. State how you count the founder's work. |
+| Guardrail | A safety measure that must not get worse while the main target improves, such as complaint or wrong-recipient rate. |
+| Hallucination | An AI answer that is not properly supported by approved facts. |
+| Human handoff | Giving a case, its context and a deadline to a named person or staffed queue in a way that will not be lost. |
+| Idempotency | Processing the same request or event again does not create an unwanted duplicate real-world result. |
+| ICP | Ideal customer profile. These are account traits that suggest pain, ability to pay, authority, fit and workable economics. |
+| Incident | An unplanned event that harms or may harm secrecy, correctness, availability, compliance or a customer result. |
+| Intake ledger | A durable record of source events, checks, processing state, attempts and correlation IDs. |
+| Kill switch | A tested control that stops a risky action, such as sending messages or making bookings. Where possible, safe intake and recovery continue. |
+| Lead | A CRM or business record for an enquiry or sales chance. One person may create several lead events. |
+| Lead source | The channel or event where a lead began. Your service normally captures leads the client generated; it does not create the leads. |
+| Least privilege | Give a named account only the access it needs, and only for as long as it needs it. |
 | MahaRERA | Maharashtra Real Estate Regulatory Authority. |
-| Maker-checker | One person prepares a consequential change; another independently reviews/approves it. |
-| Managed service | Ongoing monitored operations, reporting, incident handling and controlled improvements—not unattended software. |
-| MRR | Monthly recurring revenue; exclude one-time setup fees and pass-through costs. |
-| Nurture | Permitted, relevant follow-up over time; never a synonym for uncontrolled repeated messaging. |
-| Opt-in | Valid permission/request evidence meeting current channel/purpose rules; exact rules require current review. |
-| Opt-out / suppression | Person's stop request and the enforceable state preventing covered future contact across systems. |
-| Personal data | Data about an identifiable individual; exact statutory treatment follows applicable law. |
-| Pilot | Narrow paid, time-bound implementation designed to test delivery and specified leading metrics. |
-| POC | Proof of concept; should use synthetic/minimised data and is not production readiness. |
-| Production | Live system capable of affecting real people/data/business processes. |
-| Prompt injection | Malicious/untrusted content attempting to change model/tool instructions or expose data. |
-| Proposal | Commercial solution document; it is not permission to start or a replacement for contract/payment. |
-| Queue age | Time an item has waited without the required next action; report oldest and percentiles, not only count. |
+| Maker-checker | One person prepares an important change. A different person reviews and approves it. |
+| Managed service | Ongoing work to watch the system, report, handle incidents and make controlled improvements. It is not software left alone. |
+| MRR | Monthly recurring revenue. Do not include one-time setup fees or costs simply passed to the client. |
+| Nurture | Relevant follow-up over time that is allowed. It never means repeated messages with no control. |
+| Opt-in | Valid proof that the person gave permission or made a request under current channel and purpose rules. Check the exact current rules. |
+| Opt-out / suppression | A person's request to stop, plus a state in all systems that blocks the covered future contact. |
+| Personal data | Information about a person who can be identified. The law that applies gives the exact treatment. |
+| Pilot | A small paid setup for a fixed time. It tests delivery and named early measures. |
+| POC | Proof of concept. It should use made-up or minimum data and does not prove readiness for live use. |
+| Production | A live system that can affect real people, data or business work. |
+| Prompt injection | Harmful or untrusted text that tries to change AI or tool instructions or reveal data. |
+| Proposal | A document explaining the offered business solution. It is not permission to start and does not replace a contract or payment. |
+| Queue age | How long an item has waited without its required next action. Show the oldest item and percentiles, not only the item count. |
 | RACI | Responsibility matrix: Responsible, Accountable, Consulted and Informed. |
-| Reconciliation | Comparing independent source and destination records to find missing, duplicate or inconsistent effects. |
-| Recovery point objective (RPO) | Maximum tolerable data/config loss measured in time. |
-| Recovery time objective (RTO) | Target time to restore an agreed capability after disruption. |
-| Registration/authority preflight | Fail-closed check that project, party, content, permission and channel prerequisites remain current before action. |
-| RERA | Real Estate (Regulation and Development) Act/regulatory regime; not a generic quality badge. |
-| Retainer | Recurring professional fee for defined capacity/service; vendor usage and new scope should remain explicit. |
-| Retry | Reattempt after a qualifying failure; unsafe without limits, back-off and idempotency. |
-| RevOps | Revenue operations: the people/process/data/system discipline connecting demand to sales execution and measurement. |
-| RLS / tenant isolation | Controls ensuring one client cannot view or affect another client's data. |
-| Runbook | Step-by-step operational response for a recurring task or failure. |
-| SLA | Contracted service target and remedy; distinguish it from an internal objective or sales promise. |
-| SLO | Internal/service objective used to operate and improve reliability. |
-| Site-visit journey | Complete lifecycle from proposal to one current booking and its attendance/cancellation outcome. |
-| Source of truth | Approved authoritative system for a fact/state; avoid two competing masters. |
-| SPDI | Sensitive Personal Data or Information under the applicable legacy IT Rules framework; counsel applies scope. |
-| State machine | Explicit allowed states and transitions preventing impossible or contradictory workflow status. |
-| Suppression-first | Check contact prohibition immediately before every send, not only when a sequence is created. |
-| System of record | Authoritative operational store, usually client CRM, against which integrations reconcile. |
-| Template | Platform/client-approved message structure; approval alone does not create consent or lawful purpose. |
+| Reconciliation | Comparing records from the source and destination to find missing, duplicate or conflicting results. |
+| Recovery point objective (RPO) | The largest amount of data or setup you can afford to lose, measured as time. |
+| Recovery time objective (RTO) | The target time for restoring an agreed feature after a failure. |
+| Registration/authority preflight | A check just before an action. It stops safely unless the project, party, content, permission and channel are still valid. |
+| RERA | The Real Estate (Regulation and Development) Act and its regulator system. It is not a general badge of quality. |
+| Retainer | A repeated professional fee for stated work or capacity. Show vendor use and new scope separately. |
+| Retry | Trying again after a type of failure that allows it. It is unsafe without limits, waiting longer between attempts and idempotency. |
+| RevOps | Revenue operations. It joins people, process, data and systems so demand becomes measured sales work. |
+| RLS / tenant isolation | Controls that stop one client seeing or changing another client's data. |
+| Runbook | Step-by-step instructions for a repeated task or failure. |
+| SLA | A service target and remedy written in the contract. It is different from an internal goal or sales promise. |
+| SLO | An internal service goal used to run the system and make it more reliable. |
+| Site-visit journey | The full path from suggesting a visit to one current booking and its attendance or cancellation result. |
+| Source of truth | The approved official system for a fact or state. Do not keep two systems that both claim to be the master. |
+| SPDI | Sensitive Personal Data or Information under older IT Rules that may apply. A lawyer decides its exact scope. |
+| State machine | A clear list of allowed states and moves between them. It stops impossible or conflicting workflow states. |
+| Suppression-first | Check whether contact is banned immediately before every send, not only when the sequence starts. |
+| System of record | The official operating store, usually the client's CRM. Other systems compare their records with it. |
+| Template | A message structure approved by the platform and client. Approval alone does not prove consent or a lawful purpose. |
 | TCCCPR | TRAI Telecom Commercial Communications Customer Preference Regulations and amendments/directions. |
-| Telemarketer / RTM | Registered participant in the commercial-communications chain; client/TSP/counsel maps the actual arrangement. |
-| UAT | User acceptance testing against approved business/risk requirements before production authorisation. |
-| Upsert | Create if absent or update if a stable matching record exists. |
-| Visit booked | Slot durably reserved; distinct from proposed, confirmed by customer, attended or merely calendar-created. |
+| Telemarketer / RTM | A registered participant in the business-communication chain. The client, TSP and lawyer should map the real arrangement. |
+| UAT | User acceptance testing. Client users test the approved business and risk needs before live work is allowed. |
+| Upsert | Create the record when it is missing, or update it when a stable matching record exists. |
+| Visit booked | A slot is truly reserved. This differs from suggested, confirmed by the customer, attended or only added to a calendar. |
 | WABA | WhatsApp Business Account used for official business messaging. |
-| Webhook | HTTP callback through which a provider sends an event; availability/contract must be confirmed account by account. |
-| Withdrawal rate | First-year portfolio withdrawal divided by corpus; a planning assumption, not guaranteed safety. |
-| Wrong recipient | Message/data reaches a person who should not receive it, including recycled/mistyped numbers and bad merges. |
+| Webhook | An HTTP call through which a provider sends an event to your system. Confirm the feature and contract for each account. |
+| Withdrawal rate | Money taken from the portfolio in the first year / total portfolio. It is a planning assumption, not a guarantee of safety. |
+| Wrong recipient | A message or data reaches someone who should not get it. Causes include reused or mistyped numbers and wrong merges. |
 
 [Back to index](#table-of-contents)
 
@@ -7166,178 +7166,178 @@ Decision log updated:
 
 ### 43.1 Research standard and cut-off
 
-This edition was researched through **3 September 2026 (India time)**. It prioritises statutes, gazettes, regulators, official platform/developer documentation and directly published market reports. Vendor pricing/features are labelled as vendor claims. Old studies and anecdotal success stories are not converted into guaranteed conversion, margin or FIRE forecasts.
+The research for this edition ends on **3 September 2026 (India time)**. The strongest sources come first: laws, official Gazette notices, regulators, official platform and developer documents, and market reports published by the research company. A vendor's price or feature is clearly treated as the vendor's own claim. Old studies and individual success stories are not turned into guaranteed sales, margin or FIRE forecasts.
 
-The user's request mentioned “1,000 sources.” Source count is not evidence quality. This book deliberately uses a smaller auditable set of decision-relevant primary sources and triangulates consequential claims. Search results, influencer videos and repetitive SEO articles were discovery material, not equal-weight citations.
+The request asked for “1,000 sources.” A large source count does not make the evidence good. This book uses a smaller set of original sources that can be checked and that matter to the decision. For important claims, it checks more than one suitable source. Search pages, influencer videos and repeated SEO articles helped find topics. They do not have the same weight as the sources cited here.
 
 ### 43.2 Evidence labels
 
 | Label | Meaning | How to use it |
 |---|---|---|
-| Law/regulator | Statute, gazette, order, direction or official regulatory guidance | Binding effect and current applicability still require qualified interpretation |
-| Official platform | Current provider policy, product or developer documentation | Operationally useful; provider can change terms/features/pricing |
-| Direct market report | Named methodology/data publisher | Directional market sizing/context; inspect definitions and period |
-| Vendor claim | Company describes its own product, customers, price or outcome | Verify in demo/order form; never treat performance claim as independent proof |
-| Planning assumption | Founder-selected input used in a model | Replace with actual data; report sensitivity |
-| Legal inference | Application of source text to this unusual service | Obtain written professional opinion before relying on it |
+| Law/regulator | A law, Gazette notice, order, direction or official regulator guidance | A qualified professional must still decide whether it binds your exact work now |
+| Official platform | The provider's current policy, product page or developer document | Useful for operations, but the provider can change its terms, features and price |
+| Direct market report | A report whose publisher and research method are named | Use it for broad market size and context. Check its meanings and time period |
+| Vendor claim | A company describes its own product, clients, price or result | Check it in a demo and order form. Never treat a performance claim as independent proof |
+| Planning assumption | A number chosen by the founder for a model | Replace it with real data and show how a different number changes the answer |
+| Legal inference | This book applies legal source words to an unusual service | Get a written professional opinion before depending on it |
 
 ### 43.3 Decision-critical assumptions and unresolved facts
 
 | Assumption/unknown | Current treatment | What resolves it |
 |---|---|---|
-| Your employment permits this side business | Unknown and launch-blocking | Agreement/policy review and written HR/lawyer advice where needed |
-| Vendor interaction is outside RERA agent definition | **Not assumed** | Written Maharashtra RERA opinion on exact tasks/fees/scripts; register if required |
-| ₹3.5L is adequate emergency reserve | Planning assumption | Actual essential spend, dependants, insurance, debt and job-risk review |
-| ₹50k/month remains investable | User-provided current capacity | Monthly cash-flow reconciliation |
-| ICP has ≥300 legitimate inbound leads/month | Qualification hypothesis | Portal/ad/CRM source reports reconciled during diagnostic |
-| Client can lawfully contact each lead | Not assumed | Notice/consent/provenance/channel evidence and legal/client approval |
-| Portal provides webhook/API | **Not assumed** | Client contract/account documentation and vendor-supported test |
-| Existing CRM should be preserved | Default architecture hypothesis | Audit of capability, ownership, API, data quality and total cost |
-| ₹30k–₹45k pilot will sell | Pricing hypothesis | Paid proposals across qualified accounts |
-| Automation improves visits/sales | Not assumed | Accepted implementation plus mature comparable funnel evidence |
-| 10% portfolio return / 6% inflation | Scenario inputs, not forecasts | Adviser-reviewed planning range and annual refresh |
-| ₹5Cr is sufficient FIRE corpus | Not assumed | Spending, tax, health, dependants, horizon and withdrawal-risk plan |
+| Your employment permits this side business | Unknown, so it blocks launch | Review the agreement and policy. Get written advice from HR or a lawyer when needed |
+| Vendor interaction is outside RERA agent definition | **Not assumed** | Get a written Maharashtra RERA opinion on the exact tasks, fees and scripts. Register if required |
+| ₹3.5L is adequate emergency reserve | A planning assumption | Review real essential spending, dependants, insurance, debt and job risk |
+| ₹50k/month remains investable | The amount you said is currently available | Make your cash received and spent agree every month |
+| ICP has ≥300 legitimate inbound leads/month | An idea to check while qualifying the client | During the diagnostic, match portal, ad and CRM source reports |
+| Client can lawfully contact each lead | Not assumed | Get proof of notice, consent, source and channel, plus legal and client approval |
+| Portal provides webhook/API | **Not assumed** | Read the client's contract and account documents and pass a test supported by the vendor |
+| Existing CRM should be preserved | The normal starting design, but still an idea to test | Check features, ownership, API, data quality and full cost |
+| ₹30k–₹45k pilot will sell | An idea about price | Send paid proposals to suitable accounts and see whether they buy |
+| Automation improves visits/sales | Not assumed | Complete an accepted setup and compare mature, similar funnel groups |
+| 10% portfolio return / 6% inflation | Inputs for examples, not forecasts | An adviser reviews a planning range and you update it each year |
+| ₹5Cr is sufficient FIRE corpus | Not assumed | Build a plan for spending, tax, health, dependants, time and withdrawal risk |
 
 ### 43.4 Real-estate law and MahaRERA sources
 
 | Source | What it supports | Accessed |
 |---|---|---:|
-| [Real Estate (Regulation and Development) Act, 2016 — India Code PDF](https://www.indiacode.nic.in/indiacode/bitstream/123456789/2158/1/A201616.pdf) | Definitions; agent registration/functions; promoter advertising; penalties; core statutory text | 3 Sep 2026 |
-| [MahaRERA guidance for real-estate agents](https://www.maharera.maharashtra.gov.in/guidance-for-agents) | State agent-registration guidance and responsibilities | 3 Sep 2026 |
-| [MahaRERA Order 43/2023 page](https://maharera.maharashtra.gov.in/order-no-432023) | Competency-certificate/order reference | 3 Sep 2026 |
-| [MahaRERA Order 41A PDF](https://maharera.maharashtra.gov.in/sites/default/files/Orders_and_circulars/order_41A.pdf) | Agent information/association treatment referenced in compliance review | 3 Sep 2026 |
-| [MahaRERA agent-registration highlights](https://www.maharera.maharashtra.gov.in/index.php/highlights-of-maharera-agent-registration-detail) | Registration process/highlights | 3 Sep 2026 |
-| [MahaRERA Order 46/2023 PDF](https://maharera.maharashtra.gov.in/sites/default/files/Orders_and_circulars/115.pdf) | QR-code/advertisement compliance referenced in project activation controls | 3 Sep 2026 |
-| [MahaRERA 46B enforcement decision](https://maharera.maharashtra.gov.in/sites/default/files/final_order_document/Konkan_FO_144of2024_0.pdf) and [46C enforcement decision](https://maharera.maharashtra.gov.in/sites/default/files/final_order_document/ord_Pune_36OF2O25.pdf) | Official decisions evidencing agent-promotion QR/display enforcement; use with current orders/counsel | 3 Sep 2026 |
+| [Real Estate (Regulation and Development) Act, 2016 — India Code PDF](https://www.indiacode.nic.in/indiacode/bitstream/123456789/2158/1/A201616.pdf) | The main law: meanings, agent registration and duties, promoter advertising and penalties | 3 Sep 2026 |
+| [MahaRERA guidance for real-estate agents](https://www.maharera.maharashtra.gov.in/guidance-for-agents) | Maharashtra guidance on registering an agent and the agent's duties | 3 Sep 2026 |
+| [MahaRERA Order 43/2023 page](https://maharera.maharashtra.gov.in/order-no-432023) | Source for the competency-certificate order | 3 Sep 2026 |
+| [MahaRERA Order 41A PDF](https://maharera.maharashtra.gov.in/sites/default/files/Orders_and_circulars/order_41A.pdf) | Rules about agent information and association used in the compliance review | 3 Sep 2026 |
+| [MahaRERA agent-registration highlights](https://www.maharera.maharashtra.gov.in/index.php/highlights-of-maharera-agent-registration-detail) | Main points and steps for agent registration | 3 Sep 2026 |
+| [MahaRERA Order 46/2023 PDF](https://maharera.maharashtra.gov.in/sites/default/files/Orders_and_circulars/115.pdf) | QR-code and advertising rules used in the project-start checks | 3 Sep 2026 |
+| [MahaRERA 46B enforcement decision](https://maharera.maharashtra.gov.in/sites/default/files/final_order_document/Konkan_FO_144of2024_0.pdf) and [46C enforcement decision](https://maharera.maharashtra.gov.in/sites/default/files/final_order_document/ord_Pune_36OF2O25.pdf) | Official action on QR and display rules in agent promotions. Read it with current orders and a lawyer | 3 Sep 2026 |
 
-The conclusion that a managed buyer-facing response/qualification/visit service may be a real-estate agent is a conservative **legal inference** from the Act's broad “introduces, through any medium” language. No square official ruling for this exact automation/managed-service fact pattern was located.
+The Act uses the broad words “introduces, through any medium.” This book therefore takes a careful legal view. A managed service may be a real-estate agent if it replies to buyers, qualifies them or arranges visits. This is a **legal inference**. The research did not find an official decision that directly answers this exact automation and managed-service setup.
 
 ### 43.5 Privacy, cybersecurity and AI-governance sources
 
 | Source | What it supports | Accessed |
 |---|---|---:|
-| [Digital Personal Data Protection Act, 2023 — MeitY](https://www.meity.gov.in/data-protection-framework) | Primary Act/framework landing page | 3 Sep 2026 |
-| [DPDP commencement notification, 13 November 2025 — Gazette PDF](https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf) | Staged commencement dates | 3 Sep 2026 |
-| [Digital Personal Data Protection Rules, 2025 — Gazette PDF](https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf) | Notice, security, breach, rights and other rules with staged operation | 3 Sep 2026 |
-| [CERT-In Directions under section 70B, 28 April 2022](https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf) | Clock synchronisation, point of contact, six-hour incident reporting and log requirements | 3 Sep 2026 |
-| [OWASP API Security Top 10](https://owasp.org/API-Security/) | API threat-control checklist | 3 Sep 2026 |
-| [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | Prompt injection, data leakage and model/tool risk checklist | 3 Sep 2026 |
+| [Digital Personal Data Protection Act, 2023 — MeitY](https://www.meity.gov.in/data-protection-framework) | Main official page for the Act and its framework | 3 Sep 2026 |
+| [DPDP commencement notification, 13 November 2025 — Gazette PDF](https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf) | Dates on which different parts begin | 3 Sep 2026 |
+| [Digital Personal Data Protection Rules, 2025 — Gazette PDF](https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf) | Rules for notice, security, breach, rights and other duties, which begin in stages | 3 Sep 2026 |
+| [CERT-In Directions under section 70B, 28 April 2022](https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf) | Rules for matching clocks, naming a contact, reporting some incidents in six hours and keeping logs | 3 Sep 2026 |
+| [OWASP API Security Top 10](https://owasp.org/API-Security/) | Checklist for controlling the main API threats | 3 Sep 2026 |
+| [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | Checklist for prompt injection, data leaks and risks from AI models and tools | 3 Sep 2026 |
 
-DPDP provisions and rules are staged. Chapter 30 states the dates found in the 2025 Gazette notifications, but counsel must confirm which duties apply to the parties and date of a live deployment. Existing IT Act/rules and contractual duties do not disappear merely because a future DPDP provision has not commenced.
+Different DPDP sections and rules begin at different times. Chapter 30 gives the dates found in the 2025 Gazette notices. A lawyer must still confirm which duties apply to each party on the date you go live. Existing IT Act rules and duties in a contract do not disappear only because a later DPDP section has not started.
 
 ### 43.6 Messaging and telecom sources
 
 | Source | What it supports | Accessed |
 |---|---|---:|
-| [WhatsApp Business Messaging Policy](https://whatsappbusiness.com/policy/) | Opt-in, template, automation/human-escalation and prohibited-use expectations | 3 Sep 2026 |
-| [WhatsApp Business Platform pricing](https://whatsappbusiness.com/products/platform-pricing/) | Current pricing structure; must be requoted | 3 Sep 2026 |
-| [TRAI advice to senders](https://www.trai.gov.in/advice-to-senders) | Principal-entity/header/template/consent/telemarketer-chain operating guidance | 3 Sep 2026 |
-| [Consolidated TCCCPR text dated 21 May 2026](https://www.trai.gov.in/sites/default/files/2026-05/CA_21052026.pdf) | Current consolidated commercial-communications regulatory text used in the review | 3 Sep 2026 |
+| [WhatsApp Business Messaging Policy](https://whatsappbusiness.com/policy/) | Rules and expectations for opt-in, templates, automation, a path to a person and banned uses | 3 Sep 2026 |
+| [WhatsApp Business Platform pricing](https://whatsappbusiness.com/products/platform-pricing/) | Price structure at the time of research. Get a new quote | 3 Sep 2026 |
+| [TRAI advice to senders](https://www.trai.gov.in/advice-to-senders) | Operating guidance for the principal entity, headers, templates, consent and registered telemarketer chain | 3 Sep 2026 |
+| [Consolidated TCCCPR text dated 21 May 2026](https://www.trai.gov.in/sites/default/files/2026-05/CA_21052026.pdf) | The combined current business-communication rules used in this review | 3 Sep 2026 |
 
-Channel approval does not prove legal consent, truthfulness or RERA authority. A 24-hour WhatsApp customer-service window is not permission for unrelated marketing. Confirm exact category, template and current provider/TSP rules before every production campaign.
+A channel approving something does not prove legal consent, truthful content or RERA authority. The 24-hour WhatsApp service window does not allow unrelated marketing. Before every live campaign, check its exact category and template and the current provider and TSP rules.
 
 ### 43.7 Tax, entity, MSME and AML sources
 
 | Source | What it supports | Accessed |
 |---|---|---:|
-| [CBIC GST registration rules](https://cbic-gst.gov.in/gst-registration-rules.html) | Official GST registration procedure/reference | 3 Sep 2026 |
-| [Notification 10/2017–Integrated Tax PDF](https://cbic-gst.gov.in/hindi/pdf/integrated-tax/10_2017_IT.pdf) | Exemption from compulsory registration for qualifying small inter-State taxable service suppliers | 3 Sep 2026 |
-| [CBIC Circular 159/15/2021-GST PDF](https://cbic-gst.gov.in/pdf/Circular-No-159-14-2021-GST.pdf) | Intermediary-service clarification for place-of-supply review | 3 Sep 2026 |
-| [Income Tax Department ITR-4/44AD FAQ](https://www.incometax.gov.in/iec/foportal/help/e-filing-itr4-form-sugam-faq?mobile-app=1) | Presumptive-tax exclusions/review starting point | 3 Sep 2026 |
-| [GSTN e-invoice mandate](https://einvoice6.gst.gov.in/content/einvoice-mandate/) | Current e-invoicing turnover/effective-date reference to recheck before scale | 3 Sep 2026 |
-| [Udyam Registration official portal](https://www.udyamregistration.gov.in/default.aspx) | Free/paperless MSME registration and current classification notices | 3 Sep 2026 |
-| [Maharashtra Labour RTS services](https://labour.maharashtra.gov.in/en/labour-rts-services) and [LMS login](https://lms.mahaonline.gov.in/Login/Login) | Current state service directory and establishment/labour application portal | 3 Sep 2026 |
-| [Maharashtra profession-tax and allied acts/rules](https://www.mahagst.gov.in/en/profession-tax-and-allied-acts-gr) | Official state professional-tax reference | 3 Sep 2026 |
-| [FIU-IND AML legislation/notifications](https://fiuindia.gov.in/files/AML_Legislation/notification.html) | Starting point for reporting-entity/PMLA analysis | 3 Sep 2026 |
+| [CBIC GST registration rules](https://cbic-gst.gov.in/gst-registration-rules.html) | Official GST registration steps and rules | 3 Sep 2026 |
+| [Notification 10/2017–Integrated Tax PDF](https://cbic-gst.gov.in/hindi/pdf/integrated-tax/10_2017_IT.pdf) | Possible relief from forced registration for some qualifying small service sellers between states | 3 Sep 2026 |
+| [CBIC Circular 159/15/2021-GST PDF](https://cbic-gst.gov.in/pdf/Circular-No-159-14-2021-GST.pdf) | Help for deciding whether an intermediary-service rule changes the place of supply | 3 Sep 2026 |
+| [Income Tax Department ITR-4/44AD FAQ](https://www.incometax.gov.in/iec/foportal/help/e-filing-itr4-form-sugam-faq?mobile-app=1) | Starting point for checking who cannot use presumptive tax | 3 Sep 2026 |
+| [GSTN e-invoice mandate](https://einvoice6.gst.gov.in/content/einvoice-mandate/) | Current turnover and start-date source for e-invoicing. Check it again before scaling | 3 Sep 2026 |
+| [Udyam Registration official portal](https://www.udyamregistration.gov.in/default.aspx) | Free, paperless MSME registration and current size notices | 3 Sep 2026 |
+| [Maharashtra Labour RTS services](https://labour.maharashtra.gov.in/en/labour-rts-services) and [LMS login](https://lms.mahaonline.gov.in/Login/Login) | Current Maharashtra service list and portal for establishment and labour applications | 3 Sep 2026 |
+| [Maharashtra profession-tax and allied acts/rules](https://www.mahagst.gov.in/en/profession-tax-and-allied-acts-gr) | Official Maharashtra source for profession tax | 3 Sep 2026 |
+| [FIU-IND AML legislation/notifications](https://fiuindia.gov.in/files/AML_Legislation/notification.html) | Starting source for checking PMLA and reporting-entity duties | 3 Sep 2026 |
 
-The general Maharashtra service-provider GST threshold and possible exemption for certain small inter-State service suppliers require current fact-specific CA confirmation. Likewise, the PMLA “real estate agent” turnover/activity analysis must be completed before its trigger; do not infer it from RERA status alone.
+A CA must check your current facts before deciding the normal Maharashtra GST threshold for services or a possible exception for some small service sellers between states. You must also finish the PMLA test for the turnover and work of a “real estate agent” before its trigger. RERA status alone does not answer the PMLA question.
 
 ### 43.8 Pune market and customer-context sources
 
 | Source | What it supports | Accessed |
 |---|---|---:|
-| [Knight Frank India Real Estate: Office and Residential Market H2 2025 PDF](https://content.knightfrank.com/research/3070/documents/en/india-real-estate-office-and-residential-market-h2-2025-12597.pdf) | Pune 2025 sales, launches, inventory, price-band and micro-market context | 3 Sep 2026 |
-| [CREDAI Pune Metro](https://www.credaipune.org/) | Industry-body/member-network context; current public membership wording | 3 Sep 2026 |
-| [CREDAI January 2026 newsletter PDF](https://credai.org/knowledge-center/newsletter/reports/30_CREDAI_E_Newsletter_Januray_2026.pdf) | Pune expo/developer/channel-partner event context | 3 Sep 2026 |
+| [Knight Frank India Real Estate: Office and Residential Market H2 2025 PDF](https://content.knightfrank.com/research/3070/documents/en/india-real-estate-office-and-residential-market-h2-2025-12597.pdf) | Pune 2025 sales, new launches, homes available, price groups and local areas | 3 Sep 2026 |
+| [CREDAI Pune Metro](https://www.credaipune.org/) | Information about the industry body, its member network and current public membership wording | 3 Sep 2026 |
+| [CREDAI January 2026 newsletter PDF](https://credai.org/knowledge-center/newsletter/reports/30_CREDAI_E_Newsletter_Januray_2026.pdf) | Information about Pune events for property exhibitions, developers and channel partners | 3 Sep 2026 |
 
-These reports establish that Pune is a meaningful residential market; they do **not** establish that every broker has 50–200 leads/month, wants automation, can pay your price or will convert better. Those are account-level validation questions.
+These reports show that Pune has a meaningful housing market. They do **not** prove that every broker receives 50–200 leads/month, wants automation, can pay your price or will get more conversions. You must check those facts for each account.
 
 ### 43.9 Technical primary documentation
 
 | Source | What it supports | Accessed |
 |---|---|---:|
-| [Google Ads lead-form webhook overview](https://developers.google.com/google-ads/webhook/docs/overview) | Supported lead-form webhook pattern and lead-ID handling | 3 Sep 2026 |
-| [Meta Webhooks documentation](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/) | Subscription challenge, notification and signature-validation starting point; reconfirm current WhatsApp fields/version | 3 Sep 2026 |
-| [Zoho CRM v8 upsert records](https://www.zoho.com/crm/developer/docs/api/v8/upsert-records.html) | Supported CRM upsert semantics | 3 Sep 2026 |
-| [Zoho CRM API limits](https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html) | API quotas/concurrency planning | 3 Sep 2026 |
-| [Google Calendar create events](https://developers.google.com/workspace/calendar/api/guides/create-events) | Client-supplied event IDs/idempotent creation mechanics | 3 Sep 2026 |
-| [Google Calendar free/busy query](https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query) | Availability lookup mechanics and limitations | 3 Sep 2026 |
-| [Google Calendar push notifications](https://developers.google.com/workspace/calendar/api/guides/push) | Webhook/channel lifecycle and reconciliation need | 3 Sep 2026 |
-| [Google Calendar synchronise resources](https://developers.google.com/workspace/calendar/api/guides/sync) | Incremental sync/reconciliation | 3 Sep 2026 |
-| [n8n documentation](https://docs.n8n.io/) and [pricing](https://n8n.io/pricing/) | Workflow operation/deployment choices and current vendor pricing | 3 Sep 2026 |
-| [Make Help Center](https://help.make.com/) and [pricing](https://www.make.com/en/pricing) | Workflow/error-handling capabilities and current vendor pricing | 3 Sep 2026 |
-| [Google SRE workbook](https://sre.google/workbook/table-of-contents/) | Monitoring, incident and reliability operating principles | 3 Sep 2026 |
+| [Google Ads lead-form webhook overview](https://developers.google.com/google-ads/webhook/docs/overview) | Supported way to receive a lead-form event and handle its lead ID | 3 Sep 2026 |
+| [Meta Webhooks documentation](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/) | Starting source for the subscription check, events and signature checks. Confirm the current WhatsApp fields and version | 3 Sep 2026 |
+| [Zoho CRM v8 upsert records](https://www.zoho.com/crm/developer/docs/api/v8/upsert-records.html) | Supported rules for creating a missing CRM record or updating a matching one | 3 Sep 2026 |
+| [Zoho CRM API limits](https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html) | Limits for API use and actions happening at the same time | 3 Sep 2026 |
+| [Google Calendar create events](https://developers.google.com/workspace/calendar/api/guides/create-events) | How to use an event ID supplied by the client and make repeat creation safe | 3 Sep 2026 |
+| [Google Calendar free/busy query](https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query) | How to ask whether a time is free, and the limits of that answer | 3 Sep 2026 |
+| [Google Calendar push notifications](https://developers.google.com/workspace/calendar/api/guides/push) | How notification channels live and expire, and why records must be compared | 3 Sep 2026 |
+| [Google Calendar synchronise resources](https://developers.google.com/workspace/calendar/api/guides/sync) | How to get only later changes and keep records in sync | 3 Sep 2026 |
+| [n8n documentation](https://docs.n8n.io/) and [pricing](https://n8n.io/pricing/) | Choices for running and hosting workflows, plus current vendor prices | 3 Sep 2026 |
+| [Make Help Center](https://help.make.com/) and [pricing](https://www.make.com/en/pricing) | Workflow and error-handling features, plus current vendor prices | 3 Sep 2026 |
+| [Google SRE workbook](https://sre.google/workbook/table-of-contents/) | Working ideas for monitoring, incidents and reliability | 3 Sep 2026 |
 
-Property portals may deliver leads by account-specific connector, email, export, partner integration or supported API/webhook. Do not ask for a broker's reusable password or promise a “five-minute webhook” until the portal and account owner confirm the supported path in writing and it passes a test.
+A property portal may send leads through a connector made for that account, email, export, partner connection, or supported API or webhook. Do not ask for the broker's reusable password. Do not promise a “five-minute webhook” until the portal and account owner confirm the supported method in writing and it passes a test.
 
 ### 43.10 Product and competitor reference points
 
 | Source | Permitted conclusion | Do not conclude |
 |---|---|---|
-| [Zoho CRM pricing](https://www.zoho.com/en-us/crm/zohocrm-pricing.html) | Public edition/seat-price reference at access date | Client's final total cost or fitness without discovery |
-| [LeadSquared pricing](https://www.leadsquared.com/pricing/) | Vendor's public price/packaging reference | Exact quote, implementation cost or outcome |
-| [LeadSquared 99acres integration help](https://help.leadsquared.com/integrate-99acres-with-leadsquared/) | Vendor documents account prerequisites and periodic/real-time connector modes | Every 99acres account exposes a generic webhook to you |
-| [LeadSquared Magicbricks integration help](https://help.leadsquared.com/integrate-magicbricks-with-leadsquared/) | Vendor documents a paid connector/configuration path | An unsupported scraper/email parser is equivalent |
-| [Interakt pricing](https://www.interakt.shop/pricing/) | Public WhatsApp-provider price reference | Full CRM/operations replacement or final message cost |
-| [Sell.Do real-estate CRM](https://www.sell.do/real-estate-crm) | A vertical incumbent markets lead capture/routing/WhatsApp/visit/reporting | Its claimed outcomes prove your opportunity or pricing |
-| [Follow Up Boss pricing](https://www.followupboss.com/pricing) | Global real-estate CRM price/feature reference | Direct comparability to an India/Pune workflow |
+| [Zoho CRM pricing](https://www.zoho.com/en-us/crm/zohocrm-pricing.html) | Public editions and price per user on the date it was opened | The client's final full cost or whether it fits, before discovery |
+| [LeadSquared pricing](https://www.leadsquared.com/pricing/) | The vendor's public prices and packages | An exact quote, setup cost or result |
+| [LeadSquared 99acres integration help](https://help.leadsquared.com/integrate-99acres-with-leadsquared/) | The vendor lists what the account needs and both timed and real-time connector choices | That every 99acres account gives you a general webhook |
+| [LeadSquared Magicbricks integration help](https://help.leadsquared.com/integrate-magicbricks-with-leadsquared/) | The vendor describes a paid connector and setup path | That an unsupported scraper or email parser is the same thing |
+| [Interakt pricing](https://www.interakt.shop/pricing/) | A public price reference for a WhatsApp provider | That it replaces the full CRM and operation, or gives the final message cost |
+| [Sell.Do real-estate CRM](https://www.sell.do/real-estate-crm) | An existing property CRM sells lead capture, routing, WhatsApp, visits and reports | That its own result claims prove your opportunity or price |
+| [Follow Up Boss pricing](https://www.followupboss.com/pricing) | A global property CRM price and feature reference | That it directly matches an India or Pune workflow |
 
-Your competitor is often the client's existing CRM plus disciplined operations, not only another startup. Do not undercut a software seat price while promising implementation, compliance, monitoring and support.
+Your real competitor is often the client's current CRM used with a disciplined process. It is not only another startup. Do not charge less than the price of one software seat while promising setup, compliance, monitoring and support.
 
 ### 43.11 FIRE and trading sources
 
 | Source | What it supports | Accessed |
 |---|---|---:|
-| [SEBI: 7 out of 10 individual intraday cash traders made losses](https://www.sebi.gov.in/media-and-notifications/press-releases/jul-2024/sebi-study-finds-that-7-out-of-10-individual-intraday-traders-in-equity-cash-segment-make-losses_84948.html) | Population evidence against intraday trading as a dependable FIRE engine | 3 Sep 2026 |
-| [SEBI: 93% of individual equity F&O traders lost money in FY22–FY24](https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2024/updated-sebi-study-reveals-93-of-individual-traders-incurred-losses-in-equity-fando-between-fy22-and-fy24-aggregate-losses-exceed-1-8-lakh-crores-over-three-years_86906.html) | Derivatives loss prevalence/aggregate losses | 3 Sep 2026 |
-| [SEBI FY25 individual-trader analysis PDF](https://www.sebi.gov.in/sebi_data/attachdocs/jul-2025/1751900271726.pdf) | Later derivatives-trader update cited in Chapter 39 | 3 Sep 2026 |
-| [SEBI FY25–FY26 profitability study page](https://www.sebi.gov.in/reports-and-statistics/research/aug-2026/study-profitability-of-individual-traders-in-the-equity-derivatives-segment-fy25-fy26-_103835.html) | Newest study landing page located at cut-off; review the report before quoting granular figures | 3 Sep 2026 |
-| [SEBI investor education material](https://investor.sebi.gov.in/iematerial.html) | Risk, objectives and diversification education starting point | 3 Sep 2026 |
-| [PFRDA-hosted Pension Security in India publication PDF](https://www.pfrda.org.in/documents/33652/198397/Pension%2BSecurity%2Bin%2BIndia-Book.pdf) | Indian-context retirement/withdrawal-rate research cited with caveat | 3 Sep 2026 |
+| [SEBI: 7 out of 10 individual intraday cash traders made losses](https://www.sebi.gov.in/media-and-notifications/press-releases/jul-2024/sebi-study-finds-that-7-out-of-10-individual-intraday-traders-in-equity-cash-segment-make-losses_84948.html) | Evidence from a group of traders that intraday trading is not a dependable FIRE engine | 3 Sep 2026 |
+| [SEBI: 93% of individual equity F&O traders lost money in FY22–FY24](https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2024/updated-sebi-study-reveals-93-of-individual-traders-incurred-losses-in-equity-fando-between-fy22-and-fy24-aggregate-losses-exceed-1-8-lakh-crores-over-three-years_86906.html) | How common derivatives losses were and the total loss | 3 Sep 2026 |
+| [SEBI FY25 individual-trader analysis PDF](https://www.sebi.gov.in/sebi_data/attachdocs/jul-2025/1751900271726.pdf) | A later update on derivatives traders used in Chapter 39 | 3 Sep 2026 |
+| [SEBI FY25–FY26 profitability study page](https://www.sebi.gov.in/reports-and-statistics/research/aug-2026/study-profitability-of-individual-traders-in-the-equity-derivatives-segment-fy25-fy26-_103835.html) | Newest study page found by the research cut-off. Read the report before quoting detailed numbers | 3 Sep 2026 |
+| [SEBI investor education material](https://investor.sebi.gov.in/iematerial.html) | Starting material on risk, goals and spreading investments | 3 Sep 2026 |
+| [PFRDA-hosted Pension Security in India publication PDF](https://www.pfrda.org.in/documents/33652/198397/Pension%2BSecurity%2Bin%2BIndia-Book.pdf) | Research on retirement and withdrawal rates in India, used with a warning | 3 Sep 2026 |
 
 ### 43.12 User-provided Grok conversations: what was retained and rejected
 
-The two public shared conversations were retrieved and reviewed on 3 September 2026: [Bootstrapped AI Automation Agency Niches](https://grok.com/share/c2hhcmQtNA_3b0889cc-3376-4cf4-ba0f-76ef9c24df27) and [Top 5 AI Automation Agency Niches](https://grok.com/share/c2hhcmQtMw_9ec97d46-adc4-432c-b77c-84ccfb18f7c8). The private Grok project conversation could not be independently accessed without the account's authorisation: [private project link supplied by the user](https://grok.com/project/6525ff82-20bf-450b-aea3-9f2c4e725b56?tab=conversations&chat=1d61c08d-16d6-459c-8fbc-a9511b1922b4&rid=72804fb1-f1f4-4da3-a834-b2353cc8af64).
+The research opened and reviewed the two public shared conversations on 3 September 2026: [Bootstrapped AI Automation Agency Niches](https://grok.com/share/c2hhcmQtNA_3b0889cc-3376-4cf4-ba0f-76ef9c24df27) and [Top 5 AI Automation Agency Niches](https://grok.com/share/c2hhcmQtMw_9ec97d46-adc4-432c-b77c-84ccfb18f7c8). The private Grok project conversation needed permission from the account, so it could not be checked independently: [private project link supplied by the user](https://grok.com/project/6525ff82-20bf-450b-aea3-9f2c4e725b56?tab=conversations&chat=1d61c08d-16d6-459c-8fbc-a9511b1922b4&rid=72804fb1-f1f4-4da3-a834-b2353cc8af64).
 
 | Grok idea/claim | Treatment in this book | Reason |
 |---|---|---|
-| Real-estate lead qualification/follow-up is the preferred business | Retained as a **validation hypothesis**, narrowed to lead-to-visit RevOps | Fits bootstrap constraints and local access, but payment and legality remain unproven |
-| Your system captures the broker's existing leads rather than generating them | Retained | Correct business boundary; sources must be client-authorised and supported |
-| Build a new Bubble SaaS first | Rejected for stage 1 | Existing-CRM managed service tests demand with less cost/data fragmentation |
-| Generic portal webhook/account access is easy and risk-free | Rejected | Integration is account/vendor-specific; password sharing, contract, privacy and RERA issues exist |
-| ₹999–₹2,999/month is the winning price | Rejected | Cannot fund discovery, QA, monitoring and compliance; competitor seat price is not service cost |
-| No-code means no skill or no risk | Rejected | Architecture, state, APIs, security, operations, sales and compliance remain skilled work |
-| Ten clients/profit in 6–8 weeks is easy | Rejected as a forecast | No representative primary evidence; use paid validation and downside/base/stretch cases |
-| 80%–90% margin and 2× meetings/20 hours saved | Rejected until client-measured | Vendor/anecdotal claims, undefined costs and no accepted baseline |
-| ₹5 crore in 4–5 years is “100% doable” | Rejected | Requires extraordinary distributable cash; Chapter 39 gives arithmetic and uncertainty |
-| E-commerce must lose and this service must win | Rejected as certainty | Choice is a fit/risk judgement; either business can fail |
+| Real-estate lead qualification/follow-up is the preferred business | Kept as an **idea to validate**, but narrowed to lead-to-visit RevOps | It fits low-capital limits and local access. Payment and legality are still not proved |
+| Your system captures the broker's existing leads rather than generating them | Kept | This is the correct business limit. Every source must be authorised by the client and supported |
+| Build a new Bubble SaaS first | Rejected for stage 1 | A managed service that keeps the current CRM tests demand with less cost and fewer copies of data |
+| Generic portal webhook/account access is easy and risk-free | Rejected | Each account and vendor is different. Password sharing, contracts, privacy and RERA create risk |
+| ₹999–₹2,999/month is the winning price | Rejected | It cannot pay for discovery, QA, monitoring and compliance. A software-seat price is not the cost of a service |
+| No-code means no skill or no risk | Rejected | Design, state, APIs, security, operations, sales and compliance still need skill |
+| Ten clients/profit in 6–8 weeks is easy | Rejected as a forecast | No suitable original evidence supports it. Test whether buyers pay and use downside, base and stretch cases |
+| 80%–90% margin and 2× meetings/20 hours saved | Rejected until client-measured | These came from vendors or individual stories, costs were unclear and no starting measure was accepted |
+| ₹5 crore in 4–5 years is “100% doable” | Rejected | It needs unusually large cash available to invest. Chapter 39 shows the maths and uncertainty |
+| E-commerce must lose and this service must win | Rejected as certainty | The choice depends on fit and risk. Either business can fail |
 
 ### 43.13 Claim-to-source ledger for the biggest decisions
 
 | Decision/claim | Evidence | Confidence and caveat |
 |---|---|---|
-| Use backend-only model until RERA scope is cleared | RERA Act sections 2(zm), 9, 10, 62; MahaRERA guidance/orders | High that classification risk is material; exact model outcome needs written counsel |
-| Never mass-message purchased/scraped leads | WhatsApp policy; TCCCPR framework; privacy duties | High operational conclusion; exact lawful basis/category still fact-specific |
-| Preserve client CRM and use supported integration first | Official CRM/calendar/webhook docs; security/data-minimisation principles | High architecture default, not universal rule |
-| Build idempotent/reconciled workflows | Official API delivery/sync semantics and established SRE engineering | High; exact design depends on provider guarantees |
-| Price as implementation + managed operations, not ₹999 SaaS | Bottom-up capacity/scope economics plus public vendor anchors | Medium until paid proposals validate willingness |
-| Target meaningful-volume 5–25-rep Pune teams first | Pune market context plus service unit economics | Medium hypothesis; interviews/account evidence must validate |
-| Day trading is unsuitable as core FIRE plan | SEBI population studies | High for prudent planning; does not assert every trader loses |
-| ₹5Cr high-end path can be ~6.25 years only under breakout contributions | Reproducible monthly-compounding scenario | Arithmetic high; business/return inputs highly uncertain |
+| Use backend-only model until RERA scope is cleared | RERA Act sections 2(zm), 9, 10 and 62, plus MahaRERA guidance and orders | High confidence that the classification risk matters. A lawyer must give the exact answer for this model in writing |
+| Never mass-message purchased/scraped leads | WhatsApp policy, TCCCPR rules and privacy duties | High confidence in the operating rule. The exact legal basis and message category still depend on the facts |
+| Preserve client CRM and use supported integration first | Official CRM, calendar and webhook documents, plus rules to keep data safe and minimal | A strong normal design, but not a rule for every client |
+| Build idempotent/reconciled workflows | Official API rules for delivery and sync, plus established SRE methods | High confidence. The exact design still depends on what the provider guarantees |
+| Price as implementation + managed operations, not ₹999 SaaS | Cost built from capacity and scope, plus public vendor price references | Medium confidence until suitable buyers accept paid proposals |
+| Target meaningful-volume 5–25-rep Pune teams first | Pune market facts and the costs of serving a client | A medium-confidence idea. Interviews and account evidence must prove it |
+| Day trading is unsuitable as core FIRE plan | SEBI studies of groups of traders | High confidence for a careful plan. It does not claim that every trader loses |
+| ₹5Cr high-end path can be ~6.25 years only under breakout contributions | A monthly compound-growth example that can be run again | High confidence in the maths. Business cash and investment returns are very uncertain |
 
 ### 43.14 Model formulas and reproducibility notes
 
-FIRE tables use month-end contributions and an effective monthly rate:
+The FIRE tables add each investment at the end of the month. They turn the yearly return into the matching monthly rate:
 
 ```text
 monthly_rate = (1 + annual_return)^(1/12) - 1
@@ -7345,9 +7345,9 @@ balance_next = balance_current × (1 + monthly_rate) + monthly_contribution
 today_rupees = nominal_value / (1 + inflation)^years
 ```
 
-Amounts exclude tax, fees, contribution timing variation and volatility unless stated. The model iterates monthly until nominal balance reaches ₹5 crore. Business P&L ranges are bottom-up planning cases, not external benchmarks.
+Unless the text says otherwise, these amounts leave out tax, fees, changes in the day money is invested and market ups and downs. The model calculates one month at a time until the shown balance reaches ₹5 crore. Business profit-and-loss ranges are plans built from the bottom up. They are not outside market averages.
 
-Funnel formulas always require explicit eligible denominators. Example:
+Every funnel formula needs a clearly stated eligible bottom number. For example:
 
 ```text
 capture_rate = valid_unique_CRM_records / valid_unique_source_enquiries
@@ -7358,25 +7358,25 @@ attendance_rate = unique_attended_visit_journeys / matured_confirmed_visit_journ
 
 ### 43.15 Update procedure
 
-Every quarter—or immediately after a relevant order/policy/vendor change:
+Follow these steps every quarter. Also follow them at once after a relevant order, policy or vendor changes:
 
-1. Open the primary source, not an old screenshot or reseller blog.
-2. Record access date, document/order/version and effective/commencement date.
-3. Identify affected legal duty, workflow, content, data flow, contract, price, test and client.
-4. Ask qualified counsel/CA/provider where interpretation is material.
-5. Update the source ledger, decision log, configuration and regression tests.
-6. Obtain client approvals and run a canary before changed production behaviour.
-7. Preserve the old version, rationale and effective period.
+1. Open the original source. Do not rely on an old screenshot or a seller's blog.
+2. Record when you opened it, the document, order or version, and the date it starts to apply.
+3. Find every affected legal duty, workflow, content item, data flow, contract, price, test and client.
+4. When the meaning matters, ask a qualified lawyer, CA or provider.
+5. Update the source record, decision log, setup and repeat tests.
+6. Get client approvals. Run a small canary before the changed behaviour affects normal live work.
+7. Keep the old version, the reason for change and the period in which it applied.
 
 ### 43.16 Edition log
 
 | Version/date | Material change | Action for reader |
 |---|---|---|
-| 1.0 — 3 Sep 2026 | First complete edition; founder facts updated to ₹5L savings and ₹50k/month capacity; public Grok shares reviewed; RERA operating-model gate added; DPDP staged commencement, current TCCCPR, WhatsApp, CERT-In, GST/PMLA triggers, technical architecture, 90-day plan and FIRE model consolidated | Start with Chapters 0, 30, 38 and 40; obtain professional sign-offs before live work |
+| 1.0 — 3 Sep 2026 | First full edition, rewritten in plain language without removing operating detail. It uses ₹5L savings and ₹50k/month capacity. It reviews the public Grok shares and adds the RERA gate for the operating model. It brings together the DPDP start stages, current TCCCPR, WhatsApp, CERT-In, GST and PMLA triggers, technical design, 90-day plan and FIRE model | Start with Chapters 0, 30, 38 and 40. Get professional approval before live work |
 
 ### 43.17 Final operating principle
 
-The durable advantage is not a clever bot. It is the ability to make one regulated, human sales workflow measurable, permitted, reliable and easier to operate—then prove that customers repeatedly pay for it. When evidence contradicts this book, update the book.
+A clever bot is not the lasting advantage. The advantage is making one regulated sales process easy to measure, allowed, reliable and easier for people to run. Then you must prove that customers keep paying for it. If real evidence shows this book is wrong, update the book.
 
 [Back to index](#table-of-contents)
 
